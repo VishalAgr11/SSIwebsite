@@ -19,6 +19,8 @@
     height: 50px; 
     box-sizing: border-box; 
     transition: all 0.3s ease-in-out;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   
   .navbar-logo img {

@@ -36,10 +36,20 @@ body{
   
   .about-section .about-content {
     color: white; 
-    font-size: 0.8rem; 
+    font-size: 0.9rem; 
     margin-top: 5px;
   }
-
+  .about-content a {
+    color: white;
+    text-decoration: none; 
+    transition: color 0.4s ease; 
+  }
+  
+  .about-content a:hover {
+    color: #36bdcc; 
+    text-decoration: underline;
+  }
+  
   .our-story {
     text-align: center; 
     padding-left: 10%;
