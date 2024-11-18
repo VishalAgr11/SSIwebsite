@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
+  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>WebServices</title>
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+  <!-- Shop Content -->
+
+<!-- Shop Content -->
+<h2 class="heading">Shop With Us</h2>
+<section class="card-section">
+    <!-- Row 1 -->
+    <div class="card">
+        <div class="image-carousel">
+          <img src="../assets/facebook.png" alt="Product 1" class="carousel-image">
+          <img src="../assets/instagram.png" alt="Product 1" class="carousel-image">
+          <img src="../assets/linkedin.png" alt="Product 1" class="carousel-image">
+          <img src="../assets/twitter.png" alt="Product 1" class="carousel-image">
+          <img src="https://via.placeholder.com/100" alt="Product 1" class="carousel-image">
+        </div>
+        <div class="carousel-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <h3>Product 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        <p class="price">$50</p>
+        <button>Click to Book</button>
+      </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$60</p>
+      <button>Click to Book</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$70</p>
+      <button>Click to Book</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 4">
+      <h3>Product 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$80</p>
+      <button>Click to Book</button>
+    </div>
+    <!-- Row 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 5">
+      <h3>Product 5</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$90</p>
+      <button>Click to Book</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 6">
+      <h3>Product 6</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$100</p>
+      <button>Click to Book</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 7">
+      <h3>Product 7</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$110</p>
+      <button>Click to Book</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Product 8">
+      <h3>Product 8</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <p class="price">$120</p>
+      <button>Click to Book</button>
+    </div>
+  </section>
+
+    <div id="footer-container"></div>
+
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/shop.js"></script>
+  <script>
+    // Load Navbar
+    fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(err => console.log("Failed to load Navbar:", err));
+
+    // Load Footer
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.log("Failed to load Footer:", err));
+</script>
+</body>
+</html>

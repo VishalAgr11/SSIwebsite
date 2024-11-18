@@ -1,6 +1,11 @@
 body{
   font-family: 'Arial', sans-serif;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
   .footer {
       font-family: OpenSans;
       background-color: #0a4f6e;
