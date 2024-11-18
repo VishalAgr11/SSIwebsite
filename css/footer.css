@@ -14,13 +14,16 @@
     
     .footer-column {
       width: 25%;
+      text-align: center;
     }
-    
+      
     .footer-logo img {
-      width: 100px;
-      height: 200px;
+      height: 80px;
+      width: auto; 
+      display: block; 
+      margin: 0 auto; 
     }
-    
+
     .footer-address p,
     .footer-social a,
     .footer-column ul li {
@@ -66,33 +69,39 @@
     }
     
     .footer form input {
-      padding: 15px;
+      padding: 10px;
       width: 100%;
       margin-bottom: 10px;
       border: none;
-      font-size: 1.2rem;
+      font-size: 1rem;
       border-radius: 4px;
     }
     
     .footer form button {
-      padding: 15px;
+      padding: 10px;
       width: 100%;
       background-color: rgb(22, 22, 170);
       color: white;
-      font-size: 1.1rem;
+      font-size: 1rem;
       border: none;
       border-radius: 4px;
       cursor: pointer;
     }
-    
+    .footer form input,
+  .footer form button {
+    box-sizing: border-box;
+  }
+
     .footer form button:hover {
       background-color: blue;
     }
     /* Social Media Icons Styling */
+  
     .footer-social-media {
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center; 
+      
     }
     
     .footer-social-media a {
@@ -147,11 +156,16 @@
       }
     
       .footer-logo img {
-        width: 80px; 
-        height: auto; 
+        height: 80px;
+        width: auto; 
+        display: block; 
+        margin: 0 auto; 
+      }
+
+      .footer-address p{
+        margin-top: 10px;
       }
     
-      .footer-address p,
       .footer-social a,
       .footer-column ul li {
         font-size: 1rem; 

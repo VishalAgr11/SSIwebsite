@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/about_us.css">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
+  <link rel="stylesheet" href="../css/footer.css"> 
+  
+  <title>WebServices</title>
+</head>
+<body>
+<!-- NAVBAR -->
+<div id="navbar-container"></div>
+
+<!-- ABOUT US -->
+<section class="about-section" id="about-section">
+    <div class="color-block" style="background-color: #003249">
+      <h2 class="color-text">About Us</h2>
+      <p class="about-content">Home >> About Us</p>
+    </div>
+
+
+    <!-- Our Story Section -->
+    <div class="our-story">
+        <h3>Our Story</h3>
+        <div class="story-left">
+            <img src="../assets/your-image.jpg" alt="Our Story Image">
+        </div>
+        <div class="story-right">
+           
+            <p>Special Software (India) Pvt. Ltd. (SSI) is a one-stop solution for all your business and personal IT needs. </p><br>
+
+               <p> We offer turnkey software solutions and business automation services, to industries and individuals seeking technological transformation. Our expertise lies in developing bespoke software applications that address critical business challenges, ensuring a seamless blend of functionality, scalability, and innovation. </p><br>
+                
+               <p>We also supply consumer electronics such as refrigerators, TVs, laptops, washing machines, and specialized hardware like industrial water coolers and monitors at the lowest prices across Jharkhand. We are an authorized reseller of brands like Lapcare, Sony, Samsung, and Voltas.</p> <br>
+                
+               <p>We include our capabilities in industrial automation, particularly in the steel plant sector, delivering advanced systems for process optimization and equipment management. We also provide staffing and business process outsourcing (BPO) services, enabling our clients to focus on core operations while SSI handles workforce and process efficiencies.
+                </p>
+        </div>
+    </div>
+
+    <div class="info-about">
+        <div class="info-col">
+          <h3><span class="number">300+</span> Innovative Minds</h3>
+        </div>
+        <div class="info-col">
+          <h3><span class="number">600+</span> Projects</h3>
+        </div>
+        <div class="info-col">
+          <h3><span class="number">500+</span> Clients</h3>
+        </div>
+        <div class="info-col">
+          <h3><span class="number">24+</span> Years</h3>
+        </div>
+      </div>
+
+
+    <!-- Mission and Vision Section -->
+    <div class="mission-vision">
+        <h2>Mission and Vision</h2>
+        <div class="mission-vision-content">
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <img src="../assets/mission-image.jpg" alt="Mission Image">
+                <p>Our mission is to deliver high-quality software solutions and automation services that enhance productivity and innovation for businesses across industries,
+                    and to deliver world class IT solutions for varied industry verticals by maximizing value & growth in both our customer’s & our business; our customer & our people being the two most important stakeholders of the company.</p><br>
+
+                   <p> We achieve this by continuously nurturing innovation, talent, cost-effectiveness, technological excellence & practicing global processes.
+                </p>
+            </div>
+            <!-- Vision Section -->
+            <div class="vision-section">
+                <img src="../assets/vision-image.jpg" alt="Vision Image">
+                <p>Our vision is to be a global leader in software development and automation, fostering long-term relationships with clients by providing innovative and reliable solutions.
+                    To be a Globally recognised Customer Centric Supply Chain Solutions Company that improves Customer competitiveness. Build innovative products using latest technology that are easy to use and have rich functionality. </p><br>
+
+                    <p>Attract, retain and develop best talent in the industry.
+                </p>
+            </div>
+        </div>
+    </div>
+      
+</section>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Navbar
+  fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Navbar:", err));
+
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+</script>
+    
+</body>
+</html>

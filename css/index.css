@@ -9,7 +9,7 @@ body {
 
 .color-section {
     width: 100%;
-    height: 85vh; 
+    height: 75vh; 
     display: flex;
     position: relative;
     overflow: hidden;
@@ -35,15 +35,16 @@ body {
     font-size: 2rem; 
     font-weight: bold;
     text-align: left;
-    margin: 0 0 10px 0;
+    margin: 8rem 0 10px 0; 
   }
   
-.content {
+  .content {
     color: white;
     font-size: 1.4rem; 
     text-align: left; 
-    margin: 0;
+    margin: 20px 0 0 0; 
   }
+  
   
   .color-text, .content {
     max-width: 60%; 
@@ -58,9 +59,9 @@ body {
   .color-section .left-arrow,
   .color-section .right-arrow {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     background: rgba(0, 0, 0, 0.5);
     border: none;
@@ -86,7 +87,7 @@ body {
     text-align: center; 
     padding-left: 5%;
     padding-right: 5%;
-    height: 60px;
+    height: 30px;
   }
   
   .info-column {
@@ -201,7 +202,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 2em 1em;
-    background-color: #f9f9f9;
+    background-color: white;
   }
   
   .testimonials-heading {
@@ -274,4 +275,168 @@ body {
     background-color: #007bff;
   }
   
+  .read-more-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 22px;
+    margin-left: 10%;
+    font-size: 16px;
+    color: rgb(23, 105, 138);
+    background-color: white transparent;
+    border: 4px solid #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .read-more-btn:focus {
+    outline: none;
+  }
+
+  
+  @media screen and (max-width: 576px) {
+    /* Global styles for smaller screens */
+  body{
+    overflow-x: hidden;
+  }
+    /* Info section */
+    .info-section {
+      padding: 10px 0;
+      flex-direction: column; 
+      height: auto; 
+      padding-left: 5%; 
+      padding-right: 5%;
+    }
+  
+    .info-column {
+      padding: 10px 0;
+      text-align: center; 
+    }
+  
+    .about-us {
+      padding: 20px;
+      padding-top: 40px;
+    }
+  
+    .about-us .heading1 {
+      font-size: 2rem; 
+      margin-bottom: 15px;
+    }
+  
+    .about-us .about {
+      font-size: 1rem; 
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+  
+    /* GIF Section */
+    .gif-section {
+      height: auto; 
+      margin-bottom: 20px;
+    }
+  
+    .center-gif {
+      max-width:98%; 
+      height: 300px;
+
+    }
+  
+    /* Industries Section */
+    .industries-cards {
+      grid-template-columns: 1fr; 
+      gap: 20px;
+    }
+  
+    .industry-card {
+      height: 300px; 
+    }
+  
+    .industry-logo {
+      width: 80px; 
+      height: 80px; 
+    }
+  
+    .industry-text {
+      font-size: 1rem; 
+    }
+  
+    /* Testimonials Section */
+    .testimonials-slider {
+      max-width: 100%; 
+    }
+  
+    .testimonial-card {
+      padding: 1em;
+      margin: 10px;
+      height: 150px;
+    }
+ 
+    .testimonial-dots {
+      justify-content: center;
+    }
+  
+    .dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 0.2em;
+    }
+ 
+    .read-more-btn {
+      margin-top: 30px;
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-left: 5%;
+    }
+  
+    .industries-section, .info-section, .about-us {
+      padding: 20px 5%;
+    }
+  
+    .info-column h3 {
+      font-size: 1.2rem; 
+    }
+  
+    .center-text {
+      font-size: 1rem; 
+    }
+
+    .color-section .left-arrow,
+  .color-section .right-arrow {
+    font-size: 1rem; 
+    padding: 6px; 
+    background-color: transparent;
+    border: none; 
+  }
+ 
+  .color-section{
+    height: 65vh;
+  }
+  .color-section .left-arrow:hover,
+  .color-section .right-arrow:hover {
+    background-color: transparent; 
+    color: #007bff; 
+  }
+
+  .color-text, .content{
+    padding-left: 60px;
+  }
+
+  .color-text {
+    margin-top: 10px;
+  }
+  
+
+  .content{
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .read-more-btn{
+    margin-left: 60px;
+  }
+  }
   
