@@ -1,5 +1,4 @@
-/* Home.css */
-  * {
+* {
     box-sizing: border-box;
   }
   
@@ -10,20 +9,20 @@
     font-family: 'Arial', sans-serif;
   }
   
-  .home-container {
+  .contact-container {
     font-family: OpenSans;
     display: flex;
     flex-direction: column;
     height: auto;
     background-color: #003249;
-    padding-top: 60px;
+    padding-top: 20px;
     padding-left: 10px;
     padding-right: 15px;
     width: 100%;
     overflow-x: hidden;
   }
   
-  .home-content {
+  .contact-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +43,7 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 600;
-  }
-  
-  .text-section p {
-    font-size: 1.2rem;
+    text-align: center;
   }
   
   /* Form Section (Right side) */
@@ -87,7 +83,8 @@
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select  {
   width: 100%;
   padding: 0.8rem;
   font-size: 0.9rem; 
@@ -117,92 +114,41 @@ button:hover {
   background-color: #0056b3;
 }
 
- /* Services Section */
-.services-section {
-    font-family: OpenSans;
+.contact-details {
     text-align: center;
-    padding: 4rem; 
+    padding: 40px 20px;
     background-color: #f4f4f4;
+    color: #333;
   }
-
-  .services-section h2{
+  
+  .contact-details h2 {
     font-size: 2rem;
-    margin-bottom: 50px;
-    font-weight: 600;
-  }
-  
-  /* Service Card Grid */
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    gap: 3rem; 
-    justify-content: center; 
-  }
-  
-  /* Individual Service Card Styling */
-  .service-card {
-    width: 250px; 
-    height: 250px; 
-    background-color: white;
-    padding: 1.5rem;
-    box-shadow:1px 1px 12px 4px #e1dede;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .service-card img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
-  }
-  
-  .service-card h3 {
-    font-size: 1.5rem;
-    color: #003249;
-  }
-  
-
-/* Technoforte Description Section */
-.description {
-    padding: 4rem;
-    background-color: #ffffff;
-    text-align: center;
-    font-family: OpenSans;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-left: 15px;
-    margin-right: 15px;
-    
-  }
-  
-  .description h2 {
-    font-size: 2rem;
+    margin-bottom: 20px;
     color: #000000;
-    margin-bottom: 60px;
-    font-weight: 600;
+  }
+
+    h2.place{
+    color: #696666;
   }
   
-  .description span{
+  .contact-details p {
     font-size: 1.2rem;
-    color: #3c3f41;
-    font-weight: bold;
-    margin-top: 2rem;
-    text-align: justify;
+    margin: 10px 0;
   }
   
-  .description p {
-    font-size: 1.1rem;
-    color: #1d1d1d;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    text-align: justify;
+  .contact-details a {
+    color: #4d4f50;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
+  
+  .contact-details a:hover {
+    color: #0a4f6e;
+  }
+  
   @media (max-width: 576px) {
   
-    .home-content {
+    .contact-content {
       flex-direction: column;
       padding: 2rem 0; 
       gap: 1rem; 
@@ -231,40 +177,4 @@ button:hover {
       padding: 1.5rem; 
       width: 100%; 
     }
-  
-    .services-section {
-      padding: 2rem; 
-    }
-  
-    .services-section h2 {
-      font-size: 1.8rem; 
-      margin-bottom: 40px; 
-    }
-  
-    .service-cards {
-      grid-template-columns: 1fr; 
-      gap: 1.5rem; 
-    }
-  
-    .service-card {
-      width: 100%; 
-      height: auto; 
-      padding: 1rem; 
-    }
-  
-    .description {
-      padding: 2rem 0; 
-    }
-  
-    .description h2 {
-      font-size: 1.8rem; 
-      margin-bottom: 40px; 
-    }
-  
-    .description p, 
-    .description span {
-      font-size: 1.1rem; 
-      text-align: justify; 
-    }
   }
-  

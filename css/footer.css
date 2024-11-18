@@ -1,7 +1,9 @@
-
+body{
+  font-family: 'Arial', sans-serif;
+}
   .footer {
       font-family: OpenSans;
-      background-color: #007EA7;
+      background-color: #0a4f6e;
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -74,7 +76,7 @@
     
     .footer form input {
       padding: 10px;
-      width: 90%;
+      width: 100%;
       margin-bottom: 10px;
       border: none;
       font-size: 1rem;
@@ -83,7 +85,7 @@
     
     .footer form button {
       padding: 10px;
-      width: 90%;
+      width: 100%;
       background-color: rgb(22, 22, 170);
       color: white;
       font-size: 1rem;
@@ -138,71 +140,56 @@
   
     @media (max-width: 576px) {
       .footer {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 2rem; 
-        padding-left: 1rem; 
-        padding-right: 1rem; 
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align the content */
+        padding: 1rem;
       }
     
       .footer-column {
-        width: 100%; 
-        margin-bottom: 1.5rem; 
-        text-align: center; 
+        margin: 20px 0; /* Add spacing between stacked columns */
+        width: 100%; /* Make columns take full width */
+        text-align: left; /* Center text in each column */
       }
     
       .footer-logo img {
-        height: 80px;
-        width: auto; 
-        display: block; 
-        margin: 0 auto; 
-      }
-
-      .footer-address p{
-        margin-top: 10px;
+        height: 60px; /* Scale down the logo */
+        margin-bottom: 15px; /* Add space below the logo */
       }
     
+      .footer-address p,
       .footer-social a,
       .footer-column ul li {
-        font-size: 1rem; 
-        margin: 3px 0; 
+        font-size: 1rem; /* Adjust font size for smaller screens */
       }
     
       .footer-column h4 {
-        font-size: 1.2rem; 
-        margin-bottom: 8px;
+        font-size: 1.2rem; /* Scale down headings slightly */
       }
     
-      .footer form input {
-        padding: 10px;
-        font-size: 1rem; 
-      }
-    
+      .footer form input,
       .footer form button {
-        padding: 10px; 
-        font-size: 1rem; 
+        width: 100%; /* Ensure form elements take full width */
+        font-size: 0.9rem; /* Adjust font size */
       }
     
       .footer-social-media {
-        justify-content: center; 
+        display: flex;
+        justify-content: flex-start; /* Center social media icons */
+        flex-wrap: wrap; /* Wrap icons if necessary */
+        gap: 10px; /* Add spacing between icons */
+        margin-top: 15px;
       }
     
       .social-icon {
-        width: 30px; 
-        height: 30px;
-        margin-right: 10px; 
+        width: 30px;
+        height: 30px; /* Scale down icons */
       }
     
       .footer-copyright {
-        flex-direction: column; 
-        padding-left: 1rem; 
-        padding-right: 1rem; 
-        text-align: center; 
-        font-size: 1rem; 
-      }
-    
-      .footer-copyright p {
-        margin: 0.5rem 0; 
+        font-size: 1rem; /* Adjust font size */
+        padding: 0.5rem; /* Reduce padding */
+        text-align: left; /* Center-align copyright text */
+        justify-content: center; /* Center the text */
       }
     }
     
