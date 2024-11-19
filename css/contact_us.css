@@ -146,6 +146,30 @@ button:hover {
     color: #0a4f6e;
   }
   
+  .toast {
+    position: fixed;
+    top: 60px;  /* Position at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .toast.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .toast.success {
+    background-color: #28a745;
+  }
+  .toast.error {
+    background-color: #dc3545;
+  }
   @media (max-width: 576px) {
   
     .contact-content {

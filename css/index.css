@@ -16,9 +16,9 @@ body {
 }
 
 .color-section .color-block {
-  width: 100vw; 
-  height: 100%; 
-  flex-shrink: 0; 
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,13 +26,19 @@ body {
   padding: 20px;
   position: absolute;
   top: 0;
-  left: 100%; 
+  left: 100%;
   opacity: 0;
   transition: transform 0.6s ease, opacity 0.6s ease;
+
+  /* Background image settings */
+  background-size: cover; /* Ensures image covers the entire block */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image tiling */
+
 }
 
 .color-block.active {
-  left: 0; 
+  left: 0;
   opacity: 1;
 }
 
@@ -53,7 +59,7 @@ body {
 
 
 .color-text, .content {
-  max-width: 60%; 
+  max-width: 50%; 
   padding-left: 10%;
 }
 
@@ -69,11 +75,19 @@ body {
   transform: translateY(-50%);
   font-size: 1rem;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   border: none;
   padding: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
+
+.color-section .left-arrow:hover,
+.color-section .right-arrow:hover {
+  background-color: rgba(148, 143, 143, 0.3);
+  border-radius: 50%; 
+}
+
 
 .color-section .left-arrow {
   left: 10px;

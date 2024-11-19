@@ -21,7 +21,7 @@
       </div>
       <div class="form-section">
         <h2>Get a <span>Call Back</span></h2>
-        <form>
+        <form method="post" action="" id="contact-form">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Name*" required>
           </div>
@@ -63,15 +63,14 @@
     <h2>Contact Us</h2>
     <h2 class="place">INDIA</h2>
     <p><strong>Special Software India Pvt. Ltd.</strong></p>
-    <p><strong>Address:</strong> 123 Business Street, Cityname, Country</p>
-    <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:info@company.com">info@company.com</a></p>
+    <p><strong>Address:</strong> HIG B 26, Madhav Baug Colony, Mango, Jamshedpur Jharkhand -832110</p>
+    <p><strong><i class="fa-solid fa-envelope"></i></strong> <a href="mailto:info@company.com">rajat@specialsoftware.net,
+      agrawal_rajat@yahoo.com</a></p>
     <p><strong><i class="fa-solid fa-phone"></i></strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
     <p><strong>Working Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>
   </section>
   
-  
-    <div id="footer-container"></div>
-
+  <div id="footer-container"></div>
 
   <script src="../js/navbar.js"></script>
   <script>
@@ -90,6 +89,24 @@
             document.getElementById('footer-container').innerHTML = data;
         })
         .catch(err => console.log("Failed to load Footer:", err));
-</script>
+       
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwZEIQQvKENtSyIATQiZdbogsuKY-nRWMkErtkL-fx5_sp5G-SBGIK0HVPgYkw2IvzKOQ/exec'
+        
+        const form = document.forms['contact-form']
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thank you! your form is submitted successfully." ))
+          .then(() => { window.location.reload(); })
+          .catch(error => console.error('Error!', error.message))
+        })
+        
+        
+        
+  </script>
+
 </body>
 </html>
