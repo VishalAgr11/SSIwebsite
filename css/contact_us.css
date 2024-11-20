@@ -16,7 +16,7 @@
     height: auto;
     background: url('../assets/contact.webp') no-repeat center center / cover;
     position: relative;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 15px;
     width: 100%;
@@ -77,7 +77,7 @@
 }
 
 .form-group {
-  margin-bottom: 1rem; 
+  margin-bottom: 0.5rem; 
 }
 
 .form-group label {
