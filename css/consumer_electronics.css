@@ -8,18 +8,29 @@
     width: 100%;
     font-family: 'Arial', sans-serif;
   }
-  
   .consumer-container {
     font-family: OpenSans;
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: #003249;
-    padding-top: 20px;
+    background: url('../assets/consumer.webp') no-repeat center center / cover;
+    position: relative;
+    padding-top: 60px;
     padding-left: 10px;
     padding-right: 15px;
     width: 100%;
     overflow-x: hidden;
+  }
+  
+  .consumer-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 79, 110, 0.8); /* Adjust the opacity and color for the overlay */
+    z-index: 1;
   }
   
   .consumer-content {
@@ -29,7 +40,9 @@
     padding: 4rem;
     color: white;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
   }
   
   /* Text Section (Left side) */
