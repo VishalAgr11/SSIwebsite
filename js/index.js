@@ -80,4 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveCard(currentIndex);
     startAutoScroll(); // Start auto-scrolling on page load
   });
+
   

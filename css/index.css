@@ -28,19 +28,20 @@ body {
   top: 0;
   left: 100%;
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-
-  /* Background image settings */
-  background-size: cover; /* Ensures image covers the entire block */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents image tiling */
-
+  transform: scale(1); /* Initial scale */
+  transition: transform 0.6s ease, opacity 0.6s ease, left 0.6s ease;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .color-block.active {
+  animation: zoomIn 0.6s ease;
   left: 0;
   opacity: 1;
+  transform: scale(1.05); /* Slight zoom-in effect */
 }
+
 
 .color-text {
   color: white; 
@@ -201,15 +202,15 @@ body {
 .industries-heading {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #333; /* Heading color */
+  color: #333; 
 }
 
 .industries-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0 auto;
-  max-width: 1200px; /* Maximum width for the grid */
+  max-width: 1200px; 
 }
 
 .industry-card {
@@ -217,16 +218,17 @@ body {
   /* border: 1px solid #ddd; */
   padding: 20px;
   text-align: center;
-  height: 300px;
+  height: 350px;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 
 .industry-logo {
-  width: 100px; /* Adjust logo size */
-  height: 100px;
-  margin-bottom: 50px;
+  width: 70px; /* Adjust logo size */
+  height: 70px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .industry-text {
@@ -234,6 +236,12 @@ body {
   color: #333;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.headline{
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .info{
@@ -273,7 +281,7 @@ body {
   max-width: 600px;
   text-align: left;
   opacity: 0;
-  height: 100px;
+  height: 120px;
   transform: scale(0.95);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
@@ -294,7 +302,7 @@ body {
 }
 
 .testimonial-author {
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   font-weight: bold;
   color: #333;
 }

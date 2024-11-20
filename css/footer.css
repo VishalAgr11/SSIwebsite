@@ -10,7 +10,7 @@ body{
       font-family: OpenSans;
       background-color: #0a4f6e;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       padding: 20px;
       color: white;
       padding: 2rem;
@@ -20,11 +20,18 @@ body{
     }
     
     .footer-column {
-      width: 20%;
+      width: max-content;
+      text-align: left;
+      margin: 15px;
+    }
+
+    .footer-column-address{
+      width: 25%;
       text-align: left;
       margin: 20px;
     }
       
+
     .footer-logo img {
       height: 80px;
       width: auto; 
@@ -61,6 +68,7 @@ body{
     .footer-column ul {
       list-style: none;
       padding: 0;
+      margin: 0;
       
     }
     
@@ -151,7 +159,7 @@ body{
       }
     
       .footer-column {
-        margin: 20px 0; /* Add spacing between stacked columns */
+        margin: 15px 0; /* Add spacing between stacked columns */
         width: 100%; /* Make columns take full width */
         text-align: left; /* Center text in each column */
       }

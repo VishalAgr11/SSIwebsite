@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
+  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Center text styling */
+    .center-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh; /* Adjust to leave space for the Navbar and Footer */
+      font-size: 24px;
+      color: #555; /* Text color */
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <title>WebServices</title>
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+<div class="center-message">We are Sorry, No Data found !!</div>
+
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Navbar
+  fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Navbar:", err));
+
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+</script>
+</body>
+</html>
