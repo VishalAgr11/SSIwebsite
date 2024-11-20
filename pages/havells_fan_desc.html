@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/havells.css"> 
+  <link rel="stylesheet" href="../css/navbar.css"> 
+  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>WebServices</title>
+  
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+<!-- Product Section -->
+<section class="product-section">
+    <!-- Thumbnails -->
+    <div class="carousel-thumbnails">
+      <img src="../assets/prod5/fan.jpeg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
+    </div>
+  
+    <!-- Main Image -->
+    <div class="carousel-main-image">
+      <img id="main-image" src="../assets/prod5/fan.jpeg" alt="Optical Mouse">
+    </div>
+  
+    <!-- Product Description -->
+<div class="product-description">
+    <h2>Havells 175 mm I-Cool Table Fan, Black Grey</h2>
+    <hr>
+    <div class="details">Price: ₹2,499.00</div>
+    <div class="brand-details">
+      <table>
+        <tr>
+          <th>Model</th>
+          <td>I-Cool</td>
+        </tr>
+        <tr>
+            <th>Fan Type</th>
+            <td>Table Fan</td>
+          </tr>
+          <tr>
+            <th>Brand</th>
+            <td>Havells</td>
+          </tr>
+          <tr>
+            <th>Material</th>
+            <td>Plastic</td>
+          </tr>
+          <tr>
+            <th>Colour</th>
+            <td>Black Grey</td>
+          </tr>
+          <tr>
+            <th>Warranty:</th>
+            <td>2 Years manufacturer warranty</td>
+          </tr>
+      </table>
+    </div>
+    <hr>
+    <div class="brand-details">
+      <h3>Technical Specifications: </h3><br>
+      <table>
+        <tr>
+          <th>No. of Blades</th>
+          <td>3</td>
+        </tr>
+        <tr>
+            <th>Motor Speed</th>
+            <td>1350 RPM</td>
+          </tr>
+          <tr>
+            <th>BEE STAR Rating</th>
+            <td>Not Rated</td>
+          </tr>
+          <tr>
+            <th>Sweep Blade Span </th>
+            <td>175 mm</td>
+          </tr>
+          <tr>
+            <th>Air Delivery</th>
+            <td>9 m^3/min</td>
+          </tr>
+          <tr>
+            <th>Power Consumption:</th>
+            <td>32 Watt</td>
+          </tr>
+          <tr>
+            <th>Additional Features</th>
+            <td>Universal Fan Which Can be Mounted on Table, Wall, Ceiling</td>
+          </tr>
+      </table>
+    </div><hr>
+    <!-- About This Item Section -->
+    <div class="about-this-item">
+      <h3>Description: </h3>
+     <p class="head">Smooth and Efficient Air Delivery in all Directions</p>
+     <p class="content">We resort to fans when it comes to seeking relief from the scorching summer heat. They make our rooms pleasant while also adding to the aesthetics of our houses. This personal fans from Havells is ideal for use in all kinds of places including homes and offices. This fan is the best solution for all your air circulation needs in a limited space. Small in size and easily portable, this personal fan can be moved from one place to another with ease and safety.</p><br>
+     <p class="head">Built-In Handle for Easy Portability</p>
+     <p class="content">This personal fan is truly portable thanks to the handle on top. The handle is built robustly which allows you to carry the fan around safely without injuring yourself or damaging the fan itself.</p><br>
+     <p class="head">2 Step Speed Control</p>
+     <p class="content">The personal fan features a two-step speed control option. This feature ensures that the fan is perfect for any of your circulation needs. The speed is controlled through a knob which makes it very easy to operate.</p><br>
+     <p class="head">Efficient Air Delivery</p>
+     <p class="content">The essential job of any kind of fan is to deliver air. This personal fan by Havells excels at that job. The sweep size of the fan is 175 mm which makes the fan deliver air at the rate of 40 cmm in a very smooth manner.</p><br>
+     <p class="head">Unique Propeller with Deep Pitched Blades</p>
+     <p class="content">The personal features a unique propeller design, and deep pitched blades. This enables the personal fan to power air through air guide. This feature allows you to direction air in a very convenient and accurate way.</p><br>
+     <p class="head">Low Noise Level</p>
+     <p class="content">The personal fan functions with a very low level of noise thanks to its utilitarian design and the motor. The least amount of noise created by the fan makes it the ideal personal fan for the summer days.</p><br>
+     <p class="head">High Speed Fan</p>
+     <p class="content">This personal fan is a high-speed fan. The blades rotate at the speed of 2200 RPM which makes the fan very effective at delivering a smooth flow of air in a room. The robust motor of the fan ensures that the fan can work continuously for hours while maintaining the high speed.</p><br>
+
+    </div>
+   
+   
+  </div>
+   
+  </section>
+
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Navbar
+  fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Navbar:", err));
+
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+
+  // Carousel Thumbnail Functionality
+  function changeImage(thumbnail) {
+    // Change main image source
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = thumbnail.src;
+
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.carousel-thumbnails img');
+    thumbnails.forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

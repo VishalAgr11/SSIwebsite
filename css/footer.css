@@ -42,7 +42,7 @@ body{
     .footer-social a,
     .footer-column ul li {
       margin: 5px 0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-align: left;
     }
   
@@ -150,52 +150,51 @@ body{
     .footer-copyright p {
       margin: 0;
     }
-  
-   /* General media query for screens smaller than 576px */
+ 
 @media screen and (max-width: 576px) {
   .footer {
-    flex-direction: column; /* Stack the columns vertically */
-    padding: 20px; /* Reduce padding */
+    flex-direction: column; 
+    padding: 20px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   .footer-column,
   .footer-column-address {
-    width: 100%; /* Ensure columns take full width */
-    margin: 10px 0; /* Add spacing between stacked columns */
-    text-align: left; /* Center align text */
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
   }
 
   .footer-logo img {
-    margin: 0 auto 10px auto; /* Center the logo */
+    margin: 0 auto 10px auto; 
   }
 
   .footer-address p,
   .footer-column ul li {
-    font-size: 1rem; /* Adjust font size for better readability */
+    font-size: 1rem; 
   }
 
   .footer-social-media a {
-    margin: 0 5px; /* Adjust spacing between social icons */
+    margin: 0 5px;
   }
 
   .social-icon {
-    width: 30px; /* Reduce icon size */
+    width: 30px; 
     height: 30px;
   }
 
   .footer-copyright {
-    padding: 0.5rem; /* Reduce padding */
-    font-size: 1rem; /* Adjust font size */
-    justify-content: center; /* Center the text */
+    padding: 0.5rem; 
+    font-size: 1rem; 
+    justify-content: center; 
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   .footer form input,
   .footer form button {
-    width: 100%; /* Ensure full width */
-    font-size: 0.9rem; /* Adjust font size */
+    width: 100%; 
+    font-size: 0.9rem; 
   }
 }

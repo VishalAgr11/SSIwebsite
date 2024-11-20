@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/cooling_pad.css"> 
+  <link rel="stylesheet" href="../css/navbar.css"> 
+  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>WebServices</title>
+  
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+<!-- Product Section -->
+<section class="product-section">
+    <!-- Thumbnails -->
+    <div class="carousel-thumbnails">
+      <img src="../assets/prod3/cooling1.webp" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling2.webp" alt="Thumbnail 2" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling3.webp" alt="Thumbnail 3" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling4.webp" alt="Thumbnail 4" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling5.webp" alt="Thumbnail 5" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling6.webp" alt="Thumbnail 4" onclick="changeImage(this)">
+      <img src="../assets/prod3/cooling7.webp" alt="Thumbnail 5" onclick="changeImage(this)">
+    </div>
+  
+    <!-- Main Image -->
+    <div class="carousel-main-image">
+      <img id="main-image" src="../assets/prod3/cooling1.webp" alt="Optical Mouse">
+    </div>
+  
+    <!-- Product Description -->
+<div class="product-description">
+    <h2>Chillmate - Cooling Pad, 2 USB Port, Dual Fan, upto 15.6" Laptop</h2>
+    <hr>
+    <div class="details">Price: ₹649.00</div>
+    <div class="brand-details">
+      <table>
+        <tr>
+          <th>SKU:</th>
+          <td>LOSPCM6130</td>
+        </tr>
+        <tr>
+          <th>Model Number:</th>
+          <td>DCX-A101</td>
+        </tr>
+        <tr>
+          <th>Warranty :</th>
+          <td>1 Year</td>
+        </tr>
+        <tr>
+            <th>Imported & Marketed By</th>
+            <td>RX INFOTECH P LTD</td>
+          </tr>
+      </table>
+    </div>
+    <hr>
+    
+    <!-- About This Item Section -->
+    <div class="about-this-item">
+      <h3>Features: </h3>
+      <ul>
+        <li>Ergonomic laptop cooler and stand</li>
+        <li>Reduces working fatigue for long hours of laptop working</li>
+        <li>It has 5 inclination angle options to suit your needs</li>
+        <li>Suitable for up to 15.6-inch laptops, dual USB 2.0 ports</li>
+    </ul>
+    </div>
+    <div class="about-this-item">
+        <h3>Technical Specifications: </h3>
+        <ul>
+          <li>Double 12.5 cm fans</li>
+          <li>2 USB ports for multiple device usage</li>
+          <li>Elegant rubber finish</li>
+          <li>Unique non-slip design ensures better laptop grip.</li>
+          <li>Angled modulated design for comfortable operation.</li>
+      </ul>
+      </div>
+  </div>
+   
+  </section>
+
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Navbar
+  fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Navbar:", err));
+
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+
+  // Carousel Thumbnail Functionality
+  function changeImage(thumbnail) {
+    // Change main image source
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = thumbnail.src;
+
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.carousel-thumbnails img');
+    thumbnails.forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

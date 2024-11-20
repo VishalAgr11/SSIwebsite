@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Optical_mouse.css"> 
+  <link rel="stylesheet" href="../css/navbar.css"> 
+  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>WebServices</title>
+  
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+<!-- Product Section -->
+<section class="product-section">
+    <!-- Thumbnails -->
+    <div class="carousel-thumbnails">
+      <img src="../assets/prod1/mouse1.jpg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
+      <img src="../assets/prod1/mouse2.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
+      <img src="../assets/prod1/mouse3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+      <img src="../assets/prod1/mouse4.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+      <img src="../assets/prod1/mouse5.jpg" alt="Thumbnail 5" onclick="changeImage(this)">
+    </div>
+  
+    <!-- Main Image -->
+    <div class="carousel-main-image">
+      <img id="main-image" src="../assets/prod1/mouse1.jpg" alt="Optical Mouse">
+    </div>
+  
+    <!-- Product Description -->
+<div class="product-description">
+    <h2>Inca Optical Mouse USB Football Shape Wired Portable Mouse for PC Computer Laptop</h2>
+    <hr>
+    <div class="details">Price: ₹289.00</div>
+    <div class="brand-details">
+      <table>
+        <tr>
+          <th>Brand</th>
+          <td>Inca</td>
+        </tr>
+        <tr>
+          <th>Connectivity Technology</th>
+          <td>USB</td>
+        </tr>
+        <tr>
+          <th>Special Feature</th>
+          <td>Lightweight</td>
+        </tr>
+        <tr>
+          <th>Movement Detection Technology</th>
+          <td>Optical</td>
+        </tr>
+        <tr>
+          <th>Number of Buttons</th>
+          <td>3</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    
+    <!-- About This Item Section -->
+    <div class="about-this-item">
+      <h3>About This Item</h3>
+      <ul>
+        <li>Football-Inspired Design: This optical mouse is designed in the shape of a football, complete with a striking football dome and bright LED light, making it visually appealing for football enthusiasts.</li>
+        <li>Compatibility: This mouse is compatible with both Windows and Mac operating systems, offering flexibility for various computing environments.</li>
+        <li>USB A Type Cable: The USB A type cable ensures a stable and reliable connection to your computer, preventing interruptions during use.</li>
+        <li>Lightweight and Portable: Its lightweight design makes it easy to carry, making it a convenient accessory for laptops and on-the-go computing.</li>
+        <li>Perfect for Kids: This mouse is an excellent choice for kids or anyone who loves football, combining functionality with a fun and unique design.</li>
+        <li>Plug-and-Play Setup: The set offers a hassle-free plug-and-play setup, requiring no additional software installation. Simply connect the USB and you're ready to go.</li>
+    </ul>
+    </div>
+  </div>
+   
+  </section>
+
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Navbar
+  fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Navbar:", err));
+
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+
+  // Carousel Thumbnail Functionality
+  function changeImage(thumbnail) {
+    // Change main image source
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = thumbnail.src;
+
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.carousel-thumbnails img');
+    thumbnails.forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

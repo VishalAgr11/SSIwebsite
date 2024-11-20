@@ -1,0 +1,109 @@
+.product-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .carousel-thumbnails {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      gap: 10px;
+    }
+    .carousel-thumbnails img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      padding: 2px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .carousel-thumbnails img.active {
+      border-color: #007BFF;
+    }
+
+    /* Main Image */
+    .carousel-main-image {
+      margin-right: 20px;
+    }
+    .carousel-main-image img {
+      width: 450px;
+      height: 400px;
+      object-fit: fill;
+    }
+
+    /* Product Description */
+    .product-description {
+     width: 800px;
+      padding-left: 40px;
+      margin-top: 20px;
+    
+    }
+    .product-description h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    hr{
+        margin-bottom: 10px;
+    }
+    .product-description .details {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .product-description p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+
+    .brand-details {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .brand-details table {
+        width: 60%;
+        border-collapse: collapse;
+      }
+      .brand-details th, .brand-details td {
+        text-align: left;
+        padding: 5px;
+        padding-left: 0;
+        
+      }
+      .brand-details th {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .about-this-item {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+      }
+      
+      .about-this-item h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .about-this-item ul {
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+      
+      .about-this-item ul li {
+        margin-bottom: 8px;
+      }
+      

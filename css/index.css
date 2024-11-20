@@ -210,7 +210,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0 auto;
-  max-width: 1200px; 
+  max-width: 1300px; 
 }
 
 .industry-card {
@@ -242,6 +242,7 @@ body {
   font-size: 1.1rem;
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .info{
@@ -294,17 +295,17 @@ body {
 
 
 .testimonial-text {
-  font-size: 1rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 10px;
-  line-height: 1.6;
+  font-weight: bold;
+  color: #333;
 }
 
 .testimonial-author {
-  margin-top: 0.2em;
-  font-weight: bold;
-  color: #333;
+ 
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
 }
 
 .testimonial-dots {
