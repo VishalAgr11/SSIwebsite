@@ -151,58 +151,51 @@ body{
       margin: 0;
     }
   
-    @media (max-width: 576px) {
-      .footer {
-        flex-direction: column; /* Stack columns vertically */
-        align-items: center; /* Center align the content */
-        padding: 1rem;
-      }
-    
-      .footer-column {
-        margin: 15px 0; /* Add spacing between stacked columns */
-        width: 100%; /* Make columns take full width */
-        text-align: left; /* Center text in each column */
-      }
-    
-      .footer-logo img {
-        height: 60px; /* Scale down the logo */
-        margin-bottom: 15px; /* Add space below the logo */
-      }
-    
-      .footer-address p,
-      .footer-social a,
-      .footer-column ul li {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-      }
-    
-      .footer-column h4 {
-        font-size: 1.2rem; /* Scale down headings slightly */
-      }
-    
-      .footer form input,
-      .footer form button {
-        width: 100%; /* Ensure form elements take full width */
-        font-size: 0.9rem; /* Adjust font size */
-      }
-    
-      .footer-social-media {
-        display: flex;
-        justify-content: flex-start; /* Center social media icons */
-        flex-wrap: wrap; /* Wrap icons if necessary */
-        gap: 10px; /* Add spacing between icons */
-        margin-top: 15px;
-      }
-    
-      .social-icon {
-        width: 30px;
-        height: 30px; /* Scale down icons */
-      }
-    
-      .footer-copyright {
-        font-size: 1rem; /* Adjust font size */
-        padding: 0.5rem; /* Reduce padding */
-        text-align: left; /* Center-align copyright text */
-        justify-content: center; /* Center the text */
-      }
-    }
-    
+   /* General media query for screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column; /* Stack the columns vertically */
+    padding: 20px; /* Reduce padding */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .footer-column,
+  .footer-column-address {
+    width: 100%; /* Ensure columns take full width */
+    margin: 10px 0; /* Add spacing between stacked columns */
+    text-align: left; /* Center align text */
+  }
+
+  .footer-logo img {
+    margin: 0 auto 10px auto; /* Center the logo */
+  }
+
+  .footer-address p,
+  .footer-column ul li {
+    font-size: 1rem; /* Adjust font size for better readability */
+  }
+
+  .footer-social-media a {
+    margin: 0 5px; /* Adjust spacing between social icons */
+  }
+
+  .social-icon {
+    width: 30px; /* Reduce icon size */
+    height: 30px;
+  }
+
+  .footer-copyright {
+    padding: 0.5rem; /* Reduce padding */
+    font-size: 1rem; /* Adjust font size */
+    justify-content: center; /* Center the text */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .footer form input,
+  .footer form button {
+    width: 100%; /* Ensure full width */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}

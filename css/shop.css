@@ -9,12 +9,12 @@
   }
   
   .card-section {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
-    margin-bottom: 20px;
+    gap: 80px;
+    margin-bottom: 40px;
     background-color: #f3f0f0;
   }
   
@@ -22,41 +22,36 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 220px;
+    width: 250px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 25px;
-    height: 300px;
+    padding: 0;
+    height: 360px;
     transition: transform 0.3s;
     position: relative;
   }
   
-  /* .card:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  } */
-
   .card:hover {
     transform: scale(1.10);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #0a4f6e; /* Change background color to blue */
-    color: #fff; /* Change text color to white */
+    background-color: #0a4f6e; 
+    color: #fff;
 }
 
 .card:hover h3,
 .card:hover p,
 .card:hover .price {
-    color: #fff; /* Ensure all text becomes white */
+    color: #fff;
 }
 
 .card button {
-    background-color: #0a4f6e; /* Default button background */
-    color: #fff; /* Default button text color */
+    background-color: #0a4f6e;
+    color: #fff;
 }
 
 .card:hover button {
-    background-color: #fff; /* Change button background to white on hover */
-    color: #0a4f6e; /* Change button text color to blue */
+    background-color: #fff;
+    color: #0a4f6e;
 }
 
   
@@ -103,8 +98,8 @@
   }
   
   .card img {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
   }
