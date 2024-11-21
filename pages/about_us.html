@@ -10,8 +10,8 @@
   <title>SSI</title>
 </head>
 <body>
-<!-- NAVBAR -->
-<div id="navbar-container"></div>
+
+  <div id="navbar-container"></div>
 
 <!-- ABOUT US -->
 <section class="about-section" id="about-section">
@@ -90,7 +90,6 @@
 <!-- FOOTER -->
 <div id="footer-container"></div>
 
-<script src="../js/navbar.js"></script>
 <script>
   // Load Navbar
   fetch('../components/navbar.html')
@@ -107,7 +106,9 @@
           document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
+      
 </script>
     
+<script src="../js/navbar.js"></script>
 </body>
 </html>

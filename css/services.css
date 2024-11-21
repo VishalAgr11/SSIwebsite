@@ -55,3 +55,38 @@
     line-height: 1.5;
   }
   
+  /* Media Query for screens smaller than 576px */
+@media (max-width: 576px) {
+ 
+  .stacked-cards {
+    padding: 15px; 
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .card-image {
+    width: 100%;
+    height: 230px; 
+  }
+
+  .card-content {
+    padding-left: 0;
+    padding-top: 10px; 
+    text-align: center;
+  }
+
+  .card-content h3 {
+    font-size: 18px; 
+  }
+
+  .card-content p {
+    font-size: 14px; 
+  }
+
+  h2 {
+    font-size: 1.5rem; 
+  }
+}
