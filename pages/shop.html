@@ -34,10 +34,12 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
+    <a href="../pages/Optical_Mouse_desc.html">
     <h3>Inca Optical Mouse USB Football Shape Wired Portable Mouse for PC Computer Laptop</h3>
     <p class="price">₹289.00</p>
-    <a href="../pages/Optical_Mouse_desc.html">
-    <button>Click to Book</button></a>
+  </a>
+  <button onclick="showForm()">Click to Book</button>
+
 </div>
     <div class="card">
       <div class="image-carousel">
@@ -54,10 +56,10 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
+    <a href="../pages/wireless_mouse_desc.html">
       <h3>Safari III Wireless Mouse Black (LWM-003)</h3>
-      <p class="price">₹269.00</p>
-      <a href="../pages/wireless_mouse_desc.html">
-        <button>Click to Book</button></a>
+      <p class="price">₹269.00</p></a>
+      <button onclick="showForm()">Click to Book</button>
     </div>
     <div class="card">
       <div class="image-carousel">
@@ -76,10 +78,10 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
+    <a href="../pages/cooling_pad.html">
       <h3>Chillmate - Cooling Pad, 2 USB Port, Dual Fan, upto 15.6" Laptop</h3>
-      <p class="price">₹649.00</p>
-      <a href="../pages/cooling_pad.html">
-        <button>Click to Book</button></a>
+      <p class="price">₹649.00</p></a>
+      <button onclick="showForm()">Click to Book</button>
     </div>
     <div class="card">
       <div class="image-carousel">
@@ -96,20 +98,20 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
+    <a href="../pages/Heart_Shaped_Mouse_desc.html">
       <h3>Heart Shaped Optical Mouse(Wired)</h3>
-      <p class="price">₹289.00</p>
-      <a href="../pages/Heart_Shaped_Mouse_desc.html">
-        <button>Click to Book</button></a>
+      <p class="price">₹289.00</p></a>
+      <button onclick="showForm()">Click to Book</button>
     </div>
     <!-- Row 2 -->
     <div class="card">
       <img src="../assets/prod5/fan.jpeg" alt="Product 5">
+      <a href="../pages/havells_fan_desc.html"></a>
       <h3>Havells 175 mm I-Cool Table Fan, Black Grey</h3>
-      <p class="price">₹2,499.00</p>
-      <a href="../pages/havells_fan_desc.html">
-        <button>Click to Book</button></a>
+      <p class="price">₹2,499.00</p></a>
+      <button onclick="showForm()">Click to Book</button>
     </div>
-    <div class="card">
+    <!-- <div class="card">
       <img src="https://via.placeholder.com/100" alt="Product 6">
       <h3>Product 6</h3>
       <p>Lorem ipsum dolor sit amet, consectetur.</p>
@@ -129,8 +131,27 @@
       <p>Lorem ipsum dolor sit amet, consectetur.</p>
       <p class="price">$120</p>
       <button>Click to Book</button>
-    </div>
+    </div> -->
   </section>
+  <div class="modal" id="orderModal">
+    <div class="modal-content">
+        <span class="close-button" onclick="hideForm()">&times;</span>
+        <form>
+          <h2>Book Your <span>Order</span></h2>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name*" required>
+            <label for="phone"></label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone*" required>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email*" required>
+            <label for="quantity"></label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Order Qunatity*" required>
+            <label for="address"></label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address*" required></textarea>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</div>
 
     <div id="footer-container"></div>
 
@@ -153,6 +174,25 @@
             document.getElementById('footer-container').innerHTML = data;
         })
         .catch(err => console.log("Failed to load Footer:", err));
+
+        function showForm() {
+          // Show the modal
+          const modal = document.getElementById("orderModal");
+          modal.style.display = "flex";
+      
+          // Add blur to the background
+          document.body.classList.add("modal-active");
+      }
+      
+      function hideForm() {
+          // Hide the modal
+          const modal = document.getElementById("orderModal");
+          modal.style.display = "none";
+      
+          // Remove blur from the background
+          document.body.classList.remove("modal-active");
+      }
+      
 </script>
 </body>
 </html>
