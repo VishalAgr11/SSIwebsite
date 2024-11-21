@@ -217,3 +217,91 @@ button:hover {
 span{
   color:#0a4f6e;
 }
+
+/* Media Query for screens smaller than 576px */
+@media (max-width: 576px) {
+  .product-section {
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .carousel-thumbnails {
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .carousel-thumbnails img {
+    width: 45px;
+    height: 45px;
+    padding-top: 35px;
+  }
+
+  .carousel-main-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-description {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 15px;
+  }
+
+  .product-description h2 {
+    font-size: 20px;
+  }
+
+  .product-description .details {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .product-description button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .brand-details table {
+    width: 100%;
+  }
+
+  .brand-details th, .brand-details td {
+    padding: 8px;
+  }
+
+  .about-this-item h3 {
+    font-size: 18px;
+  }
+
+  .about-this-item ul li {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content button {
+    font-size: 0.85rem;
+  }
+
+  .modal-content button {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Adjust Close Button in Modal */
+  .modal-content .close-button {
+    font-size: 24px;
+  }
+
+  .about-this-item ul {
+    padding-left: 10px;
+  }
+}
