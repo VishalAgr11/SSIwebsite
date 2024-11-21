@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+ 
 
   // Dropdown Menu Toggle
   const dropdowns = document.querySelectorAll('.dropdown');

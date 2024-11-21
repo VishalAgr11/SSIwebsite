@@ -11,7 +11,33 @@
 </head>
 <body>
 
-<div id="navbar-container"></div>
+
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="../index.html">
+        <img src="../assets/SSI_logo1.png" alt="Company Logo">
+      </a>
+    </div>
+    <button class="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="navbar-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about_us.html">About Us</a></li>
+      <li>
+        <a href="/pages/services.html">Services</a>
+      </li>
+      <li><a href="/pages/shop.html">Shop</a></li>
+      <li class="dropdown">
+        <a href="#company">Company <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-content">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#careers">Careers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
   <!-- ContactUs Content -->
   <div class="peripherals-container">
@@ -50,14 +76,6 @@
 
   <script src="../js/navbar.js"></script>
   <script>
-    // Load Navbar
-    fetch('../components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
-        })
-        .catch(err => console.log("Failed to load Navbar:", err));
-
     // Load Footer
     fetch('../components/footer.html')
         .then(response => response.text())

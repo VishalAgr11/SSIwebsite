@@ -158,13 +158,16 @@ a{
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+    display: block;
   }
 
   .navbar-links li {
     margin: 10px 0;
     text-align: center;
   }
-
+  .navbar-links li a{
+   font-size: 1rem;
+  }
   .dropdown-content {
     position: static; /* Static positioning for mobile dropdowns */
     display: none; /* Hidden by default */
