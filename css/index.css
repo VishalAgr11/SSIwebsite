@@ -210,7 +210,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0 auto;
-  max-width: 1300px; 
+  max-width: 1150px; 
 }
 
 .industry-card {
@@ -235,7 +235,8 @@ body {
   font-size: 1.2rem;
   color: #333;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  height: 2.4rem;
 }
 
 .headline{
@@ -243,6 +244,7 @@ body {
   text-align: center;
   line-height: 1.6;
   margin-bottom: 10px;
+  height:2.4rem;
 }
 
 .info{

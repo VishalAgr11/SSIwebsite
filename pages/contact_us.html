@@ -61,33 +61,19 @@
             <input type="text" id="company" name="company" placeholder="Company/Organization">
           </div>
           <div class="form-group">
-            <select id="products" name="products" >
-              <option value="" disabled selected>Select a Product*</option>
-              <option value="product1">Product 1</option>
-              <option value="product2">Product 2</option>
-              <option value="product3">Product 3</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <select id="services" name="services">
-              <option value="" disabled selected>Select a Service*</option>
-              <option value="service1">Service 1</option>
-              <option value="service2">Service 2</option>
-              <option value="service3">Service 3</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+            <textarea id="message" name="message" placeholder="Write your message" maxlength="300" required></textarea>
+            <p id="char-count">0 / 300 characters</p>
           </div>
           <button type="submit">Submit</button>
         </form>
+        
+        
       </div>
     </div>
   </div>
 
   <section class="contact-details">
     <h2>Contact Us</h2>
-    <h2 class="place">INDIA</h2>
     <p><strong>Special Software India Pvt. Ltd.</strong></p>
     <p><strong><i class="fa-solid fa-location-dot"></i></strong> HIG B 26, Madhav Baug Colony, Mango, Jamshedpur Jharkhand -832110</p>
     <p><strong><i class="fa-solid fa-envelope"></i></strong> 
@@ -109,6 +95,21 @@
             document.getElementById('footer-container').innerHTML = data;
         })
         .catch(err => console.log("Failed to load Footer:", err));
+
+        document.getElementById("message").addEventListener("input", function () {
+          const maxCharacters = 300;
+          const currentCharacters = this.value.length;
+          const charCountElement = document.getElementById("char-count");
+        
+          if (currentCharacters <= maxCharacters) {
+            charCountElement.textContent = `${currentCharacters} / ${maxCharacters} characters`;
+          } else {
+            // If the character limit is exceeded, trim the input value
+            this.value = this.value.slice(0, maxCharacters);
+            charCountElement.textContent = `${maxCharacters} / ${maxCharacters} characters`;
+          }
+        });
+        
 
        
         const scriptURL = 'https://script.google.com/macros/s/AKfycby-BiMByyT1beBQe_GaBXv4e1Dq0U1izn9BUuUlnKKMc2-pglumIgo-Z9XXAGlOQ5dPgg/exec'

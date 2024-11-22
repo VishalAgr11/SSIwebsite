@@ -5,27 +5,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
-  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/team.css">
+   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* Center text styling */
-    .center-message {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50vh; /* Adjust to leave space for the Navbar and Footer */
-      font-size: 24px;
-      color: #555; /* Text color */
-      font-family: Arial, sans-serif;
-    }
-  </style>
+
   <title>SSI</title>
 </head>
 <body>
 
-<div id="navbar-container"></div>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="../index.html">
+      <img src="../assets/SSI_logo1.png" alt="Company Logo">
+    </a>
+  </div>
+  <button class="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul class="navbar-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../pages/about_us.html">About Us</a></li>
+    <li><a href="../pages/services.html">Services</a></li>
+    <li><a href="../pages/shop.html">Shop</a></li>
+    <li><a href="#team">Our Team</a></li>
+  </ul>
+</nav>
 
-<div class="center-message">We are Sorry, No Data found !!</div>
+<!-- Team Section -->
+<section class="team-section">
+  <h1 class="team-head">Meet Our Team</h1>
+  <p class="team-content">Our talented team is the driving force behind our success.</p>
+  <div class="team-container">
+    <!-- Team Member 1 -->
+    <div class="team-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="../assets/team-member1.jpg" alt="Member 1">
+          <h3>Jane Doe</h3>
+          <p>CEO & Founder</p>
+         
+        </div>
+        <div class="card-back">
+          <h3>Jane Doe</h3>
+          <p>Jane Doe is a visionary leader with a passion for innovation and technology. With over 15 years of experience, she founded the company to bring cutting-edge solutions to the market. Her dedication to excellence and creativity drives the company's success.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="team-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="../assets/team-member2.jpg" alt="Member 2">
+          <h3>John Smith</h3>
+          <p>CTO</p>
+         
+        </div>
+        <div class="card-back">
+          <h3>John Smith</h3>
+          <p>John Smith is a technology expert with a deep understanding of software development and IT infrastructure. As the CTO, he leads the technical team in delivering innovative products that push the boundaries of technology.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="team-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="../assets/team-member3.jpg" alt="Member 3">
+          <h3>Susan Lee</h3>
+          <p>Marketing Head</p>
+          
+        </div>
+        <div class="card-back">
+          <h3>Susan Lee</h3>
+          <p>Susan Lee brings a wealth of experience in marketing and branding. As the head of marketing, she is responsible for crafting strategies that elevate the brand and engage customers on a global scale. Her expertise in digital marketing has played a key role in the company's success.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add More Team Members Here -->
+  </div>
+</section>
+
 
 <div id="footer-container"></div>
 
