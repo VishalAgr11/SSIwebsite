@@ -1,4 +1,4 @@
-
+/* CSS Reset */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
   body {
@@ -138,7 +138,6 @@ a{
   .hamburger {
     display: block;
     cursor: pointer;
-    margin-left: 200px;
   }
 
   .navbar-links {
