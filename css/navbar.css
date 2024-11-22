@@ -138,6 +138,7 @@ a{
   .hamburger {
     display: block;
     cursor: pointer;
+    margin-right: -23px;
   }
 
   .navbar-links {
