@@ -49,7 +49,8 @@
       </div>
       <div class="form-section">
         <h2>Get a <span>Call Back</span></h2>
-        <form>
+        <form action="" method="post" name="staffForm">
+          <input type="hidden" name="formId" value="form4">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Name*" required>
           </div>
@@ -83,6 +84,21 @@
             document.getElementById('footer-container').innerHTML = data;
         })
         .catch(err => console.log("Failed to load Footer:", err));
+
+                
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-BiMByyT1beBQe_GaBXv4e1Dq0U1izn9BUuUlnKKMc2-pglumIgo-Z9XXAGlOQ5dPgg/exec'
+
+
+const form = document.forms['staffForm']
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
 </script>
 </body>
 </html>
