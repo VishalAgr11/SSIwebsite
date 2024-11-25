@@ -364,7 +364,7 @@ body{
     line-height: 1.4;
     padding: 0 10px;
   }
-
+ 
   /* GIF Section */
   .gif-section {
     height: auto; 
@@ -424,7 +424,7 @@ body{
     margin-left: 5%;
   }
 
-  .industries-section, .info-section, .about-us {
+  .industries-section, .about-us {
     padding: 20px 5%;
   }
 
@@ -445,7 +445,9 @@ body{
 }
 
 .color-section{
-  height: 65vh;
+  height: 85vh;
+  margin-top: 2rem;
+  
 }
 .color-section .left-arrow:hover,
 .color-section .right-arrow:hover {
