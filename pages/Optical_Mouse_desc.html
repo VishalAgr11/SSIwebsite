@@ -105,7 +105,8 @@
   <div class="modal" id="orderModal">
     <div class="modal-content">
         <span class="close-button" onclick="hideForm()">&times;</span>
-        <form>
+        <form action="" name="form1" method="post">
+          <input type="hidden" name="formId" value="form1">
           <h2>Book Your <span>Order</span></h2>
             <label for="name"></label>
             <input type="text" id="name" name="name" placeholder="Name*" required>
@@ -163,6 +164,17 @@ function hideForm() {
     // Remove blur from the background
     document.body.classList.remove("modal-active");
 }
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyL4FKNyNnE13hs2kkgUYNEQL9U3Fdb_3_RybnDQj5fAG-a93hZ2Jk1K3NRXPH2rCAu/exec'
+const form = document.forms['form1']
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
 </script>
 
 </body>

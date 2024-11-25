@@ -134,6 +134,7 @@
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 0.9rem;
   }
   
   .card button:hover {
@@ -204,7 +205,7 @@ body.modal-active .card-section {
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
-  font-size: 0.9rem; 
+  font-size: 1rem; 
   cursor: pointer;
   width: max-content;
   border-radius: 4px;
