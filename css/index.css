@@ -329,147 +329,155 @@ body {
 .dot.active {
   background-color: #007bff;
 }
-
-@media screen and (max-width: 576px) {
-  /* Global styles for smaller screens */
-body{
-  overflow-x: hidden;
-}
-  /* Info section */
-  .info-section {
-    padding: 10px 0;
-    flex-direction: column; 
-    height: auto; 
-    padding-left: 5%; 
-    padding-right: 5%;
+/* Media Queries for screens smaller than 576px */
+@media (max-width: 576px) {
+ 
+  .color-section {
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+    margin-top: 1rem;
+    
   }
 
-  .info-column {
-    padding: 10px 0;
-    text-align: center; 
+  .color-block {
+    padding: 15px;
+    align-items: center; 
+  }
+
+  .color-text,
+  .content {
+    max-width: 60%; 
+    padding-left: 6%;
+    margin: 1rem 0; 
+    text-align: left; 
+  }
+
+  .read-more-link {
+    margin: 2px; 
+    margin-left: 22px;
+    display: block;
+  }
+
+ 
+  .color-section .left-arrow,
+  .color-section .right-arrow {
+    top: 50%; 
+    font-size: 0.8rem; 
+  }
+
+  .color-section .left-arrow {
+    left: 5px;
+  }
+
+  .color-section .right-arrow {
+    right: 5px;
   }
 
   .about-us {
     padding: 20px;
-    padding-top: 40px;
   }
 
   .about-us .heading1 {
-    font-size: 2rem; 
-    margin-bottom: 15px;
+    font-size: 1.8rem;
   }
 
   .about-us .about {
-    font-size: 1rem; 
-    line-height: 1.4;
-    padding: 0 10px;
+    font-size: 1rem;
+    padding: 0 10px; 
   }
- 
-  /* GIF Section */
+
   .gif-section {
     height: auto; 
-    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
   }
 
   .center-gif {
-    max-width:98%; 
-    height: 300px;
-
-  }
-
-  /* Industries Section */
-  .industries-cards {
-    grid-template-columns: 1fr; 
-    gap: 20px;
-  }
-
-  .industry-card {
-    height: 300px; 
-  }
-
-  .industry-logo {
-    width: 80px; 
-    height: 80px; 
-  }
-
-  .industry-text {
-    font-size: 1rem; 
-  }
-
-  /* Testimonials Section */
-  .testimonials-slider {
     max-width: 100%; 
-  }
-
-  .testimonial-card {
-    padding: 1em;
-    margin: 10px;
-    height: 150px;
-  }
-
-  .testimonial-dots {
-    justify-content: center;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    margin: 0 0.2em;
-  }
-
-  .read-more-btn {
-    margin-top: 30px;
-    font-size: 14px;
-    padding: 10px 20px;
-    margin-left: 5%;
-  }
-
-  .industries-section, .about-us {
-    padding: 20px 5%;
-  }
-
-  .info-column h3 {
-    font-size: 1.2rem; 
   }
 
   .center-text {
     font-size: 1rem; 
+    padding: 0 15px; 
   }
 
-  .color-section .left-arrow,
-.color-section .right-arrow {
-  font-size: 1rem; 
-  padding: 6px; 
-  background-color: transparent;
-  border: none; 
-}
+  .industries-section {
+    padding: 20px 10px; 
+  }
 
-.color-section{
-  height: 80vh;
-  margin-top: 2rem;
-  
-}
-.color-section .left-arrow:hover,
-.color-section .right-arrow:hover {
-  background-color: transparent; 
-  color: #007bff; 
-}
+  .industries-heading {
+    font-size: 1.5rem; 
+  }
 
-.color-text, .content{
-  padding-left: 60px;
-}
+  .industries-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-.color-text {
-  margin-top: 10px;
-}
+  .industry-card {
+    padding: 25px; 
+    height: 300px;
+    width: 322px;
+    margin: 0 auto;
+  }
 
+  .industry-logo {
+    width: 50px; 
+    height: 50px;
+  }
 
-.content{
-  font-size: 18px;
-  line-height: 1.2;
-}
+  .industry-text,
+  .headline {
+    font-size: 1rem; 
+    height: auto; 
+  }
 
-.read-more-btn{
-  margin-left: 60px;
-}
+  .info {
+    font-size: 0.9rem;
+  }
+
+  .testimonials-section {
+    padding: 1.5em 0.5em;
+  }
+
+  .testimonials-heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 1em; 
+  }
+
+  .testimonial-text {
+    font-size: 1rem; 
+  }
+
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-dots {
+    margin-top: 0.8em;
+  }
+
+  .dot {
+    width: 8px; 
+    height: 8px;
+  }
+
+  /* Info Section */
+  .info-section {
+    flex-direction: column; 
+    height: auto;
+    padding: 10px; 
+  }
+
+  .info-column {
+    padding: 10px 0; 
+  }
+
+  .info-column h3 {
+    font-size: 1.2rem;
+  }
 }
