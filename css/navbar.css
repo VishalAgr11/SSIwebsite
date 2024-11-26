@@ -180,7 +180,12 @@ a{
     text-align: center;
   }
 
-  .dropdown:hover .dropdown-content {
+ 
+  .dropdown .dropdown-content {
+    display: none;
+  }
+
+  .dropdown .dropdown-content.show {
     display: block;
   }
 }

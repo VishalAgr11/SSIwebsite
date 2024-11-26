@@ -17,52 +17,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dropdowns = document.querySelectorAll('.dropdown');
-  
-    dropdowns.forEach(dropdown => {
-      const toggle = dropdown.querySelector('a');
-      const content = dropdown.querySelector('.dropdown-content');
-  
-      toggle.addEventListener('click', (event) => {
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach((dropdown) => {
+    const toggle = dropdown.querySelector('a');
+    const content = dropdown.querySelector('.dropdown-content');
+
+    // Handle dropdown toggle on click for smaller screens
+    toggle.addEventListener('click', (event) => {
+      if (window.innerWidth <= 576) {
         event.preventDefault();
-        const isVisible = content.style.display === 'block';
+        const isVisible = content.classList.contains('show');
         closeAllDropdowns();
-        content.style.display = isVisible ? 'none' : 'block';
-      });
-    });
-  
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.dropdown')) {
-        closeAllDropdowns();
+        if (!isVisible) {
+          content.classList.add('show');
+        }
       }
     });
-  
-    function closeAllDropdowns() {
-      document.querySelectorAll('.dropdown-content').forEach(content => {
-        content.style.display = 'none';
-      });
+  });
+
+  // Close all dropdowns when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.dropdown')) {
+      closeAllDropdowns();
     }
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdowns = document.querySelectorAll('.dropdown');
-  
-    dropdowns.forEach(dropdown => {
-      const toggle = dropdown.querySelector('a');
-      const content = dropdown.querySelector('.dropdown-content');
-  
-      toggle.addEventListener('click', (event) => {
-        event.preventDefault();
-        const isVisible = content.style.display === 'block';
-        closeAllDropdowns();
-        content.style.display = isVisible ? 'none' : 'block';
-      });
+
+  // Close all dropdown menus
+  function closeAllDropdowns() {
+    document.querySelectorAll('.dropdown-content').forEach((content) => {
+      content.classList.remove('show');
     });
-  
-    function closeAllDropdowns() {
-      document.querySelectorAll('.dropdown-content').forEach(content => {
-        content.style.display = 'none';
-      });
-    }
-  });
- 
+  }
+});
