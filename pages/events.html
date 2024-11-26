@@ -36,8 +36,9 @@
     </ul>
   </nav>
 
-  <section class="cards-section">
     <h1> Highlights of Our Events </h1>
+    
+  <section class="cards-section">
     <!-- Card 1 -->
     <div class="card">
       <div class="swiper-container">
@@ -47,6 +48,9 @@
           <div class="swiper-slide"><img src="../assets/app_dev.jpg" alt="Event 1"></div>
           <div class="swiper-slide"><img src="../assets/elec.jpg" alt="Event 1"></div>
         </div>
+        <!-- Navigation buttons -->
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
       </div>
       <div class="card-content">
         <div class="card-title">Latest Event 1</div>
@@ -55,6 +59,8 @@
         </div>
       </div>
     </div>
+    
+    
 
     <!-- Card 2 -->
     <div class="card">
@@ -63,6 +69,9 @@
           <div class="swiper-slide"><img src="../assets/event2-1.jpg" alt="Event 2"></div>
           <div class="swiper-slide"><img src="../assets/event2-2.jpg" alt="Event 2"></div>
         </div>
+         <!-- Navigation buttons -->
+         <button class="swiper-button-prev"></button>
+         <button class="swiper-button-next"></button>
       </div>
       <div class="card-content">
         <div class="card-title">Latest Event 2</div>
@@ -78,6 +87,9 @@
           <div class="swiper-slide"><img src="../assets/event2-1.jpg" alt="Event 2"></div>
           <div class="swiper-slide"><img src="../assets/event2-2.jpg" alt="Event 2"></div>
         </div>
+         <!-- Navigation buttons -->
+         <button class="swiper-button-prev"></button>
+         <button class="swiper-button-next"></button>
       </div>
       <div class="card-content">
         <div class="card-title">Latest Event 2</div>
@@ -92,24 +104,32 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
-    const swiperContainers = document.querySelectorAll('.swiper-container');
-    swiperContainers.forEach(container => {
-      new Swiper(container, {
-        slidesPerView: 1, 
-        spaceBetween: 10,
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          576: {
-            slidesPerView: 2, 
-            spaceBetween: 20,
+    document.addEventListener('DOMContentLoaded', () => {
+      const swiperContainers = document.querySelectorAll('.swiper-container');
+      swiperContainers.forEach((container) => {
+        new Swiper(container, {
+          slidesPerView: 1, // Default number of visible slides
+          spaceBetween: 10, // Space between slides
+          loop: true, // Enable infinite scrolling
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
           },
-        },
+          navigation: {
+            nextEl: container.querySelector('.swiper-button-next'),
+            prevEl: container.querySelector('.swiper-button-prev'),
+          },
+          breakpoints: {
+            576: {
+              slidesPerView: 2, // Show 2 slides at larger screen sizes
+              spaceBetween: 20,
+            },
+          },
+          slidesPerGroup: 2, // Scroll two slides at a time
+        });
       });
     });
+    
     
 
     // Load Footer
