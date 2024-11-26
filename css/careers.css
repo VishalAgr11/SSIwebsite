@@ -1,0 +1,266 @@
+.banner {
+  width: 100%;
+  background: url(../assets/jobs.webp);
+  background-size: cover; 
+  background-position: center; 
+  font-family: Arial, sans-serif;
+  padding-bottom: 40px;
+  padding-top: 60px;
+  position: relative; 
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 79, 110, 0.7); 
+  z-index: 1; 
+}
+
+.content {
+  margin-bottom: 10px;
+  position: relative; 
+  z-index: 2; 
+}
+
+.heading {
+  margin-top: 3rem;
+  margin-bottom: 10px;
+  color: white; 
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.sub-heading {
+  text-align: center;
+  color: white; 
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-align: center;
+  color: white; 
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: lightgrey;
+}
+
+
+  .why-join-us {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .why-join-us .left-content {
+    flex: 1;
+    width: 50%;
+  }
+
+  .why-join-us .left-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+
+  .why-join-us .left-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .why-join-us .cards {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    gap: 20px;
+  }
+
+  .why-join-us .card {
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .why-join-us .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .why-join-us .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .why-join-us .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .current-openings {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .openings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .opening-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .opening-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .opening-info p {
+    margin: 0.25rem 0;
+    color: #555;
+  }
+
+  .view-details {
+    padding: 0.5rem 1rem;
+    background-color: #0a4f6e;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .view-details:hover {
+    background-color: #207aa3;
+  }
+
+  /* Responsive Styles */
+@media (max-width: 1200px) {
+  .why-join-us {
+    flex-wrap: wrap;
+  }
+  .why-join-us .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-join-us .left-content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .why-join-us .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .sub-heading {
+    font-size: 1.2rem;
+  }
+  .link {
+    font-size: 0.9rem;
+  }
+  .why-join-us .cards {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    padding-bottom: 20px;
+    padding-top: 40px;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+  .sub-heading {
+    font-size: 1rem;
+  }
+    .why-join-us {
+      flex-direction: column; 
+      padding-left: 0%;
+      
+    }
+  
+    .why-join-us .left-content {
+      order: -1; 
+      width: 100%; 
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .why-join-us .cards {
+      display: flex;
+      flex-direction: column; 
+      gap: 20px;
+    }
+  
+    .why-join-us .card {
+      width: 100%; 
+      max-width: none; 
+    }
+  }
+  
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .sub-heading {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hidden state for elements */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pop-up {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

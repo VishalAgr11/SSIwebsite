@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/job-details.css">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
+  <link rel="stylesheet" href="../css/footer.css">
+  <title>Job Details</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="../index.html">
+            <img src="../assets/SSI_logo1.png" alt="Company Logo">
+          </a>
+        </div>
+        <button class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      
+    
+        <ul class="navbar-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about_us.html">About Us</a></li>
+          <li>
+            <a href="/pages/services.html">Services </a>
+          </li>
+          <li><a href="/pages/shop.html">Shop</a></li>
+          <li class="dropdown">
+            <a href="#company">Company <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-content">
+              <li><a href="#about-us">About Us</a></li>
+              <li><a href="../pages/team.html">Our Team</a></li>
+              <li><a href="../pages/careers.html">Careers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+  <div class="job-details-container">
+    <!-- Left Section -->
+    <div class="job-info">
+      <h1>Software Engineer</h1>
+      <p><strong>Experience:</strong> 2-5 years</p>
+      <p><strong>Location:</strong> Remote</p>
+      <p><strong>Job Type:</strong> Full-time</p>
+
+      <div class="job-details">
+        <h2>Responsibilities: </h2>
+        <ul>
+          <li>Develop and maintain web applications using modern frameworks.</li>
+          <li>Collaborate with cross-functional teams to deliver high-quality software.</li>
+          <li>Write clean, scalable, and efficient code.</li>
+        </ul>
+
+        <h2>Eligibility: </h2>
+        <ul>
+          <li>Bachelor's degree in Computer Science or related field.</li>
+          <li>2+ years of experience in software development.</li>
+          <li>Proficiency in JavaScript, React, and Node.js.</li>
+        </ul>
+
+        <h2>Salary: </h2>
+        <p>$70,000 - $90,000 per annum (based on experience)</p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="application-form">
+      <h2>Apply for this Position</h2>
+      <form action="/submit-application" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Full Name*" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email*" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number*" required>
+
+        <label for="cv">Upload CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+        <label for="cover-letter">Upload Cover Letter:</label>
+        <input type="file" id="cover-letter" name="cover-letter" accept=".pdf,.doc,.docx" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+</script>
+</body>
+</html>

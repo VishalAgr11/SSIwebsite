@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/careers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <title>SSI</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="../index.html">
+        <img src="../assets/SSI_logo1.png" alt="Company Logo">
+      </a>
+    </div>
+    <button class="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  
+
+    <ul class="navbar-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about_us.html">About Us</a></li>
+      <li>
+        <a href="/pages/services.html">Services </a>
+      </li>
+      <li><a href="/pages/shop.html">Shop</a></li>
+      <li class="dropdown">
+        <a href="#company">Company <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-content">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="../pages/team.html">Our Team</a></li>
+          <li><a href="../pages/careers.html">Careers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+ <!-- New Section -->
+ <div class="banner hidden animate-on-scroll">
+    <div class="content hidden animate-on-scroll">
+        <p class="heading">Join a Passionate Team <br>
+        that build's a Future</p>
+        <p class="sub-heading">Enjoy work like never before</p>
+        <p class="link"><a href="../index.html">Home</a> >> Careers </p>
+    </div>
+  </div>
+
+  <!-- Why Join Us Section -->
+  <section class="why-join-us hidden animate-on-scroll">
+    <div class="left-content">
+      <h2>Why Join Us?</h2>
+      <p>
+        At SSI, we believe in creating an environment where innovation thrives, and every team member feels valued. 
+        Join us to be part of a collaborative culture, where your ideas can shape the future.
+      </p><br>
+      <p>
+        With numerous opportunities for growth and a commitment to work-life balance, we ensure that every team 
+        member enjoys a fulfilling career.
+      </p>
+    </div>
+    <div class="cards hidden animate-on-scroll">
+      <div class="card hidden animate-on-scroll">
+        <img src="../assets/Learning-Opportunity.webp" alt="Growth Opportunities">
+        <h3>Growth Opportunities</h3>
+        <p>Join our team and unlock endless opportunities to learn and grow in diverse career paths. From on-the-job training to professional development programs, we support your continuous learning journey.</p>
+      </div>
+      <div class="card hidden animate-on-scroll">
+        <img src="../assets/team-work.webp" alt="Team Work">
+        <h3>Team Work</h3>
+        <p>Discover what sets us apart in our diverse career paths. Our collective effort fosters an environment where every individual's contribution to various career paths is valued, driving exceptional results.</p>
+      </div>
+      <div class="card hidden animate-on-scroll">
+        <img src="../assets/secure-future.webp" alt="Secure Future">
+        <h3>Secure Future</h3>
+        <p>At our company, we prioritize your long-term success and stability through various career paths. With opportunities for growth, competitive benefits, and a supportive environment, we're dedicated to helping you build a secure future.</p>
+      </div>
+      <div class="card hidden animate-on-scroll">
+        <img src="../assets/Upgrate-Skills.webp" alt="Upgrade Skills">
+        <h3>Upgrade Skills</h3>
+        <p>Explore opportunities to enhance your skills and advance your career. From specialized training programs to comprehensive resources, we offer support to help you stay ahead. Invest in your future and unlock new possibilities today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Openings Section -->
+<section class="current-openings hidden animate-on-scroll">
+    <h2 class="section-heading">Current Openings</h2>
+    <div class="openings-container hidden animate-on-scroll">
+      <!-- Opening Card 1 -->
+      <div class="opening-card hidden animate-on-scroll">
+        <div class="opening-info">
+          <h3>Software Engineer</h3>
+          <p><strong>Experience:</strong> 2-5 years</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p>Full Time</p>
+        </div>
+        <button class="view-details" onclick="location.href='../pages/jobDetails.html'">View Details</button>
+      </div>
+  
+      <!-- Opening Card 2 -->
+      <div class="opening-card hidden animate-on-scroll">
+        <div class="opening-info">
+          <h3>UI/UX Designer</h3>
+          <p><strong>Experience:</strong> 3-7 years</p>
+          <p><strong>Location:</strong> On-site (Jamshedpur)</p>
+          <p>Full Time</p>
+        </div>
+        <button class="view-details" onclick="location.href='../pages/jobDetails.html'">View Details</button>
+      </div>
+  
+      <!-- Opening Card 3 -->
+      <div class="opening-card hidden animate-on-scroll">
+        <div class="opening-info">
+          <h3>Project Manager</h3>
+          <p><strong>Experience:</strong> 5+ years</p>
+          <p><strong>Location:</strong> Hybrid (Jamshedpur)</p>
+          <p>Full Time</p>
+        </div>
+        <button class="view-details" onclick="location.href='../pages/jobDetails.html'">View Details</button>
+      </div>
+    </div>
+  </section>
+
+<div id="footer-container"></div>
+
+<script src="../js/navbar.js"></script>
+<script>
+  // Load Footer
+  fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(err => console.log("Failed to load Footer:", err));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+      
+    </script>
+</body>
+</html>

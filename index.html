@@ -102,7 +102,7 @@
   
   
   
-  <div class="info-section">
+  <div class="info-section ">
     <div class="info-column">
       <h3>BOPT Certified Team</h3>
       </div>
@@ -114,9 +114,9 @@
       </div>
   </div>
 
-  <section class="about-us">
-    <h2 class="heading1">About Us</h2><br>
-    <p class="about">Founded in 1994 and headquartered in Jamshedpur, India, SSI has built a legacy of delivering tailored IT solutions and consumer products to a diverse clientele. Over the years, the company has mastered the art of integrating modern technology into traditional business practices, enabling clients to thrive in competitive markets. With its roots in the steel industry, SSI has successfully diversified into retail electronics, staffing, and IT consulting, solidifying its position as a dynamic service provider.
+  <section class="about-us hidden animate-on-scroll">
+    <h2 class="heading1 hidden animate-on-scroll">About Us</h2><br>
+    <p class="about hidden animate-on-scroll">Founded in 1994 and headquartered in Jamshedpur, India, SSI has built a legacy of delivering tailored IT solutions and consumer products to a diverse clientele. Over the years, the company has mastered the art of integrating modern technology into traditional business practices, enabling clients to thrive in competitive markets. With its roots in the steel industry, SSI has successfully diversified into retail electronics, staffing, and IT consulting, solidifying its position as a dynamic service provider.
     <br><br>
       The company’s mission is to combine state-of-the-art technology with innovative methodologies, providing clients with cost-effective and high-performance solutions. SSI takes pride in its client-centric approach, ensuring that every project meets the customer’s needs. The company is driven by values such as integrity, accountability, and innovation, fostering long-term relationships with clients and partners.
       <br><br>
@@ -124,16 +124,16 @@
       </p>
   </section>
 
-  <section class="gif-section">
+  <section class="gif-section hidden animate-on-scroll">
     <img src="assets/digital.png" alt="GIF Description" class="center-gif">
     <p class="center-text">Gain Success with us!</p>
   </section>
 
-  <section class="industries-section">
-    <h2 class="industries-heading">Industries We Serve</h2>
-    <div class="industries-cards">
+  <section class="industries-section hidden animate-on-scroll">
+    <h2 class="industries-heading hidden animate-on-scroll">Industries We Serve</h2>
+    <div class="industries-cards hidden animate-on-scroll">
       <!-- Card 1 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/education.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Educational Institutions</p>
         <p class="headline">"Empowering Schools and Universities"</p>
@@ -141,7 +141,7 @@
         </p>
       </div>
       <!-- Card 2 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/logistics.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Transport and Logistics Companies</p>
         <p class="headline">"Moving Towards Efficiency"</p>
@@ -149,7 +149,7 @@
         </p>
       </div>
       <!-- Card 3 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/constr.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Real Estate and Construction</p>
         <p class="headline">"Constructing Success Stories"</p>
@@ -157,7 +157,7 @@
         </p>
       </div>
       <!-- Card 4 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/health.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Healthcare Providers</p>
         <p class="headline">"Revolutionizing Patient Care"</p>
@@ -165,7 +165,7 @@
         </p>
       </div>
       <!-- Card 5 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/retail.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Retail Businesses</p>
         <p class="headline">"Retail Made Smart"</p>
@@ -173,7 +173,7 @@
         </p>
       </div>
       <!-- Card 6 -->
-      <div class="industry-card">
+      <div class="industry-card hidden animate-on-scroll">
         <img src="assets/envir.png" alt="Logo" class="industry-logo">
         <p class="industry-text">Environmental and Utility Management</p>
         <p class="headline">"Sustainable Solutions for Better Tomorrow"</p>
@@ -182,7 +182,7 @@
     </div>
   </section>
 
-  <section class="testimonials-section">
+  <section class="testimonials-section hidden animate-on-scroll">
     <h2 class="testimonials-heading">Our Top Projects</h2>
   
     <div class="testimonials-slider">
@@ -253,6 +253,7 @@
         <li><a href="../pages/about_us.html">About Us</a></li>
         <li><a href="pages/services.html">Services</a></li>
         <li><a href="../pages/contact_us.html">Contact Us</a></li>
+        <li><a href="../pages/careers.html">Careers</a></li>
         <li><a href="../pages/team.html">Our Team</a></li>
         <li><a href="../pages/events.html">Events</a></li>
         <li><a href="../pages/Faq.html">FAQ</a></li>
@@ -295,7 +296,25 @@
   </div>
 
   <!-- Footer -->
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("pop-up");
+          observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+      });
+    });
+  
+    elementsToAnimate.forEach((element) => {
+      observer.observe(element);
+    });
+  });
+  
+</script>
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/index.js"></script>

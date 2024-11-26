@@ -11,38 +11,47 @@
   <title>SSI</title>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="../index.html">
+        <img src="../assets/SSI_logo1.png" alt="Company Logo">
+      </a>
+    </div>
+    <button class="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  
 
- <!-- Navbar -->
- <nav class="navbar">
-  <div class="navbar-logo">
-    <a href="../index.html">
-      <img src="../assets/SSI_logo1.png" alt="Company Logo">
-    </a>
-  </div>
-  <button class="hamburger">
-    <i class="fas fa-bars"></i>
-  </button>
-  <ul class="navbar-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/about_us.html">About Us</a></li>
-    <li><a href="../pages/services.html">Services</a></li>
-    <li><a href="../pages/shop.html">Shop</a></li>
-    <li><a href="../pages/team.html">Our Team</a></li>
-  </ul>
-</nav>
+    <ul class="navbar-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about_us.html">About Us</a></li>
+      <li>
+        <a href="/pages/services.html">Services </a>
+      </li>
+      <li><a href="/pages/shop.html">Shop</a></li>
+      <li class="dropdown">
+        <a href="#company">Company <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-content">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="../pages/team.html">Our Team</a></li>
+          <li><a href="../pages/careers.html">Careers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 <!-- FAQ Section -->
-<section class="faq-section">
+<section class="faq-section hidden animate-on-scroll">
   <!-- Full-Width Header Image -->
-  <div class="faq-header">
+  <div class="faq-header hidden animate-on-scroll" >
     <img src="../assets/FAQ-banner.webp" alt="FAQ Banner">
     <h1>Frequently Asked Questions</h1>
   </div>
 
   <!-- FAQ Cards -->
-  <div class="faq-container">
+  <div class="faq-container hidden animate-on-scroll">
     <!-- FAQ Card 1 -->
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>What services do you provide?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -53,7 +62,7 @@
     </div>
 
     <!-- FAQ Card 2 -->
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>How can I contact customer support?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -64,7 +73,7 @@
     </div>
 
     <!-- FAQ Card 3 -->
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>What are your pricing plans?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -74,7 +83,7 @@
       </div>
     </div>
 
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>What is your project development process?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -84,7 +93,7 @@
       </div>
     </div>
 
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>Do you offer cloud-based solutions?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -94,7 +103,7 @@
       </div>
     </div>
 
-    <div class="faq-card">
+    <div class="faq-card hidden animate-on-scroll">
       <div class="faq-question">
         <h3>How long has your company been in operation?</h3>
         <i class="fas fa-chevron-down"></i>
@@ -131,6 +140,23 @@
       
           // Toggle the current card
           card.classList.toggle('open');
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
         });
       });
       

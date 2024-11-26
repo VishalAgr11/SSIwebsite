@@ -20,17 +20,21 @@
     <button class="hamburger">
       <i class="fas fa-bars"></i>
     </button>
+  
+
     <ul class="navbar-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../pages/about_us.html">About Us</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
+      <li>
+        <a href="/pages/services.html">Services </a>
+      </li>
       <li><a href="/pages/shop.html">Shop</a></li>
       <li class="dropdown">
         <a href="#company">Company <span class="arrow">&#9662;</span></a>
         <ul class="dropdown-content">
           <li><a href="#about-us">About Us</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#careers">Careers</a></li>
+          <li><a href="../pages/team.html">Our Team</a></li>
+          <li><a href="../pages/careers.html">Careers</a></li>
         </ul>
       </li>
     </ul>
@@ -38,9 +42,9 @@
 
     <h1> Highlights of Our Events </h1>
     
-  <section class="cards-section">
+  <section class="cards-section hidden animate-on-scroll">
     <!-- Card 1 -->
-    <div class="card">
+    <div class="card hidden animate-on-scroll">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="../assets/about_us.jpg" alt="Event 1"></div>
@@ -63,7 +67,7 @@
     
 
     <!-- Card 2 -->
-    <div class="card">
+    <div class="card hidden animate-on-scroll">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="../assets/event2-1.jpg" alt="Event 2"></div>
@@ -81,7 +85,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card hidden animate-on-scroll">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="../assets/event2-1.jpg" alt="Event 2"></div>
@@ -139,6 +143,23 @@
         document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
   </script>
 </body>
 </html>

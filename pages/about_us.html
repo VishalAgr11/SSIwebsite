@@ -12,38 +12,40 @@
 <body>
 
   <!-- Directly include the navbar in about_us.html for testing -->
-<nav class="navbar">
-  <div class="navbar-logo">
-    <a href="../index.html">
-      <img src="../assets/SSI_logo1.png" alt="Company Logo">
-    </a>
-  </div>
-  <button class="hamburger">
-    <i class="fas fa-bars"></i>
-  </button>
-  <ul class="navbar-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/about_us.html">About Us</a></li>
-    <li>
-      <a href="/pages/services.html">Services</a>
-    </li>
-    <li><a href="/pages/shop.html">Shop</a></li>
-    <li class="dropdown">
-      <a href="#company">Company <span class="arrow">&#9662;</span></a>
-      <ul class="dropdown-content">
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#careers">Careers</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="../index.html">
+        <img src="../assets/SSI_logo1.png" alt="Company Logo">
+      </a>
+    </div>
+    <button class="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  
+
+    <ul class="navbar-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/about_us.html">About Us</a></li>
+      <li>
+        <a href="/pages/services.html">Services </a>
+      </li>
+      <li><a href="/pages/shop.html">Shop</a></li>
+      <li class="dropdown">
+        <a href="#company">Company <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown-content">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="../pages/team.html">Our Team</a></li>
+          <li><a href="../pages/careers.html">Careers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 <!-- ABOUT US -->
-<section class="about-section" id="about-section">
-    <div class="color-block" style="background-color: #003249">
-      <h2 class="color-text">About Us</h2>
-      <p class="about-content">
+<section class="about-section hidden animate-on-scroll" id="about-section">
+    <div class="color-block hidden animate-on-scroll" style="background-color: #003249">
+      <h2 class="color-text hidden animate-on-scroll">About Us</h2>
+      <p class="about-content hidden animate-on-scroll">
         <a href="../index.html">Home</a> >> 
         <a href="../pages/about_us.html"> About Us</a>
       </p>
@@ -51,9 +53,9 @@
 
 
     <!-- Our Story Section -->
-    <div class="our-story">
+    <div class="our-story hidden animate-on-scroll">
         <h3>Our Story</h3>
-        <div class="story-left">
+        <div class="story-left hidden animate-on-scroll">
             <img src="../assets/about_us.jpg" alt="Our Story Image">
         </div>
         <div class="story-right">
@@ -69,8 +71,8 @@
         </div>
     </div>
 
-    <div class="info-about">
-        <div class="info-col">
+    <div class="info-about hidden animate-on-scroll">
+        <div class="info-col hidden animate-on-scroll">
           <h3><span class="number">300+</span> Innovative Minds</h3>
         </div>
         <div class="info-col">
@@ -86,11 +88,11 @@
 
 
     <!-- Mission and Vision Section -->
-    <div class="mission-vision">
+    <div class="mission-vision hidden animate-on-scroll">
         <h2>Mission and Vision</h2>
-        <div class="mission-vision-content">
+        <div class="mission-vision-content hidden animate-on-scroll">
             <!-- Mission Section -->
-            <div class="mission-section">
+            <div class="mission-section hidden animate-on-scroll">
                 <img src="../assets/mision.jpg" alt="Mission Image">
                 <p>To develop superior software's for our users through state-of-the-art technology and innovation.</p><br>
 
@@ -99,7 +101,7 @@
                 </p>
             </div>
             <!-- Vision Section -->
-            <div class="vision-section">
+            <div class="vision-section hidden animate-on-scroll">
                 <img src="../assets/vision.jpg" alt="Vision Image">
                 <p>Build upon reputation of being one of the most innovative IT Solution and Service provider. We believe in doing our work in the most efficient way
                    with robust and structured methodology, with gradual evolution from hard-work to smart-work culture, at client's end also.
@@ -124,6 +126,23 @@
           document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
 
 </script>
     

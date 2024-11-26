@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  }
+
+  .job-details-container {
+   margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    padding-left: 8%;
+    padding-right: 8%;
+    
+  }
+
+  .job-info {
+    margin-top: 4rem;
+    flex: 2;
+  }
+
+  .job-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .job-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .job-details h2 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .job-details ul {
+    padding-left: 1rem;
+  }
+
+  .job-details ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .application-form {
+    margin-top: 4rem;
+    flex: 1.5;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #0b4661;
+    
+  }
+
+  .application-form h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .application-form label {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  .application-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .application-form button {
+    width: max-content;
+    padding: 0.7rem 1.5rem;
+    background-color: #0a4f6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem auto 0; /* Centers the button horizontally */
+    display: block; /* Ensures the button is treated as a block-level element for centering */
+  }
+
+  .application-form button:hover {
+    background-color: #185f80;
+  }
+
+  /* Media Queries */
+@media (max-width: 768px) {
+  .job-details-container {
+    flex-direction: column; /* Stack text and form vertically */
+    padding: 1.5rem;
+  }
+
+  .job-info {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Center the text on smaller screens */
+  }
+
+  .job-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .job-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .application-form {
+    margin-top: 0;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .application-form h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .job-details-container {
+    flex-direction: column; /* Stack text and form vertically */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .job-info {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .job-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .job-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .application-form {
+    margin-top: 1rem;
+    padding: 0.8rem;
+  }
+
+  .application-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .application-form input {
+    width: 93%; /* Ensure inputs take full width */
+  }
+
+  .application-form button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
