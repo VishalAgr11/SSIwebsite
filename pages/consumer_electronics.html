@@ -40,13 +40,13 @@
   </nav>
 
   <!-- ContactUs Content -->
-  <div class="consumer-container">
-    <div class="consumer-content">
-      <div class="text-section">
+  <div class="consumer-container hidden animate-on-scroll">
+    <div class="consumer-content hidden animate-on-scroll">
+      <div class="text-section hidden animate-on-scroll">
         <h1>Consumer Electronics</h1>
         <p>Got a bulk order or a single item, our strong network of suppliers enable us to give you the best price always! Be it refrigerator, televisions, washing machines etc!</p>
       </div>
-      <div class="form-section">
+      <div class="form-section hidden animate-on-scroll">
         <h2>Get a <span>Call Back</span></h2>
         <form action="" method="post" name="elecForm">
           <input type="hidden" name="formId" value="form3">
@@ -99,6 +99,24 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
 </script>
 </body>
 </html>

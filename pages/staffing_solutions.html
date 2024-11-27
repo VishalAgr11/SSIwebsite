@@ -40,14 +40,14 @@
   </nav>
 
   <!-- ContactUs Content -->
-  <div class="staffing-container">
-    <div class="staffing-content">
-      <div class="text-section">
+  <div class="staffing-container hidden animate-on-scroll">
+    <div class="staffing-content hidden animate-on-scroll">
+      <div class="text-section hidden animate-on-scroll">
         <h1>Staffing Solutions</h1>
         <p>Need people to come and work for you? Let us take care of all the paperwork and focus on your business. We handle IT and other Mechanical services, We are partners with Tata Steel Jamshedpur for 30 years now
         </p>
       </div>
-      <div class="form-section">
+      <div class="form-section hidden animate-on-scroll">
         <h2>Get a <span>Call Back</span></h2>
         <form action="" method="post" name="staffForm">
           <input type="hidden" name="formId" value="form4">
@@ -99,6 +99,24 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
 </script>
 </body>
 </html>

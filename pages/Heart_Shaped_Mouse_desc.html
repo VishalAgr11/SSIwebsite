@@ -41,9 +41,9 @@
   </nav>
 
 <!-- Product Section -->
-<section class="product-section">
+<section class="product-section hidden animate-on-scroll">
     <!-- Thumbnails -->
-    <div class="carousel-thumbnails">
+    <div class="carousel-thumbnails hidden animate-on-scroll">
       <img src="../assets/prod4/hmouse1.jpg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
       <img src="../assets/prod4/hmouse2.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
       <img src="../assets/prod4/hmouse3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
@@ -52,17 +52,17 @@
     </div>
   
     <!-- Main Image -->
-    <div class="carousel-main-image">
+    <div class="carousel-main-image hidden animate-on-scroll">
       <img id="main-image" src="../assets/prod4/hmouse1.jpg" alt="Optical Mouse">
     </div>
   
     <!-- Product Description -->
-<div class="product-description">
+<div class="product-description hidden animate-on-scroll">
     <h2>Heart Shaped Optical Mouse(Wired)</h2>
     <hr>
-    <div class="details">Price: ₹289.00</div>
+    <div class="details hidden animate-on-scroll">Price: ₹289.00</div>
     <button onclick="showForm()">Click to Book</button>
-    <div class="brand-details">
+    <div class="brand-details hidden animate-on-scroll">
       <table>
         <tr>
           <th>Brand:</th>
@@ -89,7 +89,7 @@
     <hr>
     
     <!-- About This Item Section -->
-    <div class="about-this-item">
+    <div class="about-this-item hidden animate-on-scroll">
       <h3>About This Item: </h3>
       <ul>
         <li>designer mouse</li>
@@ -104,7 +104,7 @@
    
   </section>
   <div class="modal" id="orderModal">
-    <div class="modal-content">
+    <div class="modal-content hidden animate-on-scroll">
         <span class="close-button" onclick="hideForm()">&times;</span>
         <form action="" name="form4" method="post">
           <input type="hidden" name="formId" value="form4">
@@ -167,6 +167,22 @@ function hideForm() {
     document.body.classList.remove("modal-active");
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyL4FKNyNnE13hs2kkgUYNEQL9U3Fdb_3_RybnDQj5fAG-a93hZ2Jk1K3NRXPH2rCAu/exec'
 const form = document.forms['form1']
 form.addEventListener('submit', e => {
@@ -176,6 +192,7 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
 </script>
 
 </body>

@@ -41,24 +41,24 @@
   </nav>
 
 <!-- Product Section -->
-<section class="product-section">
+<section class="product-section hidden animate-on-scroll">
     <!-- Thumbnails -->
-    <div class="carousel-thumbnails">
+    <div class="carousel-thumbnails hidden animate-on-scroll">
       <img src="../assets/prod5/fan.jpeg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
     </div>
   
     <!-- Main Image -->
-    <div class="carousel-main-image">
+    <div class="carousel-main-image hidden animate-on-scroll">
       <img id="main-image" src="../assets/prod5/fan.jpeg" alt="Optical Mouse">
     </div>
   
     <!-- Product Description -->
-<div class="product-description">
+<div class="product-description hidden animate-on-scroll">
     <h2>Havells 175 mm I-Cool Table Fan, Black Grey</h2>
     <hr>
-    <div class="details">Price: ₹2,499.00</div>
+    <div class="details hidden animate-on-scroll">Price: ₹2,499.00</div>
     <button onclick="showForm()">Click to Book</button>
-    <div class="brand-details">
+    <div class="brand-details hidden animate-on-scroll">
       <table>
         <tr>
           <th>Model</th>
@@ -87,7 +87,7 @@
       </table>
     </div>
     <hr>
-    <div class="brand-details">
+    <div class="brand-details hidden animate-on-scroll">
       <h3>Technical Specifications: </h3><br>
       <table>
         <tr>
@@ -121,7 +121,7 @@
       </table>
     </div><hr>
     <!-- About This Item Section -->
-    <div class="about-this-item">
+    <div class="about-this-item hidden animate-on-scroll">
       <h3>Description: </h3>
      <p class="head">Smooth and Efficient Air Delivery in all Directions</p>
      <p class="content">We resort to fans when it comes to seeking relief from the scorching summer heat. They make our rooms pleasant while also adding to the aesthetics of our houses. This personal fans from Havells is ideal for use in all kinds of places including homes and offices. This fan is the best solution for all your air circulation needs in a limited space. Small in size and easily portable, this personal fan can be moved from one place to another with ease and safety.</p><br>
@@ -145,7 +145,7 @@
    
   </section>
   <div class="modal" id="orderModal">
-    <div class="modal-content">
+    <div class="modal-content hidden animate-on-scroll">
         <span class="close-button" onclick="hideForm()">&times;</span>
         <form action="" name="form5" method="post">
           <input type="hidden" name="formId" value="form5">
@@ -217,6 +217,23 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
 </script>
 
 </body>

@@ -40,13 +40,13 @@
   </nav>
 
   <!-- Home Content -->
-  <div class="home-container">
-    <div class="home-content">
-      <div class="text-section">
+  <div class="home-container hidden animate-on-scroll">
+    <div class="home-content hidden animate-on-scroll">
+      <div class="text-section hidden animate-on-scroll">
         <h1>Managed IT Services</h1>
         <p>Our suite of IT managed services goes beyond basic support—we provide end-to-end management of your IT environment, optimizing performance, enhancing security, and driving business continuity. Our highly skilled professionals are equipped with the latest technology and industry best practices, offering unparalleled service and support.</p>
       </div>
-      <div class="form-section">
+      <div class="form-section hidden animate-on-scroll">
         <h2>Get a <span>Call Back</span></h2>
         <form action="" method="post" name="webForm">
           <input type="hidden" name="formId" value="form2">
@@ -72,10 +72,10 @@
   </div>
 
   <!-- Services Section -->
-  <section class="services-section">
+  <section class="services-section hidden animate-on-scroll">
     <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="service-card">
+    <div class="service-cards hidden animate-on-scroll">
+      <div class="service-card hidden animate-on-scroll">
         <img src="path-to-image.jpg" alt="Service 1">
         <h3>Web Development</h3>
       </div>
@@ -111,7 +111,7 @@
   </section>
 
   <!-- Description Section -->
-  <section class="description">
+  <section class="description hidden animate-on-scroll">
     <h2>Technoforte – Your All-in-One IT Powerhouse</h2>
     <p>Is your business facing frequent IT disruptions, security vulnerabilities, or inefficient systems management? Technoforte’s Managed IT Services provide comprehensive, proactive, and reliable solutions tailored to your unique business needs, ensuring seamless operations and a robust IT infrastructure.</p>
     <!-- Additional description content... -->
@@ -185,6 +185,23 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
 
 </script>
 </body>

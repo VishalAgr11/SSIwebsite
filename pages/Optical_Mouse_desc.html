@@ -40,9 +40,9 @@
     </ul>
   </nav>
 <!-- Product Section -->
-<section class="product-section">
+<section class="product-section hidden animate-on-scroll">
     <!-- Thumbnails -->
-    <div class="carousel-thumbnails">
+    <div class="carousel-thumbnails hidden animate-on-scroll">
       <img src="../assets/prod1/mouse1.jpg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
       <img src="../assets/prod1/mouse2.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
       <img src="../assets/prod1/mouse3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
@@ -51,17 +51,17 @@
     </div>
   
     <!-- Main Image -->
-    <div class="carousel-main-image">
+    <div class="carousel-main-image hidden animate-on-scroll">
       <img id="main-image" src="../assets/prod1/mouse1.jpg" alt="Optical Mouse">
     </div>
   
     <!-- Product Description -->
-<div class="product-description">
+<div class="product-description hidden animate-on-scroll">
     <h2>Inca Optical Mouse USB Football Shape Wired Portable Mouse for PC Computer Laptop</h2>
     <hr>
-    <div class="details">Price: ₹289.00</div>
+    <div class="details hidden animate-on-scroll">Price: ₹289.00</div>
     <button onclick="showForm()">Click to Book</button>
-    <div class="brand-details">
+    <div class="brand-details hidden animate-on-scroll">
       <table>
         <tr>
           <th>Brand</th>
@@ -88,7 +88,7 @@
     <hr>
     
     <!-- About This Item Section -->
-    <div class="about-this-item">
+    <div class="about-this-item hidden animate-on-scroll">
       <h3>About This Item</h3>
       <ul>
         <li>Football-Inspired Design: This optical mouse is designed in the shape of a football, complete with a striking football dome and bright LED light, making it visually appealing for football enthusiasts.</li>
@@ -103,7 +103,7 @@
    
   </section>
   <div class="modal" id="orderModal">
-    <div class="modal-content">
+    <div class="modal-content hidden animate-on-scroll">
         <span class="close-button" onclick="hideForm()">&times;</span>
         <form action="" name="form1" method="post">
           <input type="hidden" name="formId" value="form1">
@@ -175,6 +175,23 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
 </script>
 
 </body>

@@ -41,9 +41,9 @@
   </nav>
 
 <!-- Product Section -->
-<section class="product-section">
+<section class="product-section hidden animate-on-scroll">
     <!-- Thumbnails -->
-    <div class="carousel-thumbnails">
+    <div class="carousel-thumbnails hidden animate-on-scroll">
       <img src="../assets/prod2/wmouse1.webp" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
       <img src="../assets/prod2/wmouse2.webp" alt="Thumbnail 2" onclick="changeImage(this)">
       <img src="../assets/prod2/wmouse3.webp" alt="Thumbnail 3" onclick="changeImage(this)">
@@ -52,17 +52,17 @@
     </div>
   
     <!-- Main Image -->
-    <div class="carousel-main-image">
+    <div class="carousel-main-image hidden animate-on-scroll">
       <img id="main-image" src="../assets/prod2/wmouse1.webp" alt="Optical Mouse">
     </div>
   
     <!-- Product Description -->
-<div class="product-description">
+<div class="product-description hidden animate-on-scroll">
     <h2>Safari III Wireless Mouse Black (LWM-003)</h2>
     <hr>
-    <div class="details">Price: ₹269.00</div>
+    <div class="details hidden animate-on-scroll">Price: ₹269.00</div>
     <button onclick="showForm()">Click to Book</button>
-    <div class="brand-details">
+    <div class="brand-details hidden animate-on-scroll">
       <table>
         <tr>
           <th>SKU:</th>
@@ -85,7 +85,7 @@
     <hr>
     
     <!-- About This Item Section -->
-    <div class="about-this-item">
+    <div class="about-this-item hidden animate-on-scroll">
       <h3>Features: </h3>
       <ul>
         <li>Plug & play</li>
@@ -100,7 +100,7 @@
    
   </section>
   <div class="modal" id="orderModal">
-    <div class="modal-content">
+    <div class="modal-content hidden animate-on-scroll">
         <span class="close-button" onclick="hideForm()">&times;</span>
         <form action="" name="form2" method="post">
           <input type="hidden" name="formId" value="form2">
@@ -173,6 +173,23 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("pop-up");
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  });
+
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
+});
 </script>
 
 </body>

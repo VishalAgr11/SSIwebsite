@@ -158,4 +158,13 @@
       width: 100%; 
     }
   }
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
   
+  .pop-up {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }

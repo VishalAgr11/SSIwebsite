@@ -40,14 +40,14 @@
   </nav>
 
   <!-- ContactUs Content -->
-  <div class="peripherals-container">
-    <div class="peripherals-content">
-      <div class="text-section">
+  <div class="peripherals-container hidden animate-on-scroll">
+    <div class="peripherals-content hidden animate-on-scroll">
+      <div class="text-section hidden animate-on-scroll">
         <h1>Laptop Peripherals</h1>
         <p>We are authorized resellers of Lapcare which have the best Laptop stands, cables, keyboard, mouse and other accessories.
         </p>
       </div>
-      <div class="form-section">
+      <div class="form-section hidden animate-on-scroll">
         <h2>Get a <span>Call Back</span></h2>
         <form action="" method="post" name="laptopForm">
           <input type="hidden" name="formId" value="form5">
@@ -98,6 +98,24 @@
           .then(() => { window.location.reload(); })
           .catch(error => console.error('Error!', error.message))
         })
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+        
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("pop-up");
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+              }
+            });
+          });
+        
+          elementsToAnimate.forEach((element) => {
+            observer.observe(element);
+          });
+        });
+        
 </script>
 </body>
 </html>
