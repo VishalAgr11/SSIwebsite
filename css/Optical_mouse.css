@@ -211,6 +211,92 @@ span{
   color:#0a4f6e;
 }
 
+/* Media Query for Tablet Screens (576px to 1024px) */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .product-section {
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 50px;
+    margin: 15px;
+  }
+
+  .carousel-thumbnails {
+    flex-direction: row; 
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .carousel-thumbnails img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-main-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-description {
+    width: 100%; 
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 15px;
+  }
+
+  .product-description h2 {
+    font-size: 22px;
+  }
+
+  .product-description .details {
+    font-size: 16px; 
+  }
+
+  .product-description p {
+    font-size: 15px; 
+  }
+
+  .brand-details table {
+    width: 100%; 
+  }
+
+  .brand-details th, .brand-details td {
+    padding: 10px;
+  }
+
+  .about-this-item h3 {
+    font-size: 18px;
+  }
+
+  .about-this-item ul li {
+    font-size: 14px; 
+  }
+
+  .modal-content {
+    width: 60%; 
+    padding: 20px; 
+  }
+
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content button {
+    font-size: 0.9rem; 
+  }
+
+  .modal-content button {
+    padding: 0.6rem 1.2rem; 
+  }
+
+  /* Adjust Close Button in Modal */
+  .modal-content .close-button {
+    font-size: 26px;
+  }
+
+  .about-this-item ul {
+    padding-left: 15px;
+  }
+}
+
 /* Media Query for screens smaller than 576px */
 @media (max-width: 576px) {
   .product-section {

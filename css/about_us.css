@@ -162,6 +162,90 @@ body{
     color: #333;
     line-height: 1.6;
 }
+/* Media Query for screens between 577px and 1024px */
+@media (min-width: 577px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .about-section .color-block {
+        padding: 10px 15px;
+        height: 10vh; /* Adjust height for medium screens */
+    }
+
+    .about-section .color-text {
+        font-size: 1.8rem; /* Medium font size */
+    }
+
+    .about-section .about-content {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .our-story {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .our-story h3 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .story-left,
+    .story-right {
+        display: inline-block; /* Keep side-by-side for larger tablets */
+        width: 45%;
+        padding: 10px;
+    }
+
+    .story-left img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .info-about {
+        flex-direction: row;
+        padding-left: 7%;
+        padding-right: 7%;
+        gap: 15px; /* Add spacing between columns */
+    }
+
+    .info-col h3 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .number {
+        font-size: 2rem; /* Slightly smaller number font */
+    }
+
+    .mission-vision {
+        padding: 35px 20px;
+    }
+
+    .mission-vision h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .mission-vision-content {
+        flex-direction: row;
+        gap: 25px; /* Add gap between sections */
+    }
+
+    .mission-section,
+    .vision-section {
+        width: 48%;
+    }
+
+    .mission-section img,
+    .vision-section img {
+        width: 100%; /* Ensure images fit container */
+        height: auto;
+    }
+
+    .mission-section p,
+    .vision-section p {
+        font-size: 1rem; /* Adjust text size */
+    }
+}
 
 
 /* Media Query for screens less than 576px */

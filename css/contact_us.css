@@ -62,8 +62,8 @@
   
   /* Form Section (Right side) */
 .form-section {
-  flex: 1;
-  max-width: 28%; 
+  width: 410px; 
+  height: 490px;
   background-color: #fff;
   color: #333;
   padding: 2rem; 
@@ -165,6 +165,79 @@ button:hover {
     color: #555;
     margin-top: 5px;
   }
+  @media (min-width: 577px) and (max-width: 1024px) {
+    .contact-container {
+      padding: 20px; 
+      height: auto;
+      padding-bottom: 5px;
+      padding-top: 50px;
+    }
+  
+    .contact-content {
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      padding: 3rem; 
+      gap: 1rem; 
+    }
+  
+    .text-section {
+      width: 35%;
+      margin-top: 0;
+      text-align: left;
+    }
+  
+    .text-section h1 {
+      font-size: 2.3rem;
+      text-align: left;
+    }
+  
+    .text-section p {
+      font-size: 1rem; 
+      text-align: justify; 
+    }
+  
+    .form-section {
+      width: 50%; 
+      padding: 2rem; 
+      margin-top: 0; 
+      box-sizing: border-box; 
+    }
+  
+    .form-section h2 {
+      font-size: 1.5rem; 
+      text-align: left; 
+    }
+  
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 0.7rem 1.6rem; 
+    }
+  
+    .contact-details {
+      padding: 30px 15px;
+      font-size: 1.1rem;
+    }
+  
+    .contact-details h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-details p {
+      font-size: 1.1rem;
+    }
+  
+    .contact-details a {
+      font-size: 1rem;
+    }
+  }
+  
   
   @media (max-width: 576px) {
   

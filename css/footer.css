@@ -151,6 +151,55 @@ body{
     .footer-copyright p {
       margin: 0;
     }
+
+    @media screen and (min-width: 577px) and (max-width: 1024px) {
+      .footer {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        padding: 20px; 
+        padding-left: 4rem; 
+        padding-right: 4rem;
+      }
+    
+      .footer-column,
+      .footer-column-address {
+        width: 45%;
+        margin: 15px 0;
+      }
+    
+      .footer-logo img {
+        height: 60px;
+        margin: 0 auto 10px auto;
+      }
+    
+      .footer-address p,
+      .footer-column ul li {
+        font-size: 1.1rem;
+      }
+    
+      .footer-social-media a {
+        margin: 0 10px; 
+      }
+    
+      .social-icon {
+        width: 35px; 
+        height: 35px;
+      }
+    
+      .footer-copyright {
+        padding: 0.7rem;
+        font-size: 1.1rem; 
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+    
+      .footer form input,
+      .footer form button {
+        width: 100%;
+        font-size: 1rem; 
+      }
+    }
+    
  
 @media screen and (max-width: 576px) {
   .footer {

@@ -329,6 +329,168 @@ body {
 .dot.active {
   background-color: #007bff;
 }
+
+/* Media Queries for screens between 577px and 1024px */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .color-section {
+    height: 43vh;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .color-block {
+    padding: 20px;
+    align-items: center;
+  }
+
+  
+  .color-text,
+  .content {
+    max-width: 60%;
+    padding-left: 8%;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+
+  .read-more-link {
+    margin: 15px 60px;
+    display: block;
+  }
+
+  .color-section .left-arrow,
+  .color-section .right-arrow {
+    top: 50%;
+    font-size: 1rem;
+  }
+
+  .color-section .left-arrow {
+    left: 15px;
+  }
+
+  .color-section .right-arrow {
+    right: 15px;
+  }
+
+  .about-us {
+    padding: 30px 20px;
+  }
+
+  .about-us .heading1 {
+    font-size: 2.2rem;
+  }
+
+  .about-us .about {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .gif-section {
+    height: auto;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .center-gif {
+    max-width: 90%;
+  }
+
+  .center-text {
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+
+  .industries-section {
+    padding: 30px 15px;
+  }
+
+  .industries-heading {
+    font-size: 1.8rem;
+  }
+
+  .industries-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .industry-card {
+    padding: 25px;
+    height: 320px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .industry-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .industry-text,
+  .headline {
+    font-size: 1.1rem;
+    height: auto;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .testimonials-section {
+    padding: 2em 1em;
+  }
+
+  .testimonials-heading {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.2em;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-author {
+    font-size: 1rem;
+  }
+
+  .testimonial-dots {
+    margin-top: 1em;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  /* Info Section */
+  .info-section {
+    flex-direction: row;
+    height: auto;
+    padding: 20px;
+  }
+
+  .info-column {
+    padding: 10px 5px;
+  }
+
+  .info-column h3 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .color-section .color-block {
+    background-size: contain; 
+    background-position: center; 
+  }
+}
+
+@media (max-width: 576px) {
+  .color-section .color-block {
+    background-size: contain;
+    background-position: top center; 
+  }
+}
 /* Media Queries for screens smaller than 576px */
 @media (max-width: 576px) {
  

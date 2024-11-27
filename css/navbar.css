@@ -126,12 +126,46 @@
 a{
   text-decoration: none;
 }
+@media (min-width: 577px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 1.5rem; 
+    height: 60px; 
+  }
 
-/* Responsive Design for Screens < 576px */
+  .navbar-logo img {
+    height: 45px; 
+  }
+
+  .navbar-links {
+    gap: 2.5rem;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  .dropdown-content {
+    min-width: 200px; 
+  }
+
+  .dropdown-content li {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
 @media (max-width: 576px) {
   .navbar {
     justify-content: space-between;
-    padding: 0 2rem; /* Adjust padding for smaller screens */
+    padding: 0 2rem; 
   }
 
   .hamburger {
@@ -145,7 +179,7 @@ a{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50px; /* Adjust based on navbar height */
+    top: 50px; 
     left: 0;
     width: 100%;
     background-color: #ffffff;
@@ -170,10 +204,10 @@ a{
    font-size: 1rem;
   }
   .dropdown-content {
-    position: static; /* Static positioning for mobile dropdowns */
-    display: none; /* Hidden by default */
+    position: static; 
+    display: none;
     background-color: #ffffff;
-    width: 100%; /* Full width */
+    width: 100%;
   }
 
   .dropdown-content li {
