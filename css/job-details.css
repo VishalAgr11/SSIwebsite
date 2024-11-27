@@ -169,6 +169,7 @@ body {
     background-color: #185f80;
   }
 }
+
 /* Mobile Screens (Below 576px) */
 @media (max-width: 576px) {
   .job-details-container {
