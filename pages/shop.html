@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/footer.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/png" href="../assets/SSI_logo.jpg">
-  <title>SSI</title>
+  <title>SSI | Shop With Us</title>
 </head>
 <body>
   <nav class="navbar">
@@ -140,6 +140,37 @@
     </div>
   </section>
 
+  <!-- Horizontal Card Section -->
+<div class="horizontal-card">
+  <div class="horizontal-card-content">
+    <h3>Looking for something not here?</h3>
+    <p>We deal in all consumer electronics like televisions, refrigerators, laptop peripherals, and everything you need.</p>
+    <p>Ask us for a quote now!</p>
+    <button id="quoteButton">Shop Now</button>
+  </div>
+</div>
+
+<!-- Modal Form -->
+<div id="quoteModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Request a Quote</h2>
+    <form id="quoteForm">
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="Name:*" required>
+      
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="Email:*" required>
+      
+      <label for="product"></label>
+      <textarea id="product" name="product" rows="4"  placeholder="Product/Service Interested In:*" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
     <div id="footer-container"></div>
 
 
@@ -188,7 +219,27 @@
         });
       });
       
-      
+       // Modal Functionality
+  const quoteButton = document.getElementById("quoteButton");
+  const quoteModal = document.getElementById("quoteModal");
+  const closeModal = document.getElementById("closeModal");
+
+  // Open Modal
+  quoteButton.addEventListener("click", () => {
+    quoteModal.style.display = "flex";
+  });
+
+  // Close Modal
+  closeModal.addEventListener("click", () => {
+    quoteModal.style.display = "none";
+  });
+
+  // Close Modal When Clicking Outside Content
+  window.addEventListener("click", (e) => {
+    if (e.target === quoteModal) {
+      quoteModal.style.display = "none";
+    }
+  });
 </script>
 </body>
 </html>

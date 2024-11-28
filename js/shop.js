@@ -6,15 +6,21 @@ document.querySelectorAll('.card').forEach((card) => {
   
    
     function showImage(index) {
+      if (!images || images.length === 0 || !dots || dots.length === 0) return;
       images.forEach((img, i) => {
         img.classList.remove('active');
-        dots[i].classList.remove('active');
+        if (dots[i]) {
+          dots[i].classList.remove('active');
+        }
         if (i === index) {
           img.classList.add('active');
-          dots[i].classList.add('active');
+          if (dots[i]) {
+            dots[i].classList.add('active');
+          }
         }
       });
     }
+    
   
     function startCarousel() {
       intervalId = setInterval(() => {
