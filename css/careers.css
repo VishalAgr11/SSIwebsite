@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .banner {
   width: 100%;
   background: url(../assets/jobs.webp);
@@ -34,6 +36,7 @@
   padding-bottom: 10px;
   font-size: 3rem;
   font-weight: bold;
+  font-family: Poppins;
 }
 
 .sub-heading {
@@ -41,6 +44,7 @@
   color: white; 
   font-size: 1.5rem;
   margin-bottom: 20px;
+  font-family: Lato;
 }
 
 .link {
@@ -53,6 +57,7 @@ a {
   text-decoration: none;
   color: white;
   transition: all 0.3s ease;
+  font-family: Lato;
 }
 
 a:hover {
@@ -78,11 +83,13 @@ a:hover {
   .why-join-us .left-content h2 {
     font-size: 2.3rem;
     margin-bottom: 20px;
+    font-family: Poppins;
   }
 
   .why-join-us .left-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+    font-family: Lato;
   }
 
   .why-join-us .cards {
@@ -108,11 +115,13 @@ a:hover {
     font-size: 1.4rem;
     margin-bottom: 10px;
     line-height: 1.6;
+    font-family: Poppins;
   }
 
   .why-join-us .card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+    font-family: Lato;
   }
 
   .current-openings {
@@ -125,6 +134,7 @@ a:hover {
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #333;
+    font-family: Poppins;
   }
 
   .openings-container {
@@ -149,11 +159,13 @@ a:hover {
   .opening-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    font-family: Poppins;
   }
 
   .opening-info p {
     margin: 0.25rem 0;
     color: #555;
+    font-family: Lato;
   }
 
   .view-details {
@@ -164,6 +176,7 @@ a:hover {
     border-radius: 3px;
     cursor: pointer;
     font-size: 1rem;
+    font-family: Lato;
   }
 
   .view-details:hover {

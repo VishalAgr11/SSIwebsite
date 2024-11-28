@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
   .navbar {
     display: flex;
     justify-content: space-between; /* Adjust spacing for a balanced layout */
     align-items: center; /* Center items vertically */
     background-color: #ffffff;
     color: #020202;
-    font-family: Roboto, sans-serif;
+    font-family: Montserrat;
     position: fixed;
     top: 0;
     width: 100%;
@@ -32,6 +29,7 @@
     display: flex;
     align-items: center;
     text-decoration: none; 
+    font-family: Montserrat;
   }
 
 
@@ -44,6 +42,7 @@
     color: #030303;
     font-size: 1.5rem;
     font-weight: 600;
+    
   }
 
   .navbar-links {
@@ -61,6 +60,7 @@
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
+    font-family: Montserrat;
   }
 
   .navbar-links li a:hover {
@@ -95,6 +95,7 @@
     text-decoration: none;
     display: block;
     font-size: 1.1rem;
+    font-family: Montserrat;
   }
 
   .dropdown-content li a:hover {
@@ -112,6 +113,7 @@
     display: flex;
     gap: 4rem;
     transition: transform 0.3s ease-in-out;
+    font-family: Montserrat;
   }
   /* Hamburger Menu Styles */
 .hamburger {

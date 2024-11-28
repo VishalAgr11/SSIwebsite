@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box;
   }
@@ -7,7 +9,6 @@
     font-family: 'Arial', sans-serif;
   }
   .consumer-container {
-    font-family: OpenSans;
     display: flex;
     flex-direction: column;
     height: auto;
@@ -55,10 +56,12 @@
     margin-bottom: 1rem;
     font-weight: 600;
     text-align: center;
+    font-family: Poppins;
   }
 
   .text-section p {
     font-size: 1.2rem;
+    font-family: Lato;
   }
   
   
@@ -92,6 +95,7 @@
   font-size: 1.5rem;
   color: #000;
   margin: 0;
+  font-family: Poppins;
 }
 
 .form-section span {
@@ -107,6 +111,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
+  font-family: Lato;
 }
 
 .form-group textarea {
@@ -124,6 +129,7 @@
   transition: background-color 0.3s ease;
   margin: 0 auto;
   display: block;
+  font-family: Lato;
 }
 
 .submit:hover {

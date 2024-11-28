@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .product-section {
     display: flex;
     align-items: flex-start;
@@ -48,6 +50,7 @@
     .product-description h2 {
       font-size: 24px;
       margin-bottom: 10px;
+      font-family: Poppins;
     }
 
     hr{
@@ -56,11 +59,14 @@
     .product-description .details {
       font-weight: bold;
       margin-bottom: 10px;
+      font-family: Lato;
+      
     }
     .product-description p {
       font-size: 16px;
       line-height: 1.5;
       color: #555;
+      font-family: Lato;
     }
 
 
@@ -69,6 +75,7 @@
         font-size: 16px;
         color: #333;
         margin-bottom: 10px;
+        font-family: Lato;
       }
       .brand-details table {
         width: 60%;
@@ -78,6 +85,7 @@
         text-align: left;
         padding: 5px;
         padding-left: 0;
+        font-family: Lato;
         
       }
       .brand-details th {
@@ -96,8 +104,11 @@
         font-size: 20px;
         margin-bottom: 10px;
         color: #333;
+        font-family: Poppins;
       }
-      
+      h3{
+        font-family: Poppins;
+      }
       .about-this-item ul {
         padding-left: 20px;
         list-style-type: disc;
@@ -105,14 +116,17 @@
       
       .about-this-item ul li {
         margin-bottom: 8px;
+        font-family: Lato;
       }
       .head{
         font-size: 1.1rem;
         font-weight: 600;
         color: #333;
+        font-family: Poppins;
       }
       .content{
         font-size: 1rem;
+        font-family: Lato;
       }
 
       
@@ -124,6 +138,7 @@
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
+    font-family: Lato;
     transition: background-color 0.3s;
   }
   
