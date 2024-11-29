@@ -27,7 +27,7 @@
       border-radius: 4px;
     }
     .carousel-thumbnails img.active {
-      border-color: #007BFF;
+      border-color: #B22222;
     }
 
     /* Main Image */
@@ -45,12 +45,14 @@
      width: 800px;
       padding-left: 40px;
       margin-top: 20px;
+      color: #4F4F4F;
     
     }
     .product-description h2 {
       font-size: 24px;
       margin-bottom: 10px;
       font-family: Poppins;
+      color: #333;
     }
 
     hr{
@@ -60,6 +62,7 @@
       font-weight: bold;
       margin-bottom: 10px;
       font-family: Lato;
+      color: #4F4F4F;
       
     }
     .product-description p {
@@ -67,6 +70,7 @@
       line-height: 1.5;
       color: #555;
       font-family: Lato;
+      color: #4F4F4F;
     }
 
 
@@ -86,18 +90,19 @@
         padding: 5px;
         padding-left: 0;
         font-family: Lato;
+        color: #4F4F4F;
         
       }
       .brand-details th {
         font-weight: bold;
-        color: #000;
+        color: #333;
       }
 
       .about-this-item {
         margin-top: 20px;
         font-size: 16px;
         line-height: 1.5;
-        color: #555;
+        color: #4F4F4F;
       }
       
       .about-this-item h3 {
@@ -117,6 +122,7 @@
       .about-this-item ul li {
         margin-bottom: 8px;
         font-family: Lato;
+        color: #4F4F4F;
       }
       .head{
         font-size: 1.1rem;
@@ -127,23 +133,24 @@
       .content{
         font-size: 1rem;
         font-family: Lato;
+        color: #4F4F4F;
       }
 
       
-        
+    
   button {
-    background-color: #0a4f6e;
+    background-color: #B22222;
     color: #fff;
     border: none;
+    font-family: Lato;
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    font-family: Lato;
     transition: background-color 0.3s;
   }
-  
+
   button:hover {
-    background-color: #e5e9ec;
+    background-color: #8B0000;
   }
 
 body.modal-active .card-section {
@@ -200,7 +207,7 @@ body.modal-active .card-section {
 }
 
 .modal-content button {
-  background-color: #1a518b;
+  background-color: #B22222;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -215,7 +222,7 @@ body.modal-active .card-section {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #8B0000;
 }
 .modal-content .close-button {
   position: absolute;
@@ -229,8 +236,11 @@ button:hover {
 .modal-content .close-button:hover {
   color: #000;
 }
+h2{
+  font-family: Poppins;
+}
 span{
-  color:#0a4f6e;
+  color:#B22222;
 }
 
 

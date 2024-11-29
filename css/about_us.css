@@ -27,11 +27,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-   
   }
 
-  
-  
   .about-section .color-text {
     color: white;
     font-size: 2rem; 
@@ -69,6 +66,7 @@ body{
     margin-bottom: 20px;
     font-size: 2rem;
     font-family: Poppins;
+    color: #333333;
 }
 
 .story-left,
@@ -88,6 +86,7 @@ body{
     line-height: 1.6;
     font-size: 1.1rem;
     font-family: Lato;
+    color: #4F4F4F;
 }
 
 .story-left img {
@@ -117,13 +116,14 @@ body{
     font-size: 1.3rem;
     font-weight: 500;
     font-family: Lato;
+    color: #333333;
 }
 
 .number {
     display: block; 
     font-size: 2.2rem; 
     font-weight: 400;
-    color: #278c97; 
+    color: #B22222; 
     margin-bottom: 5px; 
 }
 
@@ -137,7 +137,7 @@ body{
 
 .mission-vision h2 {
     font-size: 2rem;
-    color: #000000;
+    color: #333333;
     margin-bottom: 30px;
     font-family: Poppins;
 }
@@ -168,7 +168,7 @@ body{
 .mission-section p,
 .vision-section p {
     font-size: 1.1rem;
-    color: #333;
+    color: #4F4F4F;
     line-height: 1.6;
     font-family: Lato;
 }

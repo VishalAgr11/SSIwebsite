@@ -27,7 +27,7 @@
       border-radius: 4px;
     }
     .carousel-thumbnails img.active {
-      border-color: #007BFF;
+      border-color: #B22222;
     }
 
     /* Main Image */
@@ -51,6 +51,7 @@
       font-size: 24px;
       margin-bottom: 10px;
       font-family: Poppins;
+      color: #333;
     }
 
     hr{
@@ -60,12 +61,14 @@
       font-weight: bold;
       margin-bottom: 10px;
       font-family: Lato;
+      color: #4F4F4F;
     }
     .product-description p {
       font-size: 16px;
       line-height: 1.5;
       color: #555;
       font-family: Lato;
+      color: #4F4F4F;
     }
 
 
@@ -75,6 +78,7 @@
         color: #333;
         margin-bottom: 10px;
         font-family: Lato;
+        
       }
       .brand-details table {
         width: 60%;
@@ -85,11 +89,11 @@
         padding: 5px;
         padding-left: 0;
         font-family: Lato;
-        
+        color: #4F4F4F;
       }
       .brand-details th {
         font-weight: bold;
-        color: #000;
+        color: #333;
         font-family: Lato;
       }
 
@@ -115,12 +119,13 @@
       .about-this-item ul li {
         margin-bottom: 8px;
         font-family: Lato;
+        color: #4F4F4F;
       }
       
       
         
   button {
-    background-color: #0a4f6e;
+    background-color: #B22222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -131,7 +136,7 @@
   }
   
   button:hover {
-    background-color: #e5e9ec;
+    background-color: #8B0000;
   }
 
 body.modal-active .card-section {
@@ -188,7 +193,7 @@ body.modal-active .card-section {
 }
 
 .modal-content button {
-  background-color: #1a518b;
+  background-color: #B22222;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -203,7 +208,7 @@ body.modal-active .card-section {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #8B0000;
 }
 .modal-content .close-button {
   position: absolute;
@@ -217,8 +222,12 @@ button:hover {
 .modal-content .close-button:hover {
   color: #000;
 }
+h2{
+  font-family: Poppins;
+}
+
 span{
-  color:#0a4f6e;
+  color:#B22222;
 }
 
 

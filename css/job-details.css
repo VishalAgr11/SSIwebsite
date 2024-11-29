@@ -29,12 +29,14 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: Poppins;
+    color: #333333;
   }
 
   .job-info p {
     font-size: 1rem;
     margin: 0.5rem 0;
     font-family: Lato;
+    color: #4F4F4F;
   }
 
   .job-details h2 {
@@ -42,6 +44,7 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: Poppins;
+    color: #333333;
   }
 
   .job-details ul {
@@ -51,6 +54,7 @@ body {
   .job-details ul li {
     margin-bottom: 0.5rem;
     font-family: Lato;
+    color: #4F4F4F;
   }
 
   .application-form {
@@ -60,7 +64,7 @@ body {
     padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #0b4661;
+    color: #4F4F4F;
     
   }
 
@@ -68,6 +72,7 @@ body {
     font-size: 2.3rem;
     margin-bottom: 1rem;
     font-family: Poppins;
+    color: #8B0000;    
   }
 
   .application-form label {
@@ -75,6 +80,7 @@ body {
     margin: 0.5rem 0;
     text-align: left;
     font-family: Lato;
+    color: #4F4F4F;
   }
 
   .application-form input {
@@ -89,7 +95,7 @@ body {
   .application-form button {
     width: max-content;
     padding: 0.7rem 1.5rem;
-    background-color: #0a4f6e;
+    background-color: #B22222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -101,7 +107,7 @@ body {
   }
 
   .application-form button:hover {
-    background-color: #185f80;
+    background-color: #8B0000;
   }
 /* Tablet Screens (576px to 1024px) */
 @media (min-width: 577px) and (max-width: 1024px) {
@@ -229,4 +235,14 @@ body {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
   }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pop-up {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

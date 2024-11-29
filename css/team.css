@@ -16,7 +16,7 @@
     font-size: 2rem;
     margin-top: 50px;
     margin-bottom: 10px;
-    color: rgb(0, 0, 0);
+    color: #333333;
     font-family: Poppins;
   }
 
@@ -32,7 +32,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 5rem;
-    background-color: rgba(10, 79, 110, 0.9);
+    background-color: rgba(178, 34, 34, 0.9);
     margin-top: 1rem;
   }
   
@@ -56,7 +56,6 @@
     box-sizing: border-box;
 }
 
-  
   .team-card:hover .card-inner {
     transform: rotateY(180deg); 
   }
@@ -88,7 +87,7 @@
   
   .card-back {
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    color: #333333;
     transform: rotateY(180deg); 
     padding: 1rem;
   }
@@ -105,17 +104,20 @@
     font-size: 1.2rem;
     margin-bottom: 5px;
     font-family: Poppins;
+    color: #333333;
   }
   
   .card-front p {
     font-size: 1rem;
     margin-bottom: 10px;
     font-family: Lato;
+    color: #4F4F4F;
   }
   
   .card-back h3 {
     font-size: 1.4rem;
     font-family: Poppins;
+    color: #333333;
   }
   
   .card-back p {
@@ -123,6 +125,7 @@
     margin: 10px 0;
     font-family: Lato;
     line-height: 1.4;
+    color: #4F4F4F;
   }
   
   .social-icons {
@@ -133,13 +136,13 @@
   }
   
   .social-icons a {
-    color: rgb(0, 0, 0);
+    color: #333333;
     font-size: 20px;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: rgba(31, 125, 168, 0.9);; 
+    color: #B22222; 
   }
 
   @media (min-width: 577px) and (max-width: 1024px) {

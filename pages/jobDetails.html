@@ -39,15 +39,15 @@
         </ul>
       </nav>
 
-  <div class="job-details-container">
+  <div class="job-details-container hidden animate-on-scroll">
     <!-- Left Section -->
-    <div class="job-info">
+    <div class="job-info hidden animate-on-scroll">
       <h1>Software Engineer</h1>
       <p><strong>Experience:</strong> 2-5 years</p>
       <p><strong>Location:</strong> Remote</p>
       <p><strong>Job Type:</strong> Full-time</p>
 
-      <div class="job-details">
+      <div class="job-details hidden animate-on-scroll">
         <h2>Responsibilities: </h2>
         <ul>
           <li>Develop and maintain web applications using modern frameworks.</li>
@@ -68,7 +68,7 @@
     </div>
 
     <!-- Right Section -->
-    <div class="application-form">
+    <div class="application-form hidden animate-on-scroll">
       <h2>Apply for this Position</h2>
       <form action="/submit-application" method="post" enctype="multipart/form-data">
         <label for="name">Name:</label>
@@ -102,6 +102,23 @@
           document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
 </script>
 </body>
 </html>

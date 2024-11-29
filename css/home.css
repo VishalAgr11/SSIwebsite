@@ -17,7 +17,7 @@
     height: auto;
     background: url('../assets/web3.jpg') no-repeat center center / cover;
     position: relative;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-left: 10px;
     padding-right: 15px;
     width: 100%;
@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 79, 110, 0.6); /* Adjust the opacity and color for the overlay */
+    background: rgba(41, 41, 41, 0.8);  /* Adjust the opacity and color for the overlay */
     z-index: 1;
   }
   
@@ -94,13 +94,13 @@
 
 .form-section h2 {
   font-size: 1.5rem;
-  color: #000;
+  color: #333;
   margin: 0;
   font-family: Poppins;
 }
 
 .form-section span {
-  color: #1f5ea1;
+  color: #B22222;
 }
 
 .form-group input,
@@ -119,7 +119,7 @@
 }
 
 .submit {
-  background-color: #1a518b;
+  background-color: #B22222;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -133,96 +133,8 @@
 }
 
 .submit:hover {
-  background-color: #0056b3;
+  background-color: #8B0000;
 }
-
- /* Services Section */
-.services-section {
-    font-family: OpenSans;
-    text-align: center;
-    padding: 4rem; 
-    background-color: #f4f4f4;
-  }
-
-  .services-section h2{
-    font-size: 2rem;
-    margin-bottom: 50px;
-    font-weight: 600;
-    font-family: Poppins;
-  }
-  
-  /* Service Card Grid */
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    gap: 3rem; 
-    justify-content: center; 
-  }
-  
-  /* Individual Service Card Styling */
-  .service-card {
-    width: 250px; 
-    height: 250px; 
-    background-color: white;
-    padding: 1.5rem;
-    box-shadow:1px 1px 12px 4px #e1dede;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .service-card img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
-  }
-  
-  .service-card h3 {
-    font-size: 1.5rem;
-    color: #003249;
-    font-family: Poppins;
-  }
-  
-
-/* Technoforte Description Section */
-.description {
-    padding: 4rem;
-    background-color: #ffffff;
-    text-align: center;
-    font-family: OpenSans;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-left: 15px;
-    margin-right: 15px;
-    
-  }
-  
-  .description h2 {
-    font-size: 2rem;
-    color: #000000;
-    margin-bottom: 60px;
-    font-weight: 600;
-    font-family: Poppins;
-  }
-  
-  .description span{
-    font-size: 1.2rem;
-    color: #3c3f41;
-    font-weight: bold;
-    margin-top: 2rem;
-    text-align: justify;
-  }
-  
-  .description p {
-    font-size: 1.1rem;
-    color: #1d1d1d;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    text-align: justify;
-    font-family: Lato;
-  }
 
   /* Tablet View Responsiveness */
 @media (min-width: 577px) and (max-width: 1024px) {

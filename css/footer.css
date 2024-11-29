@@ -6,15 +6,16 @@
 }
   .footer {
       font-family: Montserrat;
-      background-color: #0a4f6e;
+      background-color: #eeeded;
       display: flex;
       justify-content: space-between;
       padding: 20px;
-      color: white;
+      color: #333333;
       padding: 2rem;
       padding-left: 10rem;
       padding-right: 10rem;
       align-items: flex-start;
+      border-top: 1px solid #E0E0E0;
     }
     
     .footer-column {
@@ -42,41 +43,46 @@
       margin: 5px 0;
       font-size: 1rem;
       text-align: left;
+      color: #333333;
     }
   
     .footer-address p{
       margin-top: 20px;
+      color: #333333;
     }
-    
+  
     .footer-social a {
-      color: white;
+      color: #333333;
       text-decoration: none;
     }
     
     .footer-social a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: #8B0000;
     }
     
     .footer-column h4 {
       margin-bottom: 10px;
       font-size: 1.3rem;
-
+      color: #333333
     }
     
     .footer-column ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      
+      color: #333333;
     }
     
     .footer-column ul li a {
-      color: white;
+      color: #B22222; /* Firebrick Red */
       text-decoration: none;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
       
     }
     
     .footer-column ul li a:hover {
+      color: #8B0000;
       text-decoration: underline;
     }
     
@@ -97,7 +103,7 @@
     .footer form button {
       padding: 10px;
       width: 100%;
-      background-color: rgb(22, 22, 170);
+      background-color: #B22222;
       color: white;
       font-size: 1rem;
       border: none;
@@ -110,7 +116,7 @@
   }
 
     .footer form button:hover {
-      background-color: blue;
+      background-color: #8B0000;
     }
     
     .footer-social-media a {
@@ -123,7 +129,7 @@
       height: 40px;
       margin: 0;
       margin-right: 20px;
-     
+      transition: opacity 0.3s ease;
     }
     
     .social-icon:hover {
@@ -131,19 +137,13 @@
     }
     
     .footer-copyright {
-      background-color: #80CED7;
-      color: rgb(68, 66, 66);
+      background-color: #d6d4d4; /* Light Gray */
+      color: #4F4F4F; /* Muted Gray */
       text-align: center;
-      padding: 0.7rem;
+      padding: 0.7rem 10rem;
       font-size: 1.1rem;
-      display: flex;
-      justify-content: center;
-      padding-left: 10rem;
-      padding-right: 10rem;
-      font-family: OpenSans;
-      font-weight: 600;
-      margin: 0 auto;
       font-family: Montserrat;
+      font-weight: 600;
     }
     
     .footer-copyright p {

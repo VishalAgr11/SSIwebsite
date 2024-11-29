@@ -7,7 +7,7 @@
     font-size: 28px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #333;
+    color: #333333;
     padding-top: 30px;
     font-family: Poppins;
   }
@@ -18,11 +18,11 @@
     grid-template-columns: repeat(3, 300px); 
     gap: 80px;
     justify-content: center;
-    background-color: #f3f0f0;
+    background-color: #ffffff;
 }
 
 .card {
-    background-color: #fff;
+    background-color: #F7F7F7;
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -36,7 +36,7 @@
   .card:hover {
     transform: scale(1.10);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #0a4f6e; 
+    background-color: #B22222; 
     color: #fff;
 }
 
@@ -48,13 +48,13 @@
 }
 
 .card button {
-    background-color: #0a4f6e;
+    background-color: #B22222;
     color: #fff;
 }
 
 .card:hover button {
-    background-color: #fff;
-    color: #0a4f6e;
+    background-color:#fff;
+    color: #B22222;
 }
 
   
@@ -99,7 +99,7 @@
   }
   
   .carousel-dots .dot.active {
-    background-color: #0a4f6e;
+    background-color: #8B0000;
   }
   
   .card img {
@@ -116,24 +116,25 @@
     height: 60px;
     line-height: 1.4;
     font-family: Lato;
+    color: #333333;
   }
   
   .card p {
     font-size: 15px;
-    color: #555;
+    color: #4F4F4F;
     margin: 10px 0;
     font-family: Lato;
   }
   
   .card .price {
     font-weight: bold;
-    color: #333;
+    color: #4F4F4F;
     font-size: 18px;
     margin: 10px 0;
   }
   
   .card button {
-    background-color: #0a4f6e;
+    background-color: #B22222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -144,7 +145,7 @@
   }
   
   .card button:hover {
-    background-color: #e5e9ec;
+    background-color: #fff;
   }
 
   a{
@@ -173,7 +174,7 @@ body.modal-active .card-section {
 }
 
 span{
-  color:#0a4f6e;
+  color:#B22222;
 }
 
 .horizontal-card {
@@ -196,23 +197,25 @@ span{
   margin-bottom: 10px;
   font-size: 1.5rem;
   font-family: Poppins;
+  color: #333333;
 }
 
 .content{
   margin-bottom: 15px;
   font-size: 1rem;
   font-family: Lato;
+  color: #4F4F4F;
 }
 
 .quote{
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0a4f6e;
+  color: #B22222;
   font-family: Lato;
 }
 
 .horizontal-card-content button {
-  background-color:#0a4f6e;
+  background-color:#B22222;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -228,7 +231,7 @@ span{
 }
 
 .horizontal-card-content button:hover {
-  background-color: #0056b3;
+  background-color: #8B0000;
 }
 
 /* Modal Styling */
@@ -255,7 +258,7 @@ span{
 .modal-content h2 {
   margin-bottom: 15px;
   font-family: Poppins;
-  color: #0a4f6e;
+  color: #333333;
 }
 
 .modal-content form label {
@@ -273,7 +276,7 @@ span{
 }
 
 .modal-content form button {
-  background-color: #1a518b;
+  background-color: #B22222;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -289,7 +292,7 @@ span{
 }
 
 .modal-content form button:hover {
-  background-color: #0056b3;
+  background-color: #8B0000;
 }
 
 .close {
