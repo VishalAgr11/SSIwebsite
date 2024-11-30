@@ -76,15 +76,31 @@
     }
     
     .footer-column ul li a {
-      color: #B22222; /* Firebrick Red */
+      position: relative;
+      color: #B22222; 
       text-decoration: none;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
-      
+      transition: color 0.3s ease;
     }
     
+    /* Add underline effect */
+    .footer-column ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px; 
+      width: 0;
+      height: 2px; 
+      background-color: #d10b0b; 
+      transition: width 0.3s ease;
+    }
+    
+    /* Hover effect */
     .footer-column ul li a:hover {
-      color: #8B0000;
-      text-decoration: underline;
+      color: #d10b0b; 
+    }
+    
+    .footer-column ul li a:hover::after {
+      width: 100%; 
     }
     
     .footer form {
