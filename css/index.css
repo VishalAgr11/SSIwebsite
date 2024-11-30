@@ -43,7 +43,7 @@
 
 
 .color-text {
-  color: white; 
+  color: #333; 
   font-size: 2rem; 
   font-weight: bold;
   text-align: left;
@@ -52,7 +52,7 @@
 }
 
 .content {
-  color: white;
+  color: #4F4F4F;
   font-size: 1.4rem; 
   text-align: left; 
   margin: 10px 0 0 0; 
@@ -76,7 +76,7 @@
   top: 60%;
   transform: translateY(-50%);
   font-size: 1rem;
-  color: white;
+  color: #4F4F4F;
   background: transparent;
   border: none;
   padding: 10px;
