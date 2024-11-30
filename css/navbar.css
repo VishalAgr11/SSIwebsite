@@ -55,17 +55,34 @@
 }
 
 .navbar-links li a {
+  position: relative;
   color: #B22222; /* Firebrick Red */
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   font-family: Poppins;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.3s ease;
 }
 
+/* Add underline effect */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 0;
+  height: 2px;
+  background-color: #d10b0b; 
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
 .navbar-links li a:hover {
-  color: #d10b0b; /* Dark Red */
-  text-decoration: none;
+  color: #d10b0b; 
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
 }
 
 .dropdown .arrow {
@@ -91,20 +108,38 @@
   padding: 0.5rem 1rem;
 }
 
+/* Dropdown links */
 .dropdown-content li a {
-  color: #fff;
+  position: relative;
+  color: #fff; /* White text */
   text-decoration: none;
   display: block;
   font-size: 1.1rem;
   font-family: Poppins;
+  transition: color 0.3s ease;
 }
 
+/* Add underline effect */
+.dropdown-content li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 0;
+  height: 2px;
+  background-color: #fff; 
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
 .dropdown-content li a:hover {
-  color: #fff; /* Dark Red */
-  text-decoration: none;
+  color: #fff;
 }
 
-/* Show the dropdown on hover - This is for larger screens */
+.dropdown-content li a:hover::after {
+  width: 100%;
+}
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
