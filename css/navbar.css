@@ -195,6 +195,7 @@ a {
 }
 
 @media (max-width: 576px) {
+
   .navbar {
     justify-content: space-between;
     padding: 0 2rem;

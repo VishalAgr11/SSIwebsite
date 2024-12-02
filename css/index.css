@@ -518,11 +518,14 @@ body {
   .color-section .color-block {
     background-size: cover;
     background-position: top center; 
+    padding-top: 0;
   }
 }
 /* Media Queries for screens smaller than 576px */
 @media (max-width: 576px) {
- 
+*{
+  overflow-x: hidden;
+}
   .color-section {
     min-height: 80vh;
     height: auto;
@@ -539,14 +542,13 @@ body {
   .color-text,
   .content {
     max-width: 60%; 
-    padding-left: 6%;
+    padding-left: 10%;
     margin: 1rem 0; 
     text-align: left; 
   }
 
   .read-more-link {
-    margin: 2px; 
-    margin-left: 22px;
+    margin-top: 20px; 
     display: block;
   }
 
@@ -562,7 +564,7 @@ body {
   }
 
   .color-section .right-arrow {
-    right: 5px;
+    right: 15px;
   }
 
   .about-us {
