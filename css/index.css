@@ -33,7 +33,7 @@ body {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  padding-top: 0;
+  
 }
 
 .color-block.active {
@@ -516,6 +516,7 @@ body {
   .color-section .color-block {
     background-size: cover; 
     background-position: center; 
+    padding-top: 0;
   }
 }
 
