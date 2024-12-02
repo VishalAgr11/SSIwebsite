@@ -203,6 +203,7 @@ body {
   width:100% ; 
   background-color: none; 
   position: relative;
+  margin-bottom: 20px;
 }
 
 .center-gif {
