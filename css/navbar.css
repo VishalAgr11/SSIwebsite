@@ -195,7 +195,9 @@ a {
 }
 
 @media (max-width: 576px) {
-
+*{
+  overflow-x: hidden;
+}
   .navbar {
     justify-content: space-between;
     padding: 0 2rem;
@@ -241,16 +243,13 @@ a {
   .dropdown-content {
     position: static;
     display: none;
-    background-color: #ffffff;
+    background-color: #8B0000;
     width: 100%;
   }
 
   .dropdown-content li {
     text-align: center;
-  }
-
-  .dropdown .dropdown-content {
-    display: none;
+    color: #fff;
   }
 
   .dropdown .dropdown-content.show {
