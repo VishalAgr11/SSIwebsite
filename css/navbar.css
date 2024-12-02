@@ -2,23 +2,28 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Balanced layout */
-  align-items: center; /* Center items vertically */
-  background-color: #ffffff; /* Clean white background */
-  color: #020202;
-  font-family: Montserrat;
-  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Ensures the navbar stays fixed */
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Stays on top of other content */
+  background-color: transparent; /* Initially transparent */
+  color: #020202;
+  font-family: Poppins, sans-serif;
   padding: 0 2rem;
   height: 75px;
   box-sizing: border-box;
-  border-bottom: 1px solid #cac9c9; /* Light gray separator */
-  padding-left: 10%;
-  padding-right: 10%;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.navbar.scrolled {
+  background-color: #ffffff; /* Changes to white when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #cac9c9;
+}
+
 
 .navbar-logo img {
   height: 40px;
@@ -33,10 +38,6 @@
   font-family: Roboto;
 }
 
-.navbar.scrolled {
-  position: absolute;
-}
-
 .navbar-logo h2 {
   margin: 0;
   color: #030303;
@@ -48,10 +49,6 @@
   list-style: none;
   display: flex;
   gap: 4rem;
-}
-
-.navbar-links li {
-  position: relative;
 }
 
 .navbar-links li a {
@@ -79,6 +76,7 @@
 /* Hover effect */
 .navbar-links li a:hover {
   color: #d10b0b; 
+  font-weight: 600;
 }
 
 .navbar-links li a:hover::after {
@@ -88,7 +86,9 @@
 .dropdown .arrow {
   margin-left: 5px;
 }
-
+.dropdown {
+  position: relative; /* Important: ensures correct positioning for dropdown-content */
+}
 /* Dropdown menu styling */
 .dropdown-content {
   display: none;

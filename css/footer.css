@@ -78,42 +78,68 @@
       font-size: 1.3rem;
       color: #333333
     }
+    .quick-links-wrapper {
+      text-align: center; /* Center align the heading */
+      margin-right: 30px;
+    }
     
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .quick-links-wrapper h4 {
+      text-align: center;
+      font-size: 1.5rem; /* Adjust heading font size if needed */
+      margin-bottom: 15px; /* Space between heading and columns */
       color: #333333;
     }
     
-    .footer-column ul li a {
+    .quick-links-container {
+      display: flex;
+      justify-content: space-evenly; /* Space between two columns */
+      gap: 20px; /* Optional gap between columns */
+      align-items: flex-start; /* Align columns to the top */
+      max-width: 300px; /* Optional: Restrict the max width of the columns */
+      margin: 0 auto; /* Center the container horizontally */
+    }
+    
+    .quick-links-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .quick-links-container ul li {
+      margin: 5px 0;
+    }
+    
+    .quick-links-container ul li a {
       position: relative;
-      color: #B22222; 
+      color: #B22222;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     
-    /* Add underline effect */
-    .footer-column ul li a::after {
+    .quick-links-container ul li a::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -3px; 
+      bottom: -3px;
       width: 0;
-      height: 2px; 
-      background-color: #d10b0b; 
+      height: 2px;
+      background-color: #d10b0b;
       transition: width 0.3s ease;
     }
     
-    /* Hover effect */
-    .footer-column ul li a:hover {
-      color: #d10b0b; 
+    .quick-links-container ul li a:hover {
+      color: #333;
+      font-weight: bold;
     }
     
-    .footer-column ul li a:hover::after {
-      width: 100%; 
+    .quick-links-container ul li a:hover::after {
+      width: 100%;
     }
     
+    .footer-social-media{
+      margin-right: -20px;
+    }
+
     .footer form {
       display: flex;
       flex-direction: column;

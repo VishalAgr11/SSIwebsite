@@ -59,8 +59,27 @@ body {
   font-family: Lato;
 }
 
+.sub-heading{
+  color: #4F4F4F;
+  font-size: 1.2rem; 
+  text-align: left; 
+  margin: 10px 0 0 0; 
+  font-family: Lato;
+}
 
-.color-text, .content {
+.services-quote{
+  color: #4F4F4F;
+  font-size: 1.4rem; 
+  text-align: left; 
+  margin: 10px 0 0 0; 
+  font-family: Lato;
+  
+}
+
+.services-quote:hover{
+  color: #8B0000;
+}
+.color-text, .content, .sub-heading, .services-quote {
   max-width: 50%; 
   padding-left: 10%;
 }
