@@ -315,4 +315,19 @@
     width: 100%; 
     font-size: 0.9rem; 
   }
+  .quick-links-wrapper {
+    text-align: flex-start; /* Align the heading and links to the left */
+    margin-right: 0; /* Remove any right margin */
+  }
+  .quick-links-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+   
+    margin: 0;
+}
+  .quick-links-wrapper h4{
+    text-align: left;
+  }
 }

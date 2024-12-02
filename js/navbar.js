@@ -15,18 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navbarLinks = document.querySelector('.navbar-links');
 
-  if (hamburger) { // Check if the hamburger button exists
+  if (hamburger) {
     hamburger.addEventListener('click', () => {
-      navbarLinks.classList.toggle('show');
+      hamburger.classList.toggle('active'); // Toggle active state for cross
+      navbarLinks.classList.toggle('show'); // Toggle nav links
     });
 
     document.addEventListener('click', (event) => {
       if (!event.target.closest('.navbar')) {
-        navbarLinks.classList.remove('show');
+        hamburger.classList.remove('active'); // Remove cross state
+        navbarLinks.classList.remove('show'); // Hide nav links
       }
     });
   }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

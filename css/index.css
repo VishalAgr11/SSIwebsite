@@ -33,6 +33,7 @@ body {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
+  padding-top: 0;
 }
 
 .color-block.active {
@@ -362,6 +363,10 @@ body {
 
 /* Media Queries for screens between 577px and 1024px */
 @media (min-width: 577px) and (max-width: 1024px) {
+  
+  *{
+    overflow-x: hidden;
+  }
   .color-section {
     height: 43vh;
     flex-direction: column;
@@ -509,7 +514,7 @@ body {
 }
 @media (max-width: 1024px) {
   .color-section .color-block {
-    background-size: contain; 
+    background-size: cover; 
     background-position: center; 
   }
 }
