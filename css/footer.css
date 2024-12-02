@@ -47,30 +47,31 @@ body{
       color: #333333;
     }
   
-    .footer-address p{
-      margin-top: 20px;
-      gap: 10px;
-      align-items: flex-start;
-      color: #333333; 
+    .footer-address p {
+      display: grid; /* Use grid layout */
+      grid-template-columns: auto 1fr; /* Icon in the first column, text in the second */
+      align-items: start; /* Align items vertically in the center */
+      column-gap: 10px; /* Space between icon and text */
+      margin: 0.5rem 0; /* Spacing between rows */
       font-size: 1rem;
-      margin: 0.5rem 0; 
+      color: #333333;
     }
+    
     .footer-address p i {
       font-size: 1.2rem;
-      color: #8B0000; 
-      margin-top: 2px; 
+      color: #8B0000;
     }
-
+    
     .footer-address p a {
       color: #333333;
-      text-decoration: none; 
+      text-decoration: none;
+      word-break: break-word; /* Prevent long links from breaking the layout */
     }
     
     .footer-address p a:hover {
-      color: #8B0000; 
+      color: #8B0000;
     }
-
-   
+    
     .footer-column h4 {
       margin-bottom: 10px;
       font-size: 1.3rem;
