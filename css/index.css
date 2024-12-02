@@ -1,10 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+  font-family: 'Arial', sans-serif;
+}
 
 *{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .color-section {
@@ -49,7 +49,6 @@
   font-weight: bold;
   text-align: left;
   margin: 6rem 0 10px 0; 
-  font-family: Poppins;
 }
 
 .content {
@@ -100,16 +99,15 @@
   right: 10px;
 }
 
-
- .read-more-link {
+.read-more-link {
   display: inline-block;
   margin-top: 30px;
   padding: 10px 22px;
   margin-left: 10%;
-  font-size: 16px;
+  font-size: 1.2rem; 
   color: rgb(52, 53, 53);
   background-color: white;
-  border: 4px;
+  border: 4px solid #8B0000 ; /* Maroon border */
   border-radius: 6px;
   cursor: pointer;
   font-family: Lato;
@@ -117,7 +115,7 @@
 }
 
 .read-more-link:hover {
-  background-color:#B22222;
+  background-color: #8B0000 ;
   color: white;
 }
 
@@ -125,8 +123,9 @@
   outline: none;
 }
 
+
 .info-section {
-  background-color:#6b0000; 
+  background-color:#8B0000 ; 
   padding: 20px 0; 
   display: flex; 
   justify-content: space-around; 
@@ -145,18 +144,18 @@
 
 .info-column h3 {
   color: white; 
-  font-size: 1.5rem; 
-  font-family: Poppins;
+  font-size: 1.5rem;
+  font-family: Poppins; 
 }
 /* About Us Section */
 .about-us {
- padding: 30px;
- padding-top: 60px;
-  background-color: #F7F7F7; 
-  text-align: center;
-}
+  padding: 30px;
+  padding-top: 60px;
+   background-color: #F7F7F7; 
+   text-align: center;
+ }
 
-.about-us .heading1 {
+ .about-us .heading1 {
   font-size: 2.5rem; 
   font-weight: bold;
   color: #333333;
@@ -180,10 +179,9 @@
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
-  height: 500px; 
+  height: 600px; 
   width:100% ; 
   background-color: none; 
-  margin-top: 20px;
   position: relative;
 }
 
@@ -231,7 +229,6 @@
    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
-
 .industry-logo {
   width: 70px; /* Adjust logo size */
   height: 70px;
@@ -244,6 +241,7 @@
   color: #333;
   font-weight: bold;
   margin-bottom: 10px;
+  height: 2.4rem;
   font-family: Lato;
 }
 
@@ -252,6 +250,7 @@
   text-align: center;
   line-height: 1.6;
   margin-bottom: 10px;
+  height:2.4rem;
   font-family: Lato;
 }
 
@@ -319,7 +318,7 @@
   margin-bottom: 10px;
   font-size: 1rem;
   font-style: italic;
-  color: #4F4F4F;
+  color: #555;
 }
 
 .testimonial-dots {

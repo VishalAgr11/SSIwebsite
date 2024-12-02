@@ -45,23 +45,34 @@
       font-size: 1rem;
       text-align: left;
       color: #333333;
+    
     }
   
-    .footer-address p{
-      margin-top: 20px;
-      color: #333333;
-    }
-  
-    .footer-social a {
-      color: #333333;
-      text-decoration: none;
-    }
-    
-    .footer-social a:hover {
-      text-decoration: none;
-      color: #8B0000;
+    .footer-address p {
+      display: flex; 
+      align-items: flex-start; 
+      gap: 10px; 
+      color: #333333; 
+      font-size: 1rem;
+      margin: 0.5rem 0; 
     }
     
+    .footer-address p i {
+      font-size: 1.3rem;
+      color: #8B0000; 
+      margin-top: 2px; 
+    }
+
+    .footer-address p a {
+      color: #333333;
+      text-decoration: none; 
+    }
+    
+    .footer-address p a:hover {
+      color: #8B0000; 
+    }
+
+   
     .footer-column h4 {
       margin-bottom: 10px;
       font-size: 1.3rem;
@@ -112,30 +123,34 @@
       padding: 10px;
       width: 100%;
       margin-bottom: 10px;
-      border: none;
+     border: none;
       font-size: 1rem;
       border-radius: 4px;
+      box-sizing: border-box;
     }
     
     .footer form button {
       padding: 10px;
       width: 100%;
-      background-color: #B22222;
+      background-color: #333333; /* Dark Grey background */
       color: white;
       font-size: 1rem;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      box-sizing: border-box;
     }
+    
+    .footer form button:hover {
+      background-color: #8B0000; /* Maroon background on hover */
+      color: white;
+    }
+    
     .footer form input,
   .footer form button {
     box-sizing: border-box;
   }
 
-    .footer form button:hover {
-      background-color: #8B0000;
-    }
-    
     .footer-social-media a {
       margin: 0; 
       padding: 0; 
@@ -150,24 +165,34 @@
     }
     
     .social-icon:hover {
-      opacity: 0.8;
+      opacity: 0.9;
     }
     
     .footer-copyright {
-      background-color: #ececec; /* Light Gray */
-      color: #4F4F4F; /* Muted Gray */
+      background-color: #ececec; 
+      color: #000000; 
       text-align: center;
-      padding: 0.3rem 10rem;
-      font-size: 1.1rem;
+      padding: 0.3rem 8rem;
+      font-size: 1rem;
       font-family: Poppins;
-      font-weight: 600;
-
-      border-top: 1px solid #cac9c9; /* Light gray separator */
+      font-weight: 400;
+      position: relative; 
+    }
+    
+    .footer-copyright::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8rem; 
+      right: 8rem; 
+      height: 1px;
+      background-color: #c5c5c5; /* Light gray separator */
     }
     
     .footer-copyright p {
       margin: 0;
     }
+    
 
     @media screen and (min-width: 577px) and (max-width: 1024px) {
       .footer {
