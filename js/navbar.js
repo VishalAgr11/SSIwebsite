@@ -10,34 +10,56 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navbarLinks = document.querySelector('.navbar-links');
+
+  if (hamburger) { // Check if the hamburger button exists
+    hamburger.addEventListener('click', () => {
+      navbarLinks.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.navbar')) {
+        navbarLinks.classList.remove('show');
+      }
+    });
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('.dropdown');
 
-  // Toggle navbar links visibility
-  hamburger.addEventListener('click', function() {
-    navbarLinks.classList.toggle('show');
-  });
+  dropdowns.forEach((dropdown) => {
+    const toggle = dropdown.querySelector('a');
+    const content = dropdown.querySelector('.dropdown-content');
 
-  // Toggle dropdown visibility when clicking on the dropdown parent
-  dropdowns.forEach(function(dropdown) {
-    dropdown.addEventListener('click', function(event) {
-      // Prevent click from propagating to navbarLinks click handler
-      event.stopPropagation();
-      
-      // Toggle dropdown visibility
-      const dropdownContent = dropdown.querySelector('.dropdown-content');
-      dropdownContent.classList.toggle('show');
+    // Handle dropdown toggle on click for smaller screens
+    toggle.addEventListener('click', (event) => {
+      if (window.innerWidth <= 576) {
+        event.preventDefault();
+        const isVisible = content.classList.contains('show');
+        closeAllDropdowns();
+        if (!isVisible) {
+          content.classList.add('show');
+        }
+      }
     });
   });
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!navbarLinks.contains(event.target) && !hamburger.contains(event.target)) {
-      dropdowns.forEach(function(dropdown) {
-        dropdown.querySelector('.dropdown-content').classList.remove('show');
-      });
+  // Close all dropdowns when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.dropdown')) {
+      closeAllDropdowns();
     }
   });
+
+  // Close all dropdown menus
+  function closeAllDropdowns() {
+    document.querySelectorAll('.dropdown-content').forEach((content) => {
+      content.classList.remove('show');
+    });
+  }
 });

@@ -195,9 +195,7 @@ a {
 }
 
 @media (max-width: 576px) {
-*{
-  overflow-x: hidden;
-}
+
   .navbar {
     justify-content: space-between;
     padding: 0 2rem;
@@ -251,7 +249,7 @@ a {
     text-align: center;
     color: #fff;
   }
-
+  
   .dropdown .dropdown-content.show {
     display: block;
   }
