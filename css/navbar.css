@@ -75,8 +75,8 @@
 
 /* Hover effect */
 .navbar-links li a:hover {
-  color: #d10b0b; 
-  font-weight: 600;
+  color: #333; 
+  font-weight: bold;
 }
 
 .navbar-links li a:hover::after {
