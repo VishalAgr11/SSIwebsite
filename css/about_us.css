@@ -113,7 +113,7 @@ body{
     height: 380px; 
 }
 .info-about {
-    background-color: #e0e1e2; 
+    background-color: #8B0000; 
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -133,20 +133,6 @@ body{
 }
 
 .info-col h3 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-family: Lato;
-    color: #333333;
-}
-
-.number {
-    display: block; 
-    font-size: 2.2rem; 
-    font-weight: 500;
-    color: #B22222; 
-}
-
-/* .info-col h3 {
     font-size: 1.4rem;
     font-weight: 600;
     font-family: Poppins;
@@ -159,7 +145,7 @@ body{
     font-weight: 600;
     color: #fff; 
 }
- */
+
 
 .mission-vision {
     padding: 35px 0;
@@ -337,8 +323,11 @@ body{
 
     .info-about {
         flex-direction: column;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 0;
     }
 
     .info-col {

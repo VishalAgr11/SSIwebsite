@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .team-section {
@@ -172,7 +173,9 @@
   }
 
   @media (min-width: 577px) and (max-width: 1024px) {
-   
+    *{
+      overflow-x: hidden;
+     }
     .team-section {
       padding: 0;
       height: auto; 
@@ -242,9 +245,11 @@
   
   
   @media (max-width: 576px) {
-   
+   *{
+    overflow-x: hidden;
+   }
     .team-section {
-      padding: 1rem;
+      padding: 0;
       height: auto;
     }
   
