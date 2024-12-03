@@ -9,45 +9,47 @@
   <link rel="stylesheet" href="../css/team.css">
    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="icon" type="image/png" href="../assets/SSI_logo.jpg">
-  <title>SSI | Our Team</title>
+
+  <title>SSI</title>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <a href="../index.html">
-        <img src="../assets/SSI_logo1.png" alt="Company Logo">
-      </a>
-    </div>
-    <button class="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-  
 
-    <ul class="navbar-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../pages/about_us.html">About Us</a></li>
-      <li>
-        <a href="/pages/services.html">Services </a>
-      </li>
-      <li><a href="/pages/shop.html">Shop</a></li>
-      <li class="dropdown">
-        <a href="#company">Company <span class="arrow">&#9662;</span></a>
-        <ul class="dropdown-content">
-          <li><a href="../pages/team.html">Our Team</a></li>
-          <li><a href="../pages/careers.html">Careers</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-<!-- Team Section -->
-<section class="team-section hidden animate-on-scroll">
-  <div class="team-head hidden animate-on-scroll"><h1>Meet Our Team</h1>
-  <p class="team-content hidden animate-on-scroll">Our talented team is the driving force behind our success.</p>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="../index.html">
+      <img src="../assets/SSI_logo1.png" alt="Company Logo">
+    </a>
   </div>
-  <div class="team-container hidden animate-on-scroll">
+  <button class="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+
+
+  <ul class="navbar-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../pages/about_us.html">About Us</a></li>
+    <li>
+      <a href="/pages/services.html">Services </a>
+    </li>
+    <li><a href="/pages/shop.html">Shop</a></li>
+    <li class="dropdown">
+      <a href="#company">Company <span class="arrow">&#9662;</span></a>
+      <ul class="dropdown-content"> 
+        <li><a href="../pages/team.html">Our Team</a></li>
+        <li><a href="../pages/careers.html">Careers</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- Team Section -->
+<section class="team-section">
+  <h1 class="team-head">Meet Our Team</h1>
+  <p class="team-content">Our talented team is the driving force behind our success.</p>
+  <div class="team-container">
     <!-- Team Member 1 -->
-    <div class="team-card hidden animate-on-scroll">
+    <div class="team-card">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member1.jpg" alt="Member 1">
@@ -67,7 +69,7 @@
     </div>
 
     <!-- Team Member 2 -->
-    <div class="team-card hidden animate-on-scroll">
+    <div class="team-card">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member2.jpg" alt="Member 2">
@@ -87,7 +89,7 @@
     </div>
 
     <!-- Team Member 3 -->
-    <div class="team-card hidden animate-on-scroll">
+    <div class="team-card">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member3.jpg" alt="Member 3">
@@ -115,14 +117,6 @@
 
 <script src="../js/navbar.js"></script>
 <script>
-  // Load Navbar
-  fetch('../components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-      })
-      .catch(err => console.log("Failed to load Navbar:", err));
-
   // Load Footer
   fetch('../components/footer.html')
       .then(response => response.text())
@@ -130,24 +124,6 @@
           document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
-      
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("pop-up");
-              observer.unobserve(entry.target); // Stop observing once the animation is triggered
-            }
-          });
-        });
-      
-        elementsToAnimate.forEach((element) => {
-          observer.observe(element);
-        });
-      });
-      
 </script>
 </body>
 </html>
