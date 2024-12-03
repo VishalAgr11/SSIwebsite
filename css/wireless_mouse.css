@@ -122,7 +122,7 @@
       
         
   button {
-    background-color: #B22222;
+    background-color: #8B0000;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -190,7 +190,7 @@ body.modal-active .card-section {
 }
 
 .modal-content button {
-  background-color: #B22222;
+  background-color: #8B0000;
   color: white;
   border: none;
   padding: 0.6rem 1.4rem; 
@@ -223,7 +223,7 @@ h2{
   font-family: Poppins;
 }
 span{
-  color:#B22222;
+  color:#8B0000;
 }
 
 

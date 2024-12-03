@@ -1,37 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .banner {
   width: 100%;
   background: url(../assets/jobs.webp);
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   font-family: Arial, sans-serif;
-  padding-bottom: 40px;
-  padding-top: 60px;
-  position: relative; 
+  padding-bottom: 30px;
+  padding-top: 15px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .banner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(41, 41, 41, 0.8); 
-  z-index: 1; 
+  background-color: rgba(41, 41, 41, 0.8);
+  z-index: 1;
 }
 
 .content {
   margin-bottom: 10px;
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
 }
 
 .heading {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 10px;
-  color: white; 
+  color: white;
   text-align: center;
   padding-bottom: 10px;
   font-size: 3rem;
@@ -41,154 +43,174 @@
 
 .sub-heading {
   text-align: center;
-  color: white; 
+  color: white;
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-family: Lato;
+  font-weight: 500;
 }
 
 .link {
   text-align: center;
-  color: white; 
-  font-size: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  font-family: Lato;
 }
 
 a {
   text-decoration: none;
   color: white;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   font-family: Lato;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: lightgrey;
+  transition: width 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
   color: lightgrey;
+  font-weight: bold;
 }
 
+a:hover::after {
+  width: 100%;
+}
 
-  .why-join-us {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 40px;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
+.why-join-us {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
 
-  .why-join-us .left-content {
-    flex: 1;
-    width: 50%;
-  }
+.why-join-us .left-content {
+  flex: 1;
+  width: 50%;
+}
 
-  .why-join-us .left-content h2 {
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-    font-family: Poppins;
-    color:#333333;
-  }
+.why-join-us .left-content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  font-family: Poppins;
+  color: #333333;
+}
 
-  .why-join-us .left-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-family: Lato;
-    color: #4F4F4F;
-  }
+.why-join-us .left-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: Lato;
+  color: #4f4f4f;
+}
 
-  .why-join-us .cards {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    gap: 20px;
-  }
+.why-join-us .cards {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  gap: 20px;
+}
 
-  .why-join-us .card {
-    background-color: #F7F7F7;
-    border: 1px solid #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
+.why-join-us .card {
+  background-color: #f7f7f7;
+  border: 1px solid #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
-  .why-join-us .card:hover {
-    transform: translateY(-5px);
-  }
+.why-join-us .card:hover {
+  transform: translateY(-5px);
+}
 
-  .why-join-us .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    font-family: Poppins;
-    color: #8B0000;
-  }
+.why-join-us .card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-family: Poppins;
+  color: #8b0000;
+}
 
-  .why-join-us .card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-family: Lato;
-    color: #4F4F4F;
-  }
+.why-join-us .card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: Lato;
+  color: #4f4f4f;
+}
 
-  .current-openings {
-    padding: 2rem;
-    background-color: #f9f9f9;
-  }
+.current-openings {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  padding-bottom: 3rem;
+}
 
-  .section-heading {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #333;
-    font-family: Poppins;
-  }
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+  font-family: Poppins;
+}
 
-  .openings-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.openings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .opening-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    height: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.opening-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .opening-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-family: Poppins;
-    color: #333333;
-  }
+.opening-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Poppins;
+  color: #333333;
+}
 
-  .opening-info p {
-    margin: 0.25rem 0;
-    font-family: Lato;
-    color: #4F4F4F;
-  }
+.opening-info p {
+  margin: 0.25rem 0;
+  font-family: Lato;
+  color: #4f4f4f;
+}
 
-  .view-details {
-    padding: 0.5rem 1rem;
-    background-color: #B22222;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: Lato;
-  }
+.view-details {
+  padding: 0.5rem 1rem;
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: Lato;
+}
 
-  .view-details:hover {
-    background-color: #8B0000;
-  }
+.view-details:hover {
+  background-color: #8b0000;
+}
 
-  /* Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 1200px) {
   .why-join-us {
     flex-wrap: wrap;
@@ -236,31 +258,36 @@ a:hover {
   .sub-heading {
     font-size: 1rem;
   }
-    .why-join-us {
-      flex-direction: column; 
-      padding-left: 0%;
-      
-    }
-  
-    .why-join-us .left-content {
-      order: -1; 
-      width: 100%; 
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .why-join-us .cards {
-      display: flex;
-      flex-direction: column; 
-      gap: 20px;
-    }
-  
-    .why-join-us .card {
-      width: 100%; 
-      max-width: none; 
-    }
+  .why-join-us {
+    flex-direction: column;
+    padding-left: 0%;
   }
-  
+
+  .why-join-us .left-content {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .why-join-us .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .opening-card{
+    height: auto;
+  }
+  .view-details{
+    padding: 0.5rem 0.5rem;
+    width: max-content;
+  }
+
+  .why-join-us .card {
+    width: 100%;
+    max-width: none;
+  }
+}
 
 @media (max-width: 400px) {
   .heading {
@@ -274,7 +301,7 @@ a:hover {
 /* Hidden state for elements */
 .hidden {
   opacity: 0;
-  transform: translateY(50px) scale(0.95); 
+  transform: translateY(50px) scale(0.95);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 

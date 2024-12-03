@@ -113,6 +113,7 @@ body{
       color: #B22222;
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 1rem;
     }
     
     .quick-links-container ul li a::after {
