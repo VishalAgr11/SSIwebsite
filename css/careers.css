@@ -2,7 +2,7 @@
 
 .banner {
   width: 100%;
-  background: url(../assets/jobs.webp);
+  background: url(../assets/career.webp);
   background-size: cover;
   background-position: center;
   font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(41, 41, 41, 0.8);
+  background-color: rgba(39, 39, 39, 0.8);
   z-index: 1;
 }
 
@@ -211,92 +211,99 @@ a:hover::after {
 }
 
 /* Responsive Styles */
-@media (max-width: 1200px) {
+@media (max-width: 75rem) { /* 1200px = 75rem */
   .why-join-us {
     flex-wrap: wrap;
   }
   .why-join-us .cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 0.9375rem; /* 15px */
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 62rem) { /* 992px = 62rem */
   .why-join-us .left-content {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
   }
   .why-join-us .cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px = 48rem */
   .heading {
-    font-size: 2rem;
+    font-size: 2rem; /* 32px */
+  }
+  .why-join-us{
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .why-join-us .left-content {
+    text-align: center;
   }
   .sub-heading {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 19.2px */
   }
   .link {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* 14.4px */
   }
   .why-join-us .cards {
-    gap: 10px;
+    gap: 0.625rem; /* 10px */
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 36rem) { /* 576px = 36rem */
   .banner {
-    padding-bottom: 20px;
-    padding-top: 40px;
+    padding-bottom: 1.25rem; /* 20px */
+    padding-top: 2.5rem; /* 40px */
   }
   .heading {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* 28.8px */
   }
   .sub-heading {
-    font-size: 1rem;
+    font-size: 1rem; /* 16px */
   }
   .why-join-us {
     flex-direction: column;
-    padding-left: 0%;
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .why-join-us .left-content {
     order: -1;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
   }
 
   .why-join-us .cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem; /* 20px */
   }
-  .opening-card{
+  .opening-card {
     height: auto;
   }
-  .view-details{
+  .view-details {
     padding: 0.5rem 0.5rem;
     width: max-content;
   }
 
-  .why-join-us .card {
-    width: 100%;
-    max-width: none;
+  
+}
+
+@media (max-width: 25rem) { /* 400px = 25rem */
+  .heading {
+    font-size: 1.5rem; /* 24px */
+  }
+  .sub-heading {
+    font-size: 0.9rem; /* 14.4px */
   }
 }
 
-@media (max-width: 400px) {
-  .heading {
-    font-size: 1.5rem;
-  }
-  .sub-heading {
-    font-size: 0.9rem;
-  }
-}
 
 /* Hidden state for elements */
 .hidden {

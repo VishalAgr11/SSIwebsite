@@ -1,383 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html {
+  font-size: 16px; /* Base font size */
+}
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-*{
-    margin: 0;
-    padding: 0;
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
+/* About Section */
 .about-section {
-    padding: 0px 0px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
-    text-align: center; 
-    padding-bottom: 30px;
-  }
-  
-  .about-section .color-block {
-    background:url('../assets/bg.png') no-repeat center center / cover;
-    padding-top: 20px;
-    margin-bottom: 30px; 
-    height: 30vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-  }
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2rem;
+}
 
-  .about-section .color-text {
-    color: #333333;
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
-    font-family: Poppins;
-  }
-  
-  .about-section .about-content {
-    color: #8B0000; 
-    font-size: 1.1rem; 
-    margin-top: 5px;
-    font-family: Poppins;
-    font-weight: 500;
-  }
-  .about-content a {
-    color: #8B0000;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.4s ease;
+.about-section .color-block {
+  background: url("../assets/bg.png") no-repeat center center / cover;
+  padding-top: 1.25rem;
+  margin-bottom: 2rem;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section .color-text {
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+  font-family: Poppins;
+}
+
+.about-section .about-content {
+  color: #8b0000;
+  font-size: 1.1rem;
+  margin-top: 0.3125rem;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.about-content a {
+  color: #8b0000;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s ease;
 }
 
 .about-content a::after {
-    content: ''; 
-    position: absolute;
-    left: 0;
-    bottom: -2px; 
-    width: 0;
-    height: 2px; 
-    background-color: #8B0000;
-    transition: width 0.4s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  width: 0;
+  height: 0.125rem;
+  background-color: #8b0000;
+  transition: width 0.4s ease;
 }
 
 .about-content a:hover {
-    color: #333;
-    font-weight: 600;
+  color: #333;
+  font-weight: 600;
 }
 
 .about-content a:hover::after {
-    width: 100%; 
+  width: 100%;
 }
 
-  .our-story {
-    text-align: center; 
-    padding-left: 10%;
-    padding-right: 10%;
+.our-story {
+  text-align: center;
+  padding: 0 6.25rem;
 }
 
 .our-story h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-family: Poppins;
-    color: #333333;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  font-family: Poppins;
+  color: #333333;
 }
 
 .story-left,
 .story-right {
-    display: inline-block; 
-    vertical-align: top; 
-    padding: 10px; 
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.625rem;
 }
 
 .story-left {
-    width: 40%; 
+  width: 40%;
 }
 
 .story-right {
-    width: 55%;
-    text-align: justify; 
-    line-height: 1.6;
-    font-size: 1.1rem;
-    font-family: Lato;
-    color: #4F4F4F;
+  width: 55%;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-family: Lato;
+  color: #4f4f4f;
 }
 
 .story-left img {
-    width: 100%; 
-    height: 380px; 
-}
-.info-about {
-    background-color: #8B0000; 
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    padding-left: 10%; 
-    padding-right: 10%; 
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 24rem;
 }
 
-.info-col {
-    text-align: center;
-    margin: 0 0;
-    flex: 1;
+/* Info About Section */
+.info-about {
+  background-color: #8b0000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 6.25rem;
+  margin-top: 1.875rem;
+  padding: 1.25rem;
+  text-align: center;
+  width: 100%;
+  height: 3.125rem;
 }
 
 .info-col h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    font-family: Poppins;
-    color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: Poppins;
+  color: #fff;
 }
 
 .number {
-    display: block; 
-    font-size: 2rem; 
-    font-weight: 600;
-    color: #fff; 
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
 }
 
-
+/* Mission & Vision Section */
 .mission-vision {
-    padding: 35px 0;
-    text-align: center;
-    background-color: #ffffff; 
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 20px;
+  padding: 2.1875rem 0;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0 6.25rem;
+  margin-top: 2rem;
 }
 
 .mission-vision h2 {
-    font-size: 2rem;
-    color: #333333;
-    margin-bottom: 30px;
-    font-family: Poppins;
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 1.875rem;
+  font-family: Poppins;
 }
 
 .mission-vision-content {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
-    gap: 30px;     
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.875rem;
 }
 
 .mission-section,
 .vision-section {
-    width: 48%; 
-    text-align: center; 
-    text-align: justify;
+  width: 48%;
+  text-align: center;
+  text-align: justify;
 }
 
 .mission-section img,
 .vision-section img {
-    width: 350px; 
-    height: 250px; 
-    margin: 0 auto 15px; /* Centers the image horizontally */
-    display: block; /* Ensures the image is treated as a block element */
+  width: 21.875rem;
+  height: 15.625rem;
+  margin: 0 auto 0.9375rem;
+  display: block;
 }
-
 
 .mission-section p,
 .vision-section p {
-    font-size: 1.1rem;
-    color: #4F4F4F;
-    line-height: 1.6;
-    font-family: Lato;
-}
-/* Media Query for screens between 577px and 1024px */
-@media (min-width: 577px) and (max-width: 1024px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .about-section .color-block {
-        padding: 10px 15px;
-        height: 10vh; /* Adjust height for medium screens */
-    }
-
-    .about-section .color-text {
-        font-size: 1.8rem; /* Medium font size */
-    }
-
-    .about-section .about-content {
-        font-size: 1rem; /* Adjust font size */
-    }
-
-    .our-story {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .our-story h3 {
-        font-size: 1.8rem; /* Adjust heading size */
-    }
-
-    .story-left,
-    .story-right {
-        display: inline-block; /* Keep side-by-side for larger tablets */
-        width: 45%;
-        padding: 10px;
-    }
-
-    .story-left img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .info-about {
-        flex-direction: row;
-        padding-left: 7%;
-        padding-right: 7%;
-        gap: 15px; /* Add spacing between columns */
-    }
-
-    .info-col h3 {
-        font-size: 1.2rem; /* Adjust font size */
-    }
-
-    .number {
-        font-size: 2rem; /* Slightly smaller number font */
-    }
-
-    .mission-vision {
-        padding: 35px 20px;
-    }
-
-    .mission-vision h2 {
-        font-size: 1.8rem; /* Adjust heading size */
-    }
-
-    .mission-vision-content {
-        flex-direction: row;
-        gap: 25px; /* Add gap between sections */
-    }
-
-    .mission-section,
-    .vision-section {
-        width: 48%;
-    }
-
-    .mission-section img,
-    .vision-section img {
-        width: 100%; /* Ensure images fit container */
-        height: auto;
-    }
-
-    .mission-section p,
-    .vision-section p {
-        font-size: 1rem; /* Adjust text size */
-    }
+  font-size: 1.1rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-family: Lato;
 }
 
-
-/* Media Query for screens less than 576px */
-@media (max-width: 576px) {
-    body{
-        overflow-x: hidden;
-    }
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    .about-section .color-block {
-        padding: 20px 10px;
-        height: auto; /* Adjust height for smaller screens */
-    }
-
-    .about-section .color-text {
-        font-size: 1.5rem; /* Smaller font size */
-    }
-
-    .about-section .about-content {
-        font-size: 0.9rem; /* Smaller font size */
-    }
-
-    .our-story {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .our-story h3 {
-        font-size: 1.6rem; /* Reduce the heading size */
-    }
-
-    .story-left,
-    .story-right {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .story-left img {
-        width: 100%;
-        height: auto;
-    }
-
-    .info-about {
-        flex-direction: column;
-        padding-left: 3%;
-        padding-right: 3%;
-        height: auto;
-        padding-top: 10px;
-        padding-bottom: 0;
-    }
-
-    .info-col {
-        margin-bottom: 20px; /* Add spacing between columns */
-    }
-
-    .info-col h3 {
-        font-size: 1.1rem; /* Smaller font size */
-    }
-
-    .number {
-        font-size: 1.8rem; /* Smaller number font */
-    }
-
-    .mission-vision {
-        padding: 30px 15px;
-    }
-
-    .mission-vision h2 {
-        font-size: 1.6rem; /* Smaller heading size */
-    }
-
-    .mission-vision-content {
-        flex-direction: column;
-        gap: 20px; /* Add gap between sections */
-    }
-
-    .mission-section,
-    .vision-section {
-        width: 100%;
-    }
-
-    .mission-section img,
-    .vision-section img {
-        width: 100%; /* Ensure images take full width */
-    }
-
-    .mission-section p,
-    .vision-section p {
-        font-size: 1rem; /* Smaller text size */
-    }
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(50px) scale(0.95); 
-    transition: opacity 0.5s ease, transform 0.5s ease;
+/* Media Queries */
+@media (max-width: 60rem) {
+  /* Tablets */
+  .our-story {
+    padding: 0 3.125rem;
   }
-  
-  .pop-up {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+
+  .about-section .color-block {
+    height: 10vh;
+    padding-top: 50px;
+    padding-bottom: 15px;
   }
-  
+
+  .about-section .color-text {
+    font-size: 1.8rem;
+  }
+
+  .about-section .about-content {
+    font-size: 1rem;
+  }
+
+  .our-story {
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+
+  .our-story h3 {
+    font-size: 1.8rem;
+  }
+
+  .story-left,
+  .story-right {
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+  }
+
+  .story-left img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .info-about {
+    flex-direction: row;
+    padding-left: 7%;
+    padding-right: 7%;
+    gap: 15px;
+  }
+
+  .info-col h3 {
+    font-size: 1.2rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .mission-vision {
+    padding: 35px 30px;
+  }
+
+  .mission-vision h2 {
+    font-size: 1.8rem;
+  }
+
+  .mission-vision-content {
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  .mission-section,
+  .vision-section {
+    width: 48%;
+  }
+
+  .mission-section img,
+  .vision-section img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mission-section p,
+  .vision-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  /* Mobile */
+  .our-story {
+    padding: 0 1.5rem;
+  }
+  .story-left,
+  .story-right {
+    width: 100%;
+    padding: 0.625rem 0;
+  }
+  .info-about {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mission-vision {
+    padding: 0px 1.5rem;
+    margin-top: 2.25rem;
+  }
+
+  .mission-section,
+  .vision-section {
+    width: 100%;
+  }
+  .mission-vision-content {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .mission-section img,
+  .vision-section img {
+    width: 100%;
+    height: 250px;
+  }
+}

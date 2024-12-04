@@ -43,13 +43,13 @@
   </ul>
 </nav>
 
-<!-- Team Section -->
-<section class="team-section">
-  <h1 class="team-head">Meet Our Team</h1>
-  <p class="team-content">Our talented team is the driving force behind our success.</p>
-  <div class="team-container">
+<section class="team-section hidden animate-on-scroll">
+  <div class="team-head hidden animate-on-scroll"><h1>Meet Our Team</h1>
+  <p class="team-content hidden animate-on-scroll">Our talented team is the driving force behind our success.</p>
+  </div>
+  <div class="team-container hidden animate-on-scroll">
     <!-- Team Member 1 -->
-    <div class="team-card">
+    <div class="team-card hidden animate-on-scroll">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member1.jpg" alt="Member 1">
@@ -69,7 +69,7 @@
     </div>
 
     <!-- Team Member 2 -->
-    <div class="team-card">
+    <div class="team-card hidden animate-on-scroll">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member2.jpg" alt="Member 2">
@@ -89,7 +89,7 @@
     </div>
 
     <!-- Team Member 3 -->
-    <div class="team-card">
+    <div class="team-card hidden animate-on-scroll">
       <div class="card-inner">
         <div class="card-front">
           <img src="../assets/team-member3.jpg" alt="Member 3">
@@ -113,6 +113,7 @@
 </section>
 
 
+
 <div id="footer-container"></div>
 
 <script src="../js/navbar.js"></script>
@@ -124,6 +125,23 @@
           document.getElementById('footer-container').innerHTML = data;
       })
       .catch(err => console.log("Failed to load Footer:", err));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-up");
+              observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+          });
+        });
+      
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
 </script>
 </body>
 </html>

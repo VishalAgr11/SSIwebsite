@@ -234,24 +234,25 @@ html, body {
     }
     
 
-    @media screen and (min-width: 577px) and (max-width: 1024px) {
+    @media screen and (min-width: 36.0625rem) and (max-width: 64rem) {
       .footer {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        padding: 20px; 
-        padding-left: 4rem; 
-        padding-right: 4rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1.25rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
       }
     
       .footer-column,
-      .footer-column-address {
+      .footer-column-address,
+      .footer-column-social {
         width: 45%;
-        margin: 15px 0;
+        margin: 0.9375rem 0;
       }
     
       .footer-logo img {
-        height: 60px;
-        margin: 0 auto 10px auto;
+        height: 3.75rem;
+        margin: 0 auto 0.625rem auto;
       }
     
       .footer-address p,
@@ -260,88 +261,91 @@ html, body {
       }
     
       .footer-social-media a {
-        margin: 0 10px; 
+        margin: 0 0.625rem;
       }
     
       .social-icon {
-        width: 35px; 
-        height: 35px;
+        width: 2.1875rem;
+        height: 2.1875rem;
       }
     
       .footer-copyright {
-        padding: 0.7rem;
-        font-size: 1.1rem; 
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding: 0.4375rem;
+        font-size: 1.1rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
       }
     
       .footer form input,
       .footer form button {
         width: 100%;
-        font-size: 1rem; 
+        font-size: 1rem;
       }
     }
     
- 
-@media screen and (max-width: 576px) {
-  .footer {
-    flex-direction: column; 
-    padding: 20px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .footer-column,
-  .footer-column-address {
-    width: 100%;
-    margin: 10px 0;
-    text-align: left;
-  }
-
-  .footer-logo img {
-    margin: 0 auto 10px auto; 
-  }
-
-  .footer-address p,
-  .footer-column ul li {
-    font-size: 1rem; 
-  }
-
-  .footer-social-media a {
-    margin: 0 5px;
-  }
-
-  .social-icon {
-    width: 30px; 
-    height: 30px;
-  }
-
-  .footer-copyright {
-    padding: 0.5rem; 
-    font-size: 1rem; 
-    justify-content: center; 
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .footer form input,
-  .footer form button {
-    width: 100%; 
-    font-size: 0.9rem; 
-  }
-  .quick-links-wrapper {
-    text-align: flex-start; /* Align the heading and links to the left */
-    margin-right: 0; /* Remove any right margin */
-  }
-  .quick-links-container {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: flex-start;
-   
-    margin: 0;
-}
-  .quick-links-wrapper h4{
-    text-align: left;
-  }
-}
+    @media screen and (max-width: 36rem) {
+      .footer {
+        flex-direction: column;
+        padding: 1.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+    
+      .footer-column,
+      .footer-column-address,
+      .footer-column-social {
+        width: 100%;
+        margin: 0.625rem 0;
+        text-align: left;
+      }
+    
+      .footer-logo img {
+        margin: 0 auto 0.625rem auto;
+      }
+    
+      .footer-address p,
+      .footer-column ul li {
+        font-size: 1rem;
+      }
+    
+      .footer-social-media a {
+        margin: 0 0.3125rem;
+      }
+    
+      .social-icon {
+        width: 1.875rem;
+        height: 1.875rem;
+      }
+    
+      .footer-copyright {
+        padding: 0.3125rem;
+        font-size: 1rem;
+        justify-content: center;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+    
+      .footer form input,
+      .footer form button {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+    
+      .quick-links-wrapper {
+        text-align: flex-start;
+        margin-right: 0;
+      }
+    
+      .quick-links-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.25rem;
+        align-items: flex-start;
+        margin: 0;
+      }
+    
+      .quick-links-wrapper h4 {
+        text-align: left;
+      }
+    }
+    
