@@ -278,7 +278,10 @@ button:hover {
     }
   }
   
-
+  .map-container {
+    margin-top: 20px;
+  }
+  
   .hidden {
     opacity: 0;
     transform: translateY(50px) scale(0.95); 
