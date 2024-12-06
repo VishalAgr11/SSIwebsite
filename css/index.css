@@ -394,6 +394,7 @@ body {
   .read-more-link {
     margin: 1rem 3.75rem;
     display: block;
+    margin-left: 8%;
   }
 
   .color-section .left-arrow,
