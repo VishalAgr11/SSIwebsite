@@ -381,10 +381,16 @@ body {
   .content {
     max-width: 60%;
     padding-left: 8%;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     text-align: left;
   }
-
+.sub-heading{
+  height: 130px;
+}
+.color-text, .content, .sub-heading, .services-quote {
+  max-width: 50%; 
+  padding-left: 8%;
+}
   .read-more-link {
     margin: 1rem 3.75rem;
     display: block;
@@ -537,7 +543,7 @@ body {
 
   .color-text,
   .content {
-    max-width: 60%;
+    max-width: 80%;
     padding-left: 10%;
     margin: 1rem 0;
     text-align: left;
