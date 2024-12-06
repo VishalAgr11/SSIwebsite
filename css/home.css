@@ -2,10 +2,12 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
-
+body {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
 
 .home-container {
   display: flex;
@@ -16,7 +18,7 @@ body, html {
     padding-top: 0px;
     padding-left: 10px;
     padding-right: 15px;
-    margin-top: 60px;
+    margin-top: 75px;
     width: 100%;
     overflow-x: hidden;
 }
@@ -41,7 +43,7 @@ body, html {
   position: relative; /* Ensure content is above the overlay */
   z-index: 2;
 }
- .text-section {
+.text-section {
   flex: 1;
   max-width: 55%;
   margin-top: -4rem;
@@ -51,6 +53,7 @@ body, html {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  text-align: center;
   font-family: Poppins;
 }
 
@@ -58,73 +61,77 @@ body, html {
   font-size: 1.2rem;
   font-family: Lato;
 }
+
+
+/* Form Section (Right side) */
 .form-section {
-  flex: 1;
-  max-width: 28%; 
-  background-color: #fff;
-  color: #333;
-  padding: 2rem; 
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.8rem; 
+flex: 1;
+max-width: 25%; 
+background-color: #fff;
+color: #333;
+padding: 2rem; 
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: 0.8rem; 
 }
 
 .form-group {
-  margin-bottom: 1rem; 
+margin-bottom: 1rem; 
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 0.3rem; 
-  font-weight: bold;
+display: block;
+margin-bottom: 0.3rem; 
+font-weight: bold;
 }
 
 .form-section h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0;
-  font-family: Poppins;
+font-size: 1.5rem;
+color: #333;
+margin: 0;
+font-family: Poppins;
 }
 
 .form-section span {
-  color: #B22222;
+color: #B22222;
 }
 
 .form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 0.9rem; 
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-family: Lato;
+.form-group textarea,
+.form-group select  {
+width: 100%;
+padding: 0.8rem;
+font-size: 0.9rem; 
+border: 1px solid #ddd;
+border-radius: 8px;
+box-sizing: border-box;
+font-family: Lato;
 }
 
 .form-group textarea {
-  height: 100px; 
+height: 100px; 
 }
 
 .submit {
-  background-color: #B22222;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.4rem; 
-  font-size: 0.8rem; 
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: Lato;
-  transition: background-color 0.3s ease;
-  margin: 0 auto;
-  display: block;
+background-color: #B22222;
+color: white;
+border: none;
+padding: 0.6rem 1.4rem; 
+font-size: 0.8rem; 
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+margin: 0 auto;
+display: block;
+font-family: Lato;
 }
 
 .submit:hover {
-  background-color: #8B0000;
+background-color: #8B0000;
 }
 
 @media (min-width: 36.0625rem) and (max-width: 64rem) {
