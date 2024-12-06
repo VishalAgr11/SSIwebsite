@@ -670,6 +670,178 @@ body {
   }
 }
 
+@media (max-width: 25rem) {
+  .color-section .color-block {
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 25rem) { /* 400px */
+  * {
+    overflow-x: hidden;
+  }
+
+  .color-section {
+    min-height: 90vh;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .color-block {
+    padding: 0.75rem;
+    align-items: center;
+  }
+
+  .color-text,
+  .content {
+    max-width: 80%;
+    padding-left: 5%;
+    margin: 0.75rem 0;
+    text-align: left;
+  }
+.sub-heading{
+  max-width: 70%;
+    padding-left: 5%;
+    margin: 0.75rem 0;
+    text-align: left;
+}
+.services-quote {
+  max-width: 70%;
+  padding-left: 5%;
+  margin: 0.75rem 0;
+  text-align: left;
+}
+  .read-more-link {
+    margin-top: 1rem;
+    display: block;
+    font-size: 0.9rem;
+    padding-left: 5%;
+    margin-left: 5%;
+  }
+
+  .color-section .left-arrow,
+  .color-section .right-arrow {
+    top: 50%;
+    font-size: 0.7rem;
+  }
+
+  .color-section .left-arrow {
+    left: 0.25rem;
+  }
+
+  .color-section .right-arrow {
+    right: 0.75rem;
+  }
+
+  .about-us {
+    padding: 1rem;
+  }
+
+  .about-us .heading1 {
+    font-size: 1.5rem;
+  }
+
+  .about-us .about {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .gif-section {
+    height: auto;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .center-gif {
+    max-width: 100%;
+  }
+
+  .center-text {
+    font-size: 0.9rem;
+    padding: 0 0.75rem;
+  }
+
+  .industries-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .industries-heading {
+    font-size: 1.2rem;
+  }
+
+  .industries-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .industry-card {
+    padding: 1.25rem;
+    height: 15rem;
+    width: 18rem;
+    margin: 0 auto;
+  }
+
+  .industry-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .industry-text,
+  .headline {
+    font-size: 0.9rem;
+    height: auto;
+  }
+
+  .info {
+    font-size: 0.8rem;
+  }
+
+  .testimonials-section {
+    padding: 1.25em 0.5em;
+  }
+
+  .testimonials-heading {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 0.75em;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.8rem;
+  }
+
+  .testimonial-dots {
+    margin-top: 0.6em;
+  }
+
+  .dot {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  .info-section {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .info-column {
+    padding: 0.5rem 0;
+  }
+
+  .info-column h3 {
+    font-size: 1rem;
+  }
+}
+
+
 /* Hidden state for elements */
 .hidden {
   opacity: 0;
