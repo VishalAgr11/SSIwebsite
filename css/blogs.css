@@ -1,0 +1,245 @@
+/* CSS Reset */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.section-title {
+  position: relative;
+  font-size: 2rem;
+  font-family: Poppins, sans-serif;
+  color: #333;
+  text-align: center;
+  padding-top: 20px;
+  height: 30vh;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/bg.png") no-repeat center/cover;
+  z-index: -1; /* Ensures the background appears behind the text */
+}
+
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  max-width: 1100px;
+  margin-bottom: 40px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  background-color: #f8f6f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 550px;
+  border: 1px solid #8B0000;
+  transition: transform 0.3s, height 0.3s ease-in-out; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+.card-image {
+  width: 500px;
+  height: 70%;
+  object-fit: fill;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-family: Poppins;
+}
+
+.card-content p {
+  margin: 10px 0 0;
+  font-size: 15px;
+  color: #4f4f4f;
+  line-height: 1.5;
+  font-family: Lato;
+}
+.card-content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    max-height: 500px; /* Initial height for collapsed state */
+    padding: 15px 20px;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .card-content.expanded {
+    max-height: none; /* Expand fully to fit content */
+  }
+  
+  .more-content {
+    display: block;
+  }
+  
+  .more-content.hidden {
+    display: none; /* Hide additional content initially */
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8B0000;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Lato;
+  }
+ /* For screens between 577px and 768px (Tablet and Medium devices) */
+@media (max-width: 768px) and (min-width: 577px) {
+    .stacked-cards {
+      gap: 15px;
+    }
+  
+    .card {
+      flex-direction: column; /* Ensure the layout stays aligned */
+      height: auto; /* Adjust the height to fit content */
+    }
+  
+    .image {
+      width: 100%; /* Make the image take full width */
+      height: auto; /* Adjust height proportionally */
+    }
+  
+    .card-image {
+      width: 100%; /* Full-width image */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .card-content {
+      padding: 10px;
+      font-size: 14px; /* Reduce font size slightly */
+    }
+  
+    .card-content h3 {
+      font-size: 18px;
+    }
+  
+    .card-content p {
+      font-size: 14px;
+    }
+  }
+  
+  /* For screens less than 576px (Small and Very Small devices) */
+  @media (max-width: 576px) {
+    .stacked-cards {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 10px;
+    }
+  
+    .card {
+      flex-direction: column; /* Image on top, content below */
+      height: auto;
+    }
+  
+    .image {
+      width: 100%; /* Full width for the image */
+      height: auto;
+    }
+  
+    .card-image {
+      width: 100%; /* Full width for the image */
+      height: auto;
+      object-fit: cover; /* Ensure it fits well */
+    }
+  
+    .card-content {
+      padding: 10px;
+      font-size: 14px; /* Adjust text for smaller screens */
+    }
+  
+    .card-content h3 {
+      font-size: 16px;
+    }
+  
+    .card-content p {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+  
+    .read-more {
+      font-size: 14px;
+    }
+  }
+  /* For screens between 768px and 1024px (Large Tablets and Small Desktops) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .stacked-cards {
+      flex-direction: column; /* Align items in a column */
+      gap: 20px; /* Maintain spacing between cards */
+    }
+  
+    .card {
+      flex-direction: column; /* Arrange each card in a column */
+      align-items: center; /* Center the card content */
+      text-align: center; /* Center the text content */
+      height: auto; /* Adjust the height to fit content */
+    }
+  
+    .image {
+      width: 80%; /* Center the image with reduced width */
+      height: auto;
+      margin: 0 auto; /* Center horizontally */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .card-image {
+      width: 100%; /* Full width of the container */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: contain; /* Ensure the image fits well */
+    }
+  
+    .card-content {
+      padding: 20px;
+      font-size: 15px; /* Keep font size slightly larger for readability */
+    }
+  
+    .card-content h3 {
+      font-size: 18px;
+    }
+  
+    .card-content p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  
+    .read-more {
+      font-size: 15px;
+    }
+  }
+  
+  

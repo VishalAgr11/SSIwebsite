@@ -1,75 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/navbar.css"> <!-- Add CSS for Navbar -->
-  <link rel="stylesheet" href="../css/footer.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* Center text styling */
-    .center-message {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50vh; /* Adjust to leave space for the Navbar and Footer */
-      font-size: 24px;
-      color: #555; /* Text color */
-      font-family: Arial, sans-serif;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="../assets/SSI_logo.jpg">
-  <title>SSI | Blog</title>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <a href="../index.html">
-        <img src="../assets/SSI_logo1.png" alt="Company Logo">
-      </a>
-    </div>
-    <button class="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="navbar-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../pages/about_us.html">About Us</a></li>
-      <li>
-        <a href="/pages/services.html">Services</a>
-      </li>
-      <li><a href="/pages/shop.html">Shop</a></li>
-      <li class="dropdown">
-        <a href="#company">Company <span class="arrow">&#9662;</span></a>
-        <ul class="dropdown-content">
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#careers">Careers</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <!-- Add CSS for Navbar -->
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/blogs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="../assets/SSI_logo.jpg" />
+    <title>SSI | Blog</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="../index.html">
+          <img src="../assets/SSI_logo1.png" alt="Company Logo" />
+        </a>
+      </div>
+      <button class="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="navbar-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about_us.html">About Us</a></li>
+        <li>
+          <a href="/pages/services.html">Services</a>
+        </li>
+        <li><a href="/pages/shop.html">Shop</a></li>
+        <li class="dropdown">
+          <a href="#company">Company <span class="arrow">&#9662;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-<div class="center-message">We are Sorry, No Data found !!</div>
+    <h2 class="section-title hidden animate-on-scroll">Blogs</h2>
+    <section class="stacked-cards hidden animate-on-scroll">
+      <div class="card hidden animate-on-scroll">
+        <div class="image">
+          <img
+            src="../assets/AI HEAD.png"
+            alt="Card 1 Image"
+            class="card-image"
+          />
+        </div>
 
-<div id="footer-container"></div>
+        <div class="card-content">
+          <h3>How AI is Shaping the Web Development Landscape ?</h3>
+          <p class="content">
+            In today’s fast-paced digital age, Artificial Intelligence (AI) is
+            transforming industries, and web development is no exception. As
+            businesses increasingly move online, leveraging AI to enhance user
+            experiences, optimize development processes, and streamline website
+            management has become essential. <br /><strong
+              >Let’s explore how AI is revolutionizing the web development
+              landscape and why it’s a game-changer for businesses.
+            </strong>
+          </p>
+          <p class="content">
+            <strong
+              >1. Enhanced User Experience through AI-Driven
+              Personalization</strong
+            >
+            AI enables websites to deliver highly personalized experiences by
+            analyzing user behavior, preferences, and interactions. From dynamic
+            content recommendations to personalized shopping experiences,
+            AI-driven tools like recommendation engines and chatbots are
+            tailoring the digital experience to individual users.
+          </p>
+          <p class="content">
+            <strong>2. Automating Web Development Tasks</strong>
+            AI-powered tools are automating mundane and repetitive tasks in web
+            development. Platforms like Wix ADI and WordPress AI builders are
+            capable of designing complete websites by analyzing user inputs. By
+            automating coding, layout design, and optimization, developers can
+            focus on more strategic tasks, reducing development time and costs.
+          </p>
+          <span class="more-content hidden">
+            <p class="content">
+              <strong>3. Advanced SEO and Content Strategies</strong>
+              Search Engine Optimization (SEO) is a vital component of web
+              development. AI-powered tools like SEMrush and Jasper.ai help
+              developers and marketers create SEO-optimized content, identify
+              keyword opportunities, and analyze competitor strategies. AI also
+              ensures that websites are accessible and follow the latest web
+              standards, enhancing their visibility on search engines.
+            </p>
+            <p class="content">
+              <strong>4. Strengthening Security</strong>
+              With cyberattacks on the rise, website security is a top priority.
+              AI-powered security tools detect threats in real-time by analyzing
+              patterns and behaviors. They can: Identify vulnerabilities in the
+              code. Prevent malicious attacks such as DDoS and phishing. Ensure
+              compliance with data protection regulations. AI-powered tools like
+              Cloudflare and ReCaptcha are already safeguarding countless
+              websites across the globe.
+            </p>
+            <p class="content">
+              <strong>Conclusion</strong><br />
+              The integration of AI in web development is not just a trend—it’s
+              a necessity for businesses looking to thrive in the digital era.
+              By enhancing user experience, automating processes, improving
+              security, and optimizing content strategies, AI empowers
+              businesses to create smarter, faster, and more engaging websites.
+              <br />At SSI, we specialize in harnessing AI-driven solutions to
+              deliver exceptional web development services. Whether you’re
+              looking to build a new website or upgrade an existing one, our
+              team can help you stay ahead in the ever-evolving digital
+              landscape. <br /><strong>Need AI-powered web solutions?</strong
+              ><br />
+              Get in touch with our experts and let’s build something
+              extraordinary together! Let’s shape the future of the web
+              together. Contact us today!
+            </p>
+          </span>
+          <span class="read-more">Read More</span>
+        </div>
+      </div>
 
-<script src="../js/navbar.js"></script>
-<script>
-  // Load Navbar
-  fetch('../components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-      })
-      .catch(err => console.log("Failed to load Navbar:", err));
+      <div class="card hidden animate-on-scroll">
+        <div class="image">
+          <img
+            src="../assets/laptop.png"
+            alt="Card 2 Image"
+            class="card-image"
+          />
+        </div>
+        
+        <div class="card-content">
+          <h3>Tech Upgrades: How Peripherals Can Extend Your Laptop’s Life ?</h3>
+          <p class="content">
+            Your laptop is a powerhouse, but over time, its performance may wane. Instead of investing in a new device, strategically upgrading peripherals can breathe new life into your laptop, boosting both functionality and longevity.
+              In today’s fast-paced digital world, laptops are essential, but heavy usage can take a toll over time.  <br /><strong
+              >Instead of replacing your device prematurely, upgrading with the right peripherals can significantly extend its life and enhance performance. Here’s how:
+            </strong>
+          </p>
+          <p class="content">
+            <strong
+              >1. External Monitors: Reducing Wear on Built-in Screens</strong
+            >
+            An external monitor not only enhances your productivity but also reduces wear and tear on your laptop’s display, preventing common issues like flickering or dead pixels.
+          </p>
+          <p class="content">
+            <strong>2. External Keyboards: Saving Your Laptop’s Keyboard</strong>
+            Frequent typing can wear out your laptop’s built-in keyboard. An external keyboard protects it while offering a more comfortable typing experience.
+          </p>
+          
+            <p class="content">
+              <strong>3. Cooling Pads: Protecting from Overheating</strong>
+              Heat is a laptop's worst enemy. Cooling pads help regulate temperatures during intensive tasks, improving performance and extending internal hardware lifespan.
+            </p>
+            <span class="more-content hidden">
+            <p class="content">
+              <strong>4. External Storage: Reducing Internal Drive Strain</strong>
+              Using external SSDs or HDDs decreases the load on your laptop’s internal storage, speeding up its performance and reducing the risk of data loss.
+            </p>
+            <p class="content">
+              <strong>5. Battery Packs and Chargers</strong>
+              A failing battery doesn’t mean the end of your laptop. High-quality external battery packs or replacement chargers can extend its usability, especially on the go.
+            </p>
+            <p class="content">
+              <strong>6. Audio and Video Peripherals </strong>
+              Enhance your video calls and entertainment with external webcams, microphones, or speakers. These upgrades reduce the strain on your laptop's built-in components.
+             </p>
 
-  // Load Footer
-  fetch('../components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-      })
-      .catch(err => console.log("Failed to load Footer:", err));
-</script>
-</body>
+            <p class="content">
+              <strong>Conclusion</strong><br />
+              Smart peripheral upgrades not only improve your laptop's performance but also extend its life, saving you the cost of early replacements.
+              <br /><strong>Ready to upgrade? </strong
+              ><br />
+              At SSI, we offer a wide range of peripherals tailored to meet your needs. Reach out to us for expert advice and premium products that keep your laptop running at its best!
+            </p>
+          </span>
+          <span class="read-more">Read More</span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="../js/navbar.js"></script>
+    <script>
+      // Load Footer
+      fetch("../components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((err) => console.log("Failed to load Footer:", err));
+       
+        document.querySelectorAll(".read-more").forEach((button) => {
+          button.addEventListener("click", function () {
+            const card = this.closest(".card"); // Get the card container
+            const cardContent = card.querySelector(".card-content");
+            const moreContent = cardContent.querySelector(".more-content");
+        
+            if (cardContent.classList.contains("expanded")) {
+              // Collapse content
+              moreContent.classList.add("hidden");
+              cardContent.classList.remove("expanded");
+              this.textContent = "Read More";
+        
+              card.style.height = "550px"; 
+            } else {
+              // Expand content
+              moreContent.classList.remove("hidden");
+              cardContent.classList.add("expanded");
+              this.textContent = "Read Less";
+        
+              const contentHeight = cardContent.scrollHeight;
+              const extraHeight = 300;
+              card.style.height = `${contentHeight + extraHeight}px`; 
+            }
+          });
+        });
+        
+    </script>
+  </body>
 </html>
